@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Travel Method --></label>
+    <name>Travel_Method__c</name>
+    <picklistValues>
+        <masterLabel>Car</masterLabel>
+        <translation><!-- Car --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plane</masterLabel>
+        <translation><!-- Plane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Train</masterLabel>
+        <translation><!-- Train --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

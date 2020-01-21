@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Support Site Category --></label>
+    <name>Article_Support_Site_Category__c</name>
+    <relationshipLabel><!-- Articles --></relationshipLabel>
+</CustomFieldTranslation>

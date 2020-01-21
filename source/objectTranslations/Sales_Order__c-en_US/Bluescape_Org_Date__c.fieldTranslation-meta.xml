@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date when the client gets access to the Bluescape Org/User Licenses (for new customers) or contract sign/closed date (for existing customers) whichever is later --></help>
+    <label><!-- Bluescape Org Date --></label>
+    <name>Bluescape_Org_Date__c</name>
+</CustomFieldTranslation>

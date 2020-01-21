@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select all the competitors that are involved in this deal --></help>
+    <label><!-- Competitors --></label>
+    <name>Competitors__c</name>
+    <picklistValues>
+        <masterLabel>Customer Internal Politics</masterLabel>
+        <translation><!-- Customer Internal Politics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jamboard</masterLabel>
+        <translation><!-- Jamboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Microsoft Surface Hub</masterLabel>
+        <translation><!-- Microsoft Surface Hub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mural</masterLabel>
+        <translation><!-- Mural --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation><!-- Not Applicable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oblong</masterLabel>
+        <translation><!-- Oblong --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prysm</masterLabel>
+        <translation><!-- Prysm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T1V</masterLabel>
+        <translation><!-- T1V --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

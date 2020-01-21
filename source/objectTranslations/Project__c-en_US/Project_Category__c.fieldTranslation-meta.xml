@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Project Category --></label>
+    <name>Project_Category__c</name>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Non-Billable</masterLabel>
+        <translation><!-- Internal Non-Billable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unapproved_Bluescape_Events</fullName>
+    <columns>NAME</columns>
+    <columns>BS_Demo_Name__c</columns>
+    <columns>Requester__c</columns>
+    <columns>Type__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Large_Format_Display__c</columns>
+    <columns>Launch_Call_Date__c</columns>
+    <columns>Install_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Demo_Unit__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approved_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Waiting for Approval</value>
+    </filters>
+    <label>Unapproved Bluescape Events</label>
+</ListView>

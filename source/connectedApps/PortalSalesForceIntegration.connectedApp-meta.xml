@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>mkalisaamy@encoress.com</contactEmail>
+    <label>PortalSalesForceIntegration</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost:4000/</callbackUrl>
+        <consumerKey>3MVG9y6x0357HlecqCjiev3mzqlhd0aBYylmF6uGDgg0OQx3aH6KBvkI3IAUGMxNtdJnyW7vQN1x0JXfbgpzP</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Api</scopes>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <startUrl>https://localhost:4000/</startUrl>
+</ConnectedApp>

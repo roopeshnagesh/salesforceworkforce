@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Amount of time between first post and the best reply, as chosen. --></help>
+    <label><!-- Time to Best Reply --></label>
+    <name>Time_to_Best_Reply__c</name>
+</CustomFieldTranslation>

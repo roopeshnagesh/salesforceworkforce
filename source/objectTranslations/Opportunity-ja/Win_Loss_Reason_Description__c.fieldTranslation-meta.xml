@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Explain, in further detail, why the opportunity was won/lost including other reasons not included in Win/Loss picklist --></help>
+    <label><!-- Win/Loss Reason Description --></label>
+    <name>Win_Loss_Reason_Description__c</name>
+</CustomFieldTranslation>

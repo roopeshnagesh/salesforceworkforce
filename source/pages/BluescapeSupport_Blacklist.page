@@ -1,0 +1,51 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Blacklisting a Guest Email Domain
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+          Admins can blacklist a guest email domain, preventing anyone with a certain email domain from being invited to use Bluescape. This gives&nbsp;your Organization greater security and access control.<br />
+<br />
+To blacklist a guest email domain:
+<ol>
+    <li>Log in to Bluescape as an Admin.</li>
+    <li>Click the Org tree icon in the portal to open the&nbsp;<b>Organization Settings</b> page.</li>
+    <li>Find&nbsp;the&nbsp;<b>Blacklisting guest email domains</b> section.&nbsp;</li>
+    <li>Enter the domain you want to blacklist in the&nbsp;field with the following convention: &quot;abc.com&quot; (i.e., the email domain name followed by .com, with no @ sign).</li>
+    <li>Click <b>Add</b>.</li>
+</ol>
+<br />
+Guests from that email domain can not be invited to use Bluescape.<br />
+<br />
+In addition, the email domain is now displayed under the <b>Blacklisted domains</b>&nbsp;section.<br />
+<br />
+To remove the email domain from the blacklist, click the X (exit) icon next to the domain name.
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

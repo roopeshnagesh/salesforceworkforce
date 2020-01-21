@@ -1,0 +1,132 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Setting Up Single Sign-On
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                Single Sign-On (SSO) allows you to sign into Bluescape from a centralized identity provider (IDP), simplifying both user experience and management. Bluescape supports SSO via IDPs using the SAML 2.0 standard.&nbsp;<br />
+<br />
+The certified SAML IDPs for Bluescape are:
+<p>&nbsp;</p>
+
+<ul>
+	<li>Okta</li>
+	<li>ADFS</li>
+	<li>Ping Federate</li>
+	<li>F5</li>
+	<li>onelogin</li>
+</ul>
+<br />
+Setting up SSO involves an exchange of information between the customer and Bluescape Support. To set up SSO in Bluescape:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Contact Bluescape Support and inform them that you want to set up SSO for your Organization with one of the IDPs listed above.</li>
+	<li>Provide Support with the contact email address of your SSO Administrator.</li>
+	<li>Support will provide you with&nbsp;the following URLs:</li>
+</ol>
+&nbsp;
+
+<table border="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="1"><b>IDP Configuration URLs</b></td>
+			<td colspan="1" rowspan="1"><b>Example</b></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Entity ID*</td>
+			<td colspan="1" rowspan="1">https://portal.apps.us.bluescape.com/saml/metadata/&lt;customer_saml_provider_name&gt;</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Assertion Consumer Service (ACS) URL*</td>
+			<td colspan="1" rowspan="1">https://identity-api.apps.us.bluescape.com/api/authenticate/&lt;acs_id&gt;</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Single Logout Endpoint*</td>
+			<td colspan="1" rowspan="1">https://identity-api.apps.us.bluescape.com/api/logout/&lt;saml_id&gt;</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Single Sign-On (SSO) URL*</td>
+			<td colspan="1" rowspan="1">https://portal.apps.us.bluescape.com/saml/single_sign_on/&lt;identity_provider_name&gt;</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+*<b>Note</b>:&nbsp;These URLs will have placeholders for the &lt;customer_saml_provider_name&gt;, &lt;acs_id&gt;, &lt;saml_id&gt;, and &lt;identity_provider_name&gt; because they have not been generated yet.&nbsp;<br />
+<br />
+&nbsp; &nbsp;4. Map Attribute Statements as follows:<br />
+&nbsp;
+<table border="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="1"><b>Attribute Statement</b></td>
+			<td colspan="1" rowspan="1"><b>Example</b></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">first_name</td>
+			<td colspan="1" rowspan="1">John</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">last_name</td>
+			<td colspan="1" rowspan="1">Doe</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">email</td>
+			<td colspan="1" rowspan="1">John.doe@domain.com</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">name</td>
+			<td colspan="1" rowspan="1">John Doe</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+&nbsp; &nbsp;5. Provide Bluescape Support with the URL to the metadata XML file created by your SSO provider.<br />
+&nbsp; &nbsp;6.&nbsp;Support uses this metadata URL to set up a test Organization and provide you with the following (updated) URLs:&nbsp;&nbsp;
+<p>&nbsp;</p>
+
+<ul>
+	<li>Entity ID</li>
+	<li>ACS URL</li>
+	<li>Single Logout Endpoint</li>
+	<li>SSO URL</li>
+</ul>
+&nbsp; &nbsp;7. Use the above information to complete your IDP configuration.<br />
+&nbsp; &nbsp;8.&nbsp;Have a user log in to the test Organization using the SSO URL provided by Support.<br />
+&nbsp; &nbsp;9. If the login is successful, provide Bluescape Support with permission to apply the SSO setup to the actual Organization.<br />
+&nbsp; &nbsp;10.&nbsp;All users can now log in via their SSO provider or the SSO URL.<br />
+<br />
+<b>Note</b>:&nbsp;For those using Okta for SSO, do not use the Bluescape application defined in the Okta application library. Instead, create your own.<br />
+<br />
+<br />
+
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

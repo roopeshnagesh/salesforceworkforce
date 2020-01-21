@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Demo_Event_Approval_needed</fullName>
+        <description>Demo Event Approval needed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>don.preble@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_Approval_Needed</template>
+    </alerts>
+    <alerts>
+        <fullName>Demo_Event_Rejected_Notification</fullName>
+        <description>Demo Event Rejected Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CSM__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Requester__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>charlotte.livermore@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>don.preble@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>elizabeth.mcglauflin@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>josh.bradbury@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>steve.westerman@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Demo_Event_Request_Needs_Approval</fullName>
+        <description>Demo Event Request Needs Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_Approval_Needed</template>
+    </alerts>
+    <alerts>
+        <fullName>Demo_Event_Submitted_Needs_details_added</fullName>
+        <description>Demo Event Submitted. Needs details added</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Event_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Demo_Event_final_approval_has_been_requested</fullName>
+        <description>Demo Event final approval has been requested</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CSM__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Requester__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>SE__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>joe.gomez@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_Waiting_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Demo_Install_Approval_has_been_given</fullName>
+        <description>Demo Install Approval has been given</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requester__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>loni.miller@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_First_Approval_Given</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Demo_Unit_Manager_of_new_request</fullName>
+        <description>Notify Demo Unit Manager of new request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CSM__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Requester__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>Logistics</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>beth.weinberger@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>don.preble@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Event_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Recalling_a_demo_unit_approval_request</fullName>
+        <description>Recalling a demo unit approval request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CSM__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>charlotte.livermore@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>don.preble@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>steve.westerman@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_that_event_is_fully_approved</fullName>
+        <description>Send email that event is fully approved (Don, Dina, Execs, and CSM)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CSM__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Requester__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>SE__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Chief_Revenue_Officer</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Finance</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>dina.joudeh@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>don.preble@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bluescape_Event_Demo_Unit_Management/Demo_Unit_Approved</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Approved_Date</fullName>
+        <description>Setting the Approved Date</description>
+        <field>Approved_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Denied</fullName>
+        <field>Status__c</field>
+        <literalValue>Denied</literalValue>
+        <name>Set Status Denied</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Waiting_for_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Waiting for Approval</literalValue>
+        <name>Set Status Waiting for Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_to_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Set Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Submit_for_Approval_Date</fullName>
+        <field>Submit_for_Approval_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Submit for Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unset_Approved_Date</fullName>
+        <field>Approved_Date__c</field>
+        <name>Unset Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BS_Demo_Name</fullName>
+        <field>Demo_Name__c</field>
+        <formula>Opportunity__r.Name + &quot;  &quot; + &quot;Demo&quot;</formula>
+        <name>Update BS Demo Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Demo Update Name</fullName>
+        <actions>
+            <name>Update_BS_Demo_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>True</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Event Request Created</fullName>
+        <actions>
+            <name>Notify_Demo_Unit_Manager_of_new_request</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Bluescape_Demo__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Needs More Information,Shipping Details Needed</value>
+        </criteriaItems>
+        <description>Email Demo Unit Manager to get availability of demo unit and shipping info</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Demo_Install_Needs_Approval_Liz</fullName>
+        <assignedTo>marcel.dubois@bluescape.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>This Task is obsolete. Changing Assigned To to me was a quick way to get around an issue I&#39;m deaing witn.
+
+A demo install needs approval: {!Bluescape_Event__c.Name}</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Bluescape_Demo__c.Submit_for_Approval_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Demo Install Needs Approval by Liz</subject>
+    </tasks>
+    <tasks>
+        <fullName>Handle_approved_demo_Installation_finances</fullName>
+        <assignedTo>dina.joudeh@bluescape.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>A demo install has been approved. Billing the correct party needs to be handled. To get details, view the Bluescape Events tab in Salesforce or see Don Preble.
+
+Bluescape Events: https://na9.salesforce.com/a0w/o</description>
+        <dueDateOffset>-1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Bluescape_Demo__c.Install_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Handle approved demo Install financials</subject>
+    </tasks>
+    <tasks>
+        <fullName>Ship_Demo_Unit_Don</fullName>
+        <assignedTo>don.preble@bluescape.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Bluescape_Demo__c.Shipping_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Ship Demo Unit Don</subject>
+    </tasks>
+    <tasks>
+        <fullName>Ship_Demo_Unit_Ross</fullName>
+        <assignedTo>ross.vanpraag@bluescape.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Bluescape_Demo__c.Shipping_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Ship Demo Unit Ross</subject>
+    </tasks>
+</Workflow>

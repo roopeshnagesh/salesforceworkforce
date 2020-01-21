@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CSM_Assignment_Sales_Qualified_Lead_Create</fullName>
+        <description>CSM Assignment: Sales Qualified Lead Create</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>_andy.dreisch@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff.smith@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/Discover_Qualification_oppy</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Execs_on_Closed_Won_Oppty</fullName>
+        <description>Email Execs on Closed Won Oppty</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Ownerss_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>dina.joudeh@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>don.preble@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>justin.stanten@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>shaun.conners@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/Closed_Won_Oppty</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Finance_Team_when_Opp_is_Pending_Booking</fullName>
+        <description>Email Finance Team when Opp is Pending Booking</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dina.joudeh@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>justin.stanten@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nina.le@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/Pending_Booking_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Marketing_when_stage_changed_to_M_Marketing</fullName>
+        <description>Email Marketing when stage changed to M-Marketing</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>david.chan@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jada.pogue@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Stage_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Notification_for_Renewal_Opportunity</fullName>
+        <description>Email Notification for Renewal Opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>_andy.dreisch@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff.smith@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>justin.stanten@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>parul.sakhuja@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/New_Renewal_Opp_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>Moved_from_Closed_Won</fullName>
+        <description>Moved from &quot;Closed / Won&quot;</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Accountant</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Assistant_Controller</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Chief_Revenue_Officer</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Finance</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>All_Templates/Opportunity_Moved_out_of_Closed_Won</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Opportunity_Email_Notification</fullName>
+        <description>New Opportunity Email Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff.smith@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>parul.sakhuja@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/New_Opportunity_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Next_Step_Outdated</fullName>
+        <description>WF: Next Step Outdated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Chief_Revenue_Officer</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/Next_step_outdated</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Support_to_create_org_if_needed</fullName>
+        <ccEmails>support@bluescape.com</ccEmails>
+        <description>Notify Support to create org (if needed)</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/Create_Org_for_Closed_Won_Opp</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Account_Name_Changed</fullName>
+        <description>PB: Account Name Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Account_Name_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Amount_Changed</fullName>
+        <description>PB: Amount Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Amount_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Close_Date_Changed</fullName>
+        <description>PB: Close Date Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Close_Date_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Next_Step_Changed</fullName>
+        <description>PB: Next Step Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Next_Step_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Next_Step_Date_Outdated</fullName>
+        <description>PB: Next Step Date Outdated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Chief_Revenue_Officer</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/Next_step_outdated</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Opp_Name_Changed</fullName>
+        <description>PB: Opportunity Name Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Opp_Name_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Opp_Owner_Changed</fullName>
+        <description>PB: Opportunity Owner Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Opp_Owner_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>PB_Stage_Changed</fullName>
+        <description>PB: Stage Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Process_Builder/PB_Stage_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>Referral_Exists_Notification</fullName>
+        <description>Referral Exists Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Controller</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Finance</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Process_Builder/Referral_Account_Exists</template>
+    </alerts>
+    <alerts>
+        <fullName>Renewal_Opportunity_Due_in_90_Days</fullName>
+        <description>Renewal Opportunity Due in 90 Days</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>justin.stanten@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>All_Templates/Opportunity_Due_in_90_Days</template>
+    </alerts>
+    <alerts>
+        <fullName>WF_Close_Date_in_Past</fullName>
+        <description>WF: Close Date In Past</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>peter.shutte@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Process_Builder/Close_Date_Outdated</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Copy_Owner_Manager_Email_to_email_field</fullName>
+        <field>Ownerss_Manager_Email__c</field>
+        <formula>Owner_s__c</formula>
+        <name>Copy Owner Manager Email to email field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PV_Opportunity_Name</fullName>
+        <field>PV_Opportunity_Name__c</field>
+        <formula>priorvalue(Name)</formula>
+        <name>PV Opportunity Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDR_Assigned</fullName>
+        <field>SDR__c</field>
+        <formula>CreatedBy.FirstName &amp;&quot; &quot;&amp; CreatedBy.LastName</formula>
+        <name>SDR Assigned</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SQL_Timestamp_when_SDR_Creates_Oppty</fullName>
+        <description>(SDR) Timestamp SQL when a User with the role of &quot;Sales Development Representative&quot; creates an opportunity</description>
+        <field>SQL_Timestamp__c</field>
+        <formula>NOW()</formula>
+        <name>SQL Timestamp when SDR Creates Oppty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SQL_True_when_SDR_Creates_Oppty</fullName>
+        <description>(SDR) SQL is True when a User with the role of &quot;Sales Development Representative&quot; creates an opportunity</description>
+        <field>SQL__c</field>
+        <literalValue>1</literalValue>
+        <name>SQL True when SDR Creates Oppty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Accepted_Timestamp_Set</fullName>
+        <description>Set Sales Accepted field Timestamp for an opportunity that is created by an SDR and moved to pipeline stage.</description>
+        <field>Sales_Accepted_Timestamp__c</field>
+        <formula>NOW()</formula>
+        <name>Sales Accepted Timestamp Set</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Accepted_to_TRUE</fullName>
+        <description>Set Sales Accepted field to &#39;TRUE&#39; for an opportunity that is created by an SDR and moved to pipeline stage.</description>
+        <field>Sales_Accepted__c</field>
+        <literalValue>1</literalValue>
+        <name>Sales Accepted to &#39;TRUE&#39;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Note_Update</fullName>
+        <field>sales_notes_updated__c</field>
+        <formula>Now()</formula>
+        <name>Sales Note Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SDR_Email_Address</fullName>
+        <field>SDR_Email__c</field>
+        <formula>CreatedBy.Email</formula>
+        <name>Update SDR Email Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Close Date Outdated</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Send notification to Sales Ops and VP of Sales when a Close Date is past due</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>WF_Close_Date_in_Past</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Closed Won Oppty</fullName>
+        <actions>
+            <name>Email_Execs_on_Closed_Won_Oppty</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Assign_CSM</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed - Won,Closed Won / Request Install,Closed Won</value>
+        </criteriaItems>
+        <description>Any Opportunity that is set to &#39;Closed - Won&#39; / &#39;Closed Won / Request Install&#39;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contraction Expiration Notification</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <description>Alerts sales team and management that a closed opportunity has a renewal date in 90s days for further discussion and opp creation</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Renewal_Opportunity_Due_in_90_Days</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.Renewal_Date__c</offsetFromField>
+            <timeLength>-90</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Email Notification to Marketing</fullName>
+        <actions>
+            <name>Email_Marketing_when_stage_changed_to_M_Marketing</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>M-Marketing</value>
+        </criteriaItems>
+        <description>Email Notification to Marketing when Opp stage changed to M - Marketing</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Net New Closed Won Opp</fullName>
+        <actions>
+            <name>Notify_Support_to_create_org_if_needed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Type</field>
+            <operation>equals</operation>
+            <value>Pilot,New Business,Dealer-New Business</value>
+        </criteriaItems>
+        <description>Any Opportunity that is set to &#39;Closed Won&#39;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Next Step Outdated</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Send notification to Sales Ops and VP, Sales when Next Step Date is outdated</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Next_Step_Outdated</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.Next_Step_Date__c</offsetFromField>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Owner%27s Manager Email to 2nd Email Field</fullName>
+        <actions>
+            <name>Copy_Owner_Manager_Email_to_email_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Copy Owner&#39;s Manager Email text field to Ownerss Manager Email email field</description>
+        <formula>not(ISNULL( Ownerss_Manager_Email__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PV Amount</fullName>
+        <active>false</active>
+        <formula>ischanged( Amount )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PV Opportunity Name</fullName>
+        <actions>
+            <name>PV_Opportunity_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ischanged( Name )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pending Booking Opportunity</fullName>
+        <actions>
+            <name>Email_Finance_Team_when_Opp_is_Pending_Booking</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>7-Pending Booking,6-Pending Booking,R4-Pending Booking</value>
+        </criteriaItems>
+        <description>Any Opportunity that is set to &#39;Pending Booking&#39;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Popular SDR Email with SDR email address</fullName>
+        <actions>
+            <name>Update_SDR_Email_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Created_by_Role__c</field>
+            <operation>equals</operation>
+            <value>Sales Development Representative</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SQL Overdue Notification to Owner%2C SDR%2C and Manager</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Created_by_Role__c</field>
+            <operation>equals</operation>
+            <value>Sales Development Representative</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>1-Sales Qualified Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Sales_Accepted__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Send notification to Opp Owner, SDR, and Manager when an SQL is created and hasn&#39;t moved out of &quot;1-Sales Qualified Lead&quot; w/in 10 days.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SQL True when SDR Creates Oppty</fullName>
+        <actions>
+            <name>SDR_Assigned</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>SQL_Timestamp_when_SDR_Creates_Oppty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>SQL_True_when_SDR_Creates_Oppty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Created_by_Role__c</field>
+            <operation>equals</operation>
+            <value>Sales Development Representative</value>
+        </criteriaItems>
+        <description>(SDR) SQL is True when a User with the role of &quot;Sales Development Representative&quot; creates an opportunity</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sales Accepted %27TRUE%27</fullName>
+        <actions>
+            <name>Sales_Accepted_Timestamp_Set</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Sales_Accepted_to_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>(SDR Role) Set Sales Accepted field to &#39;TRUE&#39; if opportunity was created by an SDR and moved to any pipeline (non-lost) stage.</description>
+        <formula>AND( 
+ISPICKVAL(PRIORVALUE(StageName),&quot;1-Sales Qualified Lead&quot;), 
+OR( 
+ISPICKVAL(StageName, &quot;2-Identify Solution Fit&quot;), 
+ISPICKVAL(StageName, &quot;3-Justify Business&quot;), 
+ISPICKVAL(StageName, &quot;4-Justify Technically&quot;), 
+ISPICKVAL(StageName, &quot;5-Selected&quot;), 
+ISPICKVAL(StageName, &quot;6-Negotiate&quot;), 
+ISPICKVAL(StageName, &quot;7-Pending Booking&quot;),
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+ISPICKVAL(StageName, &quot;R1-Pending&quot;),
+ISPICKVAL(StageName, &quot;R2-In Progress&quot;),
+ISPICKVAL(StageName, &quot;R3-Negotiate&quot;)),
+CreatedBy.UserRole.Name = &quot;Sales Development Representative&quot; 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sales Accepted %27TRUE%27 %28Old%29</fullName>
+        <actions>
+            <name>Sales_Accepted_Timestamp_Set</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Sales_Accepted_to_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Created_by_Role__c</field>
+            <operation>equals</operation>
+            <value>Sales Development Representative</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Qualifying,Motivation Identified,Closing,Closed Won / Request Install,Installed / Invoiced,Closed Won,Motivation Validated</value>
+        </criteriaItems>
+        <description>(SDR Role) Set Sales Accepted field to &#39;TRUE&#39; if opportunity was created by an SDR and moved to any pipeline (non-lost) stage.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sales Notes Updated</fullName>
+        <actions>
+            <name>Sales_Note_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED( Sales_Notes__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Assign_CSM</fullName>
+        <assignedTo>jeff.smith@bluescape.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>(Closed Won) Assign SC to Account Team</subject>
+    </tasks>
+    <tasks>
+        <fullName>SQL_Opportunity_Created_Assign_CSM</fullName>
+        <assignedTo>jeff.smith@bluescape.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>SQL Opportunity Created- Assign CSM</subject>
+    </tasks>
+</Workflow>

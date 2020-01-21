@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Case_Status_to_Working</fullName>
+        <field>Status</field>
+        <literalValue>Working</literalValue>
+        <name>Case Status to Working</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CommStatus_Email_Awaiting_User_Response</fullName>
+        <field>Comm_Status__c</field>
+        <literalValue>Awaiting User Response</literalValue>
+        <name>CommStatus-Awaiting User Response</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CommStatus_Email_User_Response_Received</fullName>
+        <field>Comm_Status__c</field>
+        <literalValue>User Response Received</literalValue>
+        <name>CommStatus-Email_User Response Received</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Platform_API</fullName>
+        <field>Platform__c</field>
+        <literalValue>API</literalValue>
+        <name>Set Platform=API</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Awaiting_User_Response</fullName>
+        <field>Status</field>
+        <literalValue>Awaiting user response</literalValue>
+        <name>Status-Awaiting User Response</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_User_Email_Response_Received</fullName>
+        <field>Status</field>
+        <literalValue>User response received</literalValue>
+        <name>Status-User Email Response Received</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Case_Changed_Timestamp_2</fullName>
+        <field>Case_Changed_Timestamp__c</field>
+        <formula>Now()</formula>
+        <name>Update Case Changed Timestamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>Case Email Received</fullName>
+        <actions>
+            <name>CommStatus_Email_User_Response_Received</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Case_Changed_Timestamp_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>EmailMessage.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>EmailMessage.FromAddress</field>
+            <operation>notEqual</operation>
+            <value>support@bluescape.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>EmailMessage.FromAddress</field>
+            <operation>notEqual</operation>
+            <value>bluescape.support@bluescape.com</value>
+        </criteriaItems>
+        <description>When support receives email, update Comm_Status__c to &#39;User Response Received&#39;. There is another workflow that triggers off Comm_Status__c changes to send email to the Account Team.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Email Sent</fullName>
+        <actions>
+            <name>CommStatus_Email_Awaiting_User_Response</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Case_Changed_Timestamp_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>EmailMessage.Status</field>
+            <operation>equals</operation>
+            <value>Sent,Replied</value>
+        </criteriaItems>
+        <description>When support sends email, update Comm_Status__c to &#39;Awaiting User Response&#39;. There is another workflow that triggers off Comm_Status__c changes to send email to the Account Team.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email2Case API</fullName>
+        <actions>
+            <name>Set_Platform_API</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>EmailMessage.ToAddress</field>
+            <operation>startsWith</operation>
+            <value>api.support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>EmailMessage.ToAddress</field>
+            <operation>startsWith</operation>
+            <value>api-support</value>
+        </criteriaItems>
+        <description>For new api.support cases, set the platform to API.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Email on a closed case</fullName>
+        <actions>
+            <name>Case_Status_to_Working</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>CommStatus_Email_User_Response_Received</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>New email on a closed case causes it to open again.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Email updates Email%2FComment Timestamp</fullName>
+        <actions>
+            <name>Update_Case_Changed_Timestamp_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.CaseNumber</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Handling a case email</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

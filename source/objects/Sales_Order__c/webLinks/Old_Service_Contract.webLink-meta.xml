@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Old_Service_Contract</fullName>
+    <availability>online</availability>
+    <description>This made use of the deprecated REQUIRESCRIPT function</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Old Service Contract</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)}
+var profile = &quot;{!$Profile.Name}&quot;;
+
+var serviceContractName;
+serviceContractName = sforce.apex.execute(&quot;SalesOrderUtils&quot;,&quot;createServiceContract&quot;,{salesOrderId:&quot;{!Sales_Order__c.Id}&quot;});
+
+var s1 = &quot;&quot;+serviceContractName;
+if (s1.indexOf(&quot;failed&quot;) &gt; -1) {
+  alert(&quot;Service Contract created with errors, please contact System Admin \n\n&quot; + s1);
+  location.reload(true);
+} else if (s1.indexOf(&quot;Error&quot;) &gt; -1) {
+  alert(s1);
+} else {
+  alert(&quot;Service Contract created, Name : &quot; + serviceContractName);
+  location.reload(true);
+}</url>
+</WebLink>

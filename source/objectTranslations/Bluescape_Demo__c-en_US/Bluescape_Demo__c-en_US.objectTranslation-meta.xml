@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bluescape Demo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bluescape Demos</value>
+    </caseValues>
+    <layouts>
+        <layout>Demo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Installation Info --></label>
+            <section>Installation Info</section>
+        </sections>
+        <sections>
+            <label><!-- Shipping Details --></label>
+            <section>Shipping Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Shipping Details --></label>
+            <section>Shipping Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Install date has to come before the removal date --></errorMessage>
+        <name>Install_Date_prior_to_Removal_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t go for approval with missing fields --></errorMessage>
+        <name>Ready_For_Approval_Minimum_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Shipping date has to come before the install date --></errorMessage>
+        <name>Shipping_Date_prior_to_Install_Date</name>
+    </validationRules>
+    <workflowTasks>
+        <description><!-- This Task is obsolete. Changing Assigned To to me was a quick way to get around an issue I&apos;m deaing witn.
+
+A demo install needs approval: {!Bluescape_Event__c.Name} --></description>
+        <name>Demo_Install_Needs_Approval_Liz</name>
+        <subject><!-- Demo Install Needs Approval by Liz --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- A demo install has been approved. Billing the correct party needs to be handled. To get details, view the Bluescape Events tab in Salesforce or see Don Preble.
+
+Bluescape Events: https://na9.salesforce.com/a0w/o --></description>
+        <name>Handle_approved_demo_Installation_finances</name>
+        <subject><!-- Handle approved demo Install financials --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Ship_Demo_Unit_Don</name>
+        <subject><!-- Ship Demo Unit Don --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Ship_Demo_Unit_Ross</name>
+        <subject><!-- Ship Demo Unit Ross --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

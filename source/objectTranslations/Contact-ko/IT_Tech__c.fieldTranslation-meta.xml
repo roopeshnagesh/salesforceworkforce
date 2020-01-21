@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates who we should work with regarding technical issues post hardware installation. --></help>
+    <label><!-- IT/Tech --></label>
+    <name>IT_Tech__c</name>
+</CustomFieldTranslation>

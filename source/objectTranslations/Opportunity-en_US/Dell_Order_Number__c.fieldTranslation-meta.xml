@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Dell_Order_Number --></help>
+    <label><!-- Dell Order Number --></label>
+    <name>Dell_Order_Number__c</name>
+</CustomFieldTranslation>

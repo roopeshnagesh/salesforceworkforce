@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Lead Source (deprecated) --></label>
+    <name>Lead_Source__c</name>
+    <picklistValues>
+        <masterLabel>Bluescape</masterLabel>
+        <translation><!-- Bluescape --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth</masterLabel>
+        <translation><!-- Haworth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth-Dealer</masterLabel>
+        <translation><!-- Haworth-Dealer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTaction</masterLabel>
+        <translation><!-- MultiTaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Obscura Digital</masterLabel>
+        <translation><!-- Obscura Digital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

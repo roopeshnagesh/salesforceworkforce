@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If supported, select which webcam is installed on the wall --></help>
+    <label><!-- Supported Webcam --></label>
+    <name>Supported_Webcam__c</name>
+    <picklistValues>
+        <masterLabel>Logitech C920</masterLabel>
+        <translation><!-- Logitech C920 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logitech C930</masterLabel>
+        <translation><!-- Logitech C930 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Panasonic AW-HE2</masterLabel>
+        <translation><!-- Panasonic AW-HE2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unsupported</masterLabel>
+        <translation><!-- Unsupported --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

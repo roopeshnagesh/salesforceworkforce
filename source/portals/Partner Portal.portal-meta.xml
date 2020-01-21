@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <admin>admin@bluescape.com</admin>
+    <defaultLanguage>en_US</defaultLanguage>
+    <description>Partner Portal</description>
+    <emailSenderAddress>support@bluescape.com</emailSenderAddress>
+    <emailSenderName>Bluescape Support</emailSenderName>
+    <enableSelfCloseCase>false</enableSelfCloseCase>
+    <forgotPassTemplate>All_Templates/PartnerChangePwdEmail</forgotPassTemplate>
+    <isSelfRegistrationActivated>false</isSelfRegistrationActivated>
+    <logoDocument>Bluescape_Community_Assets/Bluescape_Logo.png</logoDocument>
+    <newPassTemplate>All_Templates/PartnerChangePwdEmail</newPassTemplate>
+    <newUserTemplate>All_Templates/Partner_Portal_New_User_Notification</newUserTemplate>
+    <showActionConfirmation>false</showActionConfirmation>
+    <type>Partner</type>
+</Portal>

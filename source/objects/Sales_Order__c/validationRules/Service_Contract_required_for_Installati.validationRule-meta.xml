@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Contract_required_for_Installati</fullName>
+    <active>false</active>
+    <description>Service contract is required to set Status to &quot;Installed&quot;</description>
+    <errorConditionFormula>IF(  ISPICKVAL(Status__c, &#39;Installed&#39;),  ISBLANK( Service_Contract_Id__c ) , FALSE)</errorConditionFormula>
+    <errorMessage>Service Contract must exist for Status = Installed</errorMessage>
+</ValidationRule>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate the device the wall is using to output audio --></help>
+    <label><!-- Sound Output --></label>
+    <name>Sound_Output__c</name>
+    <picklistValues>
+        <masterLabel>Focusrite 2i2</masterLabel>
+        <translation><!-- Focusrite 2i2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Focusrite 2i2 2.0</masterLabel>
+        <translation><!-- Focusrite 2i2 2.0 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onboard</masterLabel>
+        <translation><!-- Onboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCI Card</masterLabel>
+        <translation><!-- PCI Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yamaha CS-700</masterLabel>
+        <translation><!-- Yamaha CS-700 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

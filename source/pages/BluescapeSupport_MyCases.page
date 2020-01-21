@@ -1,0 +1,159 @@
+<apex:page title="Bluescape Support: Cases" controller="BluescapeSupport_MyCasesController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                @media (max-width: 768px) {
+                    #myCases .caseList .date {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                }
+
+                #myCases .caseList .headerRow {
+                    font-weight: bold;
+                }
+
+                #myCases .caseList .headerRow>div {
+                    background-image: url('{!URLFOR($Resource.BluescapeSupport_StaticResources, '/images/sort/sort_both.png')}');
+                    background-repeat: no-repeat;
+                    background-position: center right;
+                }
+
+                #myCases .caseList .headerRow>div.sort-asc {
+                    background-image: url('{!URLFOR($Resource.BluescapeSupport_StaticResources, '/images/sort/sort_asc.png')}');
+                }
+
+                #myCases .caseList .headerRow>div.sort-desc {
+                    background-image: url('{!URLFOR($Resource.BluescapeSupport_StaticResources, '/images/sort/sort_desc.png')}');
+                }
+
+                #myCases .caseList .dataRow:nth-child(2n) {
+                    background-color: #f9f9f9;
+                }
+
+                #myCases .actionBtn {
+                    background-color: #0072FF;
+                    color: #FFF;
+                    padding: .5rem 2rem;
+                    display: inline-block;
+                    margin: 2rem 0;
+                }
+
+                #myCases .actionBtn a {
+                    color: #FFF;
+                }
+
+                #myCases .row.filtering {
+                    background-color: #FCFCFC;
+                    padding: .5rem 0;
+                }
+
+                #myCases .row.filtering form {
+                    display: inline-block;
+                }
+
+                #myCases .row.pageData {
+                    font-size: 1.2rem;
+                    font-weight: 100;
+                    padding: 1rem 0;
+                    margin-bottom: 1rem;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="myCases" class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <apex:outputPanel layout="none" rendered="{!isSuperUser == false}">
+                            <h1>My Cases</h1>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="none" rendered="{!isSuperUser == true}">
+                            <h1>Cases</h1>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="actionBtn" rendered="{!userContactId != null}">
+                            <a href="{!$Page.BluescapeSupport_NewCase}">New Case</a>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+
+                <apex:outputPanel layout="block" rendered="{!isSuperUser}" styleClass="row filtering">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        View:
+                        <apex:form >
+                            <apex:selectList styleClass="chooseView" value="{!curView}" size="1">
+                                <apex:selectOptions value="{!caseViews}" />
+                            </apex:selectList>
+                        </apex:form>
+                    </div>
+                </apex:outputPanel>
+
+                <div class="row pageData">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        Displaying records {!pageData.recordStart} to {!pageData.recordEnd} of {!pageData.recordCount}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="caseList">
+                            <div class="row headerRow hidden-xs">
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-field="CreatedDate">Date Opened</div>
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-field="CaseNumber">Case Number</div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" data-field="Subject">Subject</div>
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-field="Type">Type</div>
+                                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" data-field="Status">Status</div>
+                            </div>
+                            <apex:repeat value="{!caseList}" var="case">
+                                <div class="row dataRow">
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 date">{!case.creationDate}</div>
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><a href="{!$Page.BluescapeSupport_CaseDetail}?caseId={!case.id}">{!case.caseNo}</a></div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">{!case.subject}</div>
+                                    <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">{!case.type}</div>
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">{!case.status}</div>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <c:BluescapeSupport_Pagination pageData="{!pageData}" pageUrl="{!$Page.BluescapeSupport_MyCases}?v={!curView}&sf={!pageData.sortField}&sd={!pageData.sortDir}" />
+                    </div>
+                </div>
+
+            </div>
+        </apex:define>
+
+        <apex:define name="scripts">
+            <script>
+                $(document).ready(function() {
+                    let sortField = '{!pageData.sortField}';
+                    let sortDir = '{!pageData.sortDir}';
+
+                    $(".chooseView").on('change', function(e) {
+                        window.location.href = '{!$Page.BluescapeSupport_MyCases}?v=' + $(this).val();
+                    });
+
+                    $(".caseList .headerRow > div").on('click', function(e) {
+                        sortField = $(this).attr("data-field");
+                        sortDir = sortDir == 'asc' ? 'desc' : 'asc';
+                        refreshTable();
+                    });
+
+                    $("div[data-field=" + sortField + "]").addClass('sort-' + sortDir);
+
+                    function refreshTable() {
+                        window.location.href = `{!$Page.BluescapeSupport_MyCases}?v={!curView}&sf=${sortField}&sd=${sortDir}`;
+                    }
+                });
+            </script>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

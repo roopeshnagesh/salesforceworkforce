@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Change_Task_Owner_to_Lead_Managers</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Lead_Managers</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Change Task Owner to Lead Managers</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_Percent_Complete</fullName>
+        <field>Percent_Completed__c</field>
+        <formula>Percent_Completed__c   *  100</formula>
+        <name>Task Percent Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Task</fullName>
+        <actions>
+            <name>Task_Percent_Complete</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>CreatedDate  &lt;&gt;  LastModifiedDate</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

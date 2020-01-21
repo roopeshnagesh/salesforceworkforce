@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/vnd.openxmlformats-officedocument.presentationml.presentation</contentType>
+    <description>updated version 1.15.15</description>
+</StaticResource>

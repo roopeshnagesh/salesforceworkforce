@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>ariel.jakobovits@bluescape.com</contactEmail>
+    <label>AnalyticsApp</label>
+    <oauthConfig>
+        <callbackUrl>https://www.getpostman.com/oauth2/callback
+http://localhost:8030/sfdc/callback
+https://54.193.81.58/analytics/sfdc/callback</callbackUrl>
+        <consumerKey>3MVG9y6x0357HlecqCjiev3mzqpxEFiKAZX7HMHJdQpzWL7hCRhOsawgZh7CzrEs71M2kbQs2ihS1Dvwa5JN3</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Getting Started Web</label>
+                <name>Getting_Started_Web</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Collaboration Web</label>
+                <name>Collaboration_Web</name>
+            </dataCategory>
+            <label>Web Client</label>
+            <name>Web_Client</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Getting Started Wall</label>
+                <name>Getting_Started_Wall</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Collaboration Wall</label>
+                <name>Collaboration_Wall</name>
+            </dataCategory>
+            <label>Wall Client</label>
+            <name>Wall_Client</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Getting Started Mobile</label>
+                <name>Getting_Started_Mobile</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Collaboration Mobile</label>
+                <name>Collaboration_Mobile</name>
+            </dataCategory>
+            <label>Mobile Client</label>
+            <name>Mobile_Client</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Getting Started Portal</label>
+                <name>Getting_Started_Portal</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Collaboration Portal</label>
+                <name>Collaboration_Portal</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Organization</label>
+                <name>Organization</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Workspace</label>
+                <name>Workspace</name>
+            </dataCategory>
+            <label>Portal Administration</label>
+            <name>Portal_Administration</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Integration</label>
+                <name>Integration</name>
+            </dataCategory>
+            <label>API</label>
+            <name>API</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+        <object>Question</object>
+    </objectUsage>
+</DataCategoryGroup>

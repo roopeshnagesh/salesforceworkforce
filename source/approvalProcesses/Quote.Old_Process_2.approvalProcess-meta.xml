@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Assistant_Controller</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Business_Development</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>VP_Customer_Success</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>VP_Finance</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>joe.gomez@bluescape.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>marcel.dubois@bluescape.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Account</field>
+        <field>Contract</field>
+        <field>AdditionalAddress</field>
+        <field>AdditionalName</field>
+        <field>BillingAddress</field>
+        <field>BillingName</field>
+        <field>rstk__Quote_csoproduct__c</field>
+        <field>Contact</field>
+        <field>CreatedBy</field>
+        <field>Description</field>
+        <field>Discount</field>
+        <field>Discounts_Total__c</field>
+        <field>Email</field>
+        <field>ExpirationDate</field>
+        <field>Fax</field>
+        <field>GrandTotal</field>
+        <field>Hardware_Total__c</field>
+        <field>LastModifiedBy</field>
+        <field>Licenses_Total__c</field>
+        <field>LineItemCount</field>
+        <field>Notes__c</field>
+        <field>Ongoing_Annual_Licensing__c</field>
+        <field>Ongoing_Licensing3__c</field>
+        <field>Ongoing_Licensing__c</field>
+        <field>Ongoing_Licensing2__c</field>
+        <field>Opportunity</field>
+        <field>Other_Costs_Total__c</field>
+        <field>Phone</field>
+        <field>rstk__Quote_rsjob__c</field>
+        <field>QuoteNumber</field>
+        <field>QuoteToAddress</field>
+        <field>QuoteToName</field>
+        <field>rstk__Quote_salesdiv__c</field>
+        <field>rstk__Quote_sohdr__c</field>
+        <field>rstk__Quote_soline__c</field>
+        <field>rstk__Quote_price__c</field>
+        <field>Services_Total__c</field>
+        <field>ShippingHandling</field>
+        <field>ShippingAddress</field>
+        <field>ShippingName</field>
+        <field>Status</field>
+        <field>Subtotal</field>
+        <field>Subtotal2__c</field>
+        <field>TotalPrice</field>
+        <field>IsSyncing</field>
+        <field>Tax</field>
+        <field>Terms2__c</field>
+        <field>Three_Year_Commitment2__c</field>
+        <field>Three_Year_Commitment__c</field>
+        <field>Total_Services_Licenses__c</field>
+        <field>Total_Services_Licenses2__c</field>
+        <field>Total_Up_Front_Investment__c</field>
+        <field>Total_Up_Front_Investment2__c</field>
+        <field>rstk__triggeroptions__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Quote_Approved_by_VP_Sales</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>fred.constantineau@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>josh.bradbury@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>sue.habernigg@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>ABS(Discounts_Total__c) != 0 || 
+Services_Total__c = 0 ||
+(ABS(Services_Total__c) != 0 &amp;&amp; Hardware_Total__c = 0) ||
+Sale_Price_Total__c &lt; List_Price_Total__c ||
+Concurrent_License_Count__c &gt; 0 || 
+NOT(ISBLANK(Notes__c))</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>VP Sales approves quote first</label>
+        <name>VP_Sales_approves_quote_first</name>
+        <rejectionActions>
+            <action>
+                <name>Quote_Rejected_by_VP_Sales</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>steve.westerman@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>VP Customer Success approves quote after VP Sales</label>
+        <name>VP_Customer_Success_approves_quote_after_VP_Sales</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Quote_Rejected_Email</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>(Non-AE or Biz Dev based Roles) 
+Approvals are needed when:
+a) Discount included
+b) No services
+c) Sale price is less than list price
+d) Only services
+e) Includes concurrent user licenses
+f) Notes need to be reviewed</description>
+    <emailTemplate>Opportunity_Quote_Approval_Process/Quote_needs_Approval</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>User.UserRole</field>
+            <operation>notEqual</operation>
+            <value>Business Development</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.UserRole</field>
+            <operation>notEqual</operation>
+            <value>Sales Executive</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Quote_Approved_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Quote_Status_Set_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Quote_Record_Type_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Quote_Status_Set_to_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Notify_Kevin_of_new_Quote_for_Approval</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Quote_Status_Set_to_In_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Old Process #2 (DO NOT ACTIVATE or EDIT)</label>
+    <recallActions>
+        <action>
+            <name>Quote_Recalled_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Quote_Status_Set_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

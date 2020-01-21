@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Manually entered field depicting the number of LFDs that could be sold as part of a partner deal --></help>
+    <label><!-- LFDs (Potential) --></label>
+    <name>LFDs_Potential_Account__c</name>
+</CustomFieldTranslation>

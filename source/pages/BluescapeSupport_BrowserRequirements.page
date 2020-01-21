@@ -1,0 +1,42 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Bluescape Browser Requirements
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                   We recommend using the latest version of Chrome, Firefox, Safari, or Edge. Blusecape tests the latest two versions of these browsers. Other popular browsers may work, but are not tested.&nbsp;<br />
+<br />
+Your browser must support WebGL and HTTPS to run Bluescape. To confirm you have WebGL support, navigate to https://webglreport.com in your browser.&nbsp;<br />
+<br />
+Bluescape&#39;s&nbsp;Meet videoconferencing service requires WebRTC support, which is only available on Chrome, Firefox, and Opera browsers. Additionally, Meet&rsquo;s screencasting feature is only available with a Chrome extension.&nbsp;<br />
+&nbsp;
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

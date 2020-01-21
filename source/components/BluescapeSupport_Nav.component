@@ -1,0 +1,110 @@
+<apex:component controller="BluescapeSupport_NavController">
+    <apex:attribute name="userName" type="String" description="Name of logged in user" />
+    <apex:attribute name="isPartner" type="Boolean" description="Whether user is considered a Partner" />
+
+    <nav class="navbar" id="supportNav">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{!$Page.BluescapeSupport_Home}">
+                        <img class="logoB" src="{!URLFOR($Resource.bluescape_logo_white)}" />
+                    </a>
+
+                    <ul class="nav navbar-nav hidden-xs hidden-sm visible-md visible-lg">
+                        <li class="menuitem"><a href="{!$Page.BluescapeSupport_Home}">Home</a></li>
+                      <!--  <li class="menuitem">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuGuides" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  Guides
+                                  <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuGuides">
+                                    <apex:repeat value="{!siteCategories}" var="cat">  
+                                        <li><a href="{!$Page.BluescapeSupport_SiteCategory}?name=Introduction%20to%20Bluescape">Introduction to Bluescape</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_SupportedDataTypes}?name=Supported%20Data%20Types">Supported Data Types</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_SmartGrid}?name=Smart%20Grid">Smart Grid</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_MeetBasics}?name=Meet%20Basics">Meet Basics</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_UsingCanvas}?name=Using%20Canvas">Using Canvas</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_CustomRole}?name=Custom%20Roles">Custom Roles</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_Page1}?name=Page1">Page 1</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_Page2}?name=Page1">Page 2</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_Page3}?name=Page1">Page 3</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_Page4}?name=Page1">Page 4</a></li>
+                                        <li><a href="{!$Page.BluescapeSupport_Page5}?name=Page1">Page 5</a></li>
+                                        </apex:repeat>  
+                                </ul>
+                            </div>
+                        </li> -->
+                        <li class="menuitem">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuResources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  Resources
+                                  <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuResources">
+                                    <li><a href="{!$Page.BluescapeSupport_Videos}">Videos</a></li>
+                                    <!-- <li><a href="{!$Page.BluescapeSupport_Templates}">Templates</a></li>  -->
+                                    <!-- <li><a href="{!$Page.BluescapeSupport_Partners}">Installations</a></li> -->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menuitem">
+                          <a href="{!$Page.BluescapeSupport_Contact}">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right pull-right">
+                        <!-- <li class="hidden-xs visible-sm visible-md visible-lg">
+                            <form class="navbar-form" id="navSearch" action="{!$Page.BluescapeSupport_SearchResults}" method="get">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" id="searchQry" name="q" class="form-control" placeholder="Search support" aria-describedby="basic-addon2" />
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button" id="searchSubmit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </li> -->
+
+                        <apex:outputPanel layout="none" rendered="{!userName == ''}">
+                            <li class="menuitem hidden-xs hidden-sm visible-md visible-lg">
+                                <a href="{!$Page.BluescapeSupport_Login}">Login/Sign Up</a>
+                            </li>
+                        </apex:outputPanel>
+
+                        <apex:outputPanel layout="none" rendered="{!userName != ''}">
+                            <li class="menuitem hidden-xs hidden-sm visible-md visible-lg">
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                      {!userName}
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a href="{!$Page.BluescapeSupport_MyCases}">My Cases</a></li>
+                                        <li><a href="{!$Site.Prefix}/secur/logout.jsp?retUrl={!$Page.BluescapeSupport_Home}">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </apex:outputPanel>
+
+                        <li class="menuitem mobile-bars visible-xs visible-sm hidden-md hidden-lg">
+                            <a class="toggle-button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        $(document).ready(() => {
+            $("#supportNav #searchSubmit").click(() => {
+                if ($("#supportNav #navSearch input").val().trim() !== "") {
+                    $("#supportNav #navSearch").submit();
+                }
+            })
+        })
+    </script>
+</apex:component>

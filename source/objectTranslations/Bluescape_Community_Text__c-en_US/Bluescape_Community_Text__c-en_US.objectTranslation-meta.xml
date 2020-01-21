@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bluescape Community Text</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bluescape Community Texts</value>
+    </caseValues>
+    <layouts>
+        <layout>Bluescape Community Text Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

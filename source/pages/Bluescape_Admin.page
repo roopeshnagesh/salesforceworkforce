@@ -1,0 +1,144 @@
+<apex:page sidebar="false" controller="BluescapeAdmin_controller" showHeader="true">
+    <apex:form >
+        <apex:sectionHeader title="Upload data from CSV file" />
+        <apex:pagemessages />
+        <apex:pageBlock >
+            <center>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>Mode</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:inputFile value="{!contentFile}" filename="{!fileContent}" />
+                        </td>
+                        <td>
+                            <apex:selectList value="{!mode}" multiselect="false" size="1">
+                                <apex:selectOption itemValue="" itemLabel="" />
+                                <apex:selectOption itemValue="videos" itemLabel="Videos" />
+                                <apex:selectOption itemValue="articles" itemLabel="Articles" />
+                                <apex:selectOption itemValue="templates" itemLabel="Templates" />
+                            </apex:selectList>
+                        </td>
+                        <td>
+                            <apex:commandButton action="{!ReadFile}" value="Process File" id="readFileBtn" style="width:100px;" />
+                        </td>
+                        <td>
+                            <apex:commandButton action="{!PerformUpdate}" value="Perform Update" id="performUpdateBtn" style="width:100px;" />
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <font color="red"> <b>Note: Please use the standard template to upload content. </b> </font>
+            </center>
+
+            <apex:pageblocktable value="{!videoContentItems}" var="item" rendered="{!mode == 'videos'}">
+                <apex:column headerValue="Changed">
+                    {!item.changed}
+                </apex:column>
+                <apex:column headerValue="Found">
+                    {!item.record != null}
+                </apex:column>
+                <apex:column headerValue="Title">
+                    {!item.title}
+                </apex:column>
+                <apex:column headerValue="URL">
+                    {!item.url}
+                </apex:column>
+                <apex:column headerValue="Rating">
+                    {!item.rating}
+                </apex:column>
+                <apex:column headerValue="Site Category">
+                    {!item.siteCategory}
+                </apex:column>
+                <apex:column headerValue="Sub Category">
+                    {!item.subCategory}
+                </apex:column>
+                <apex:column headerValue="Audience">
+                    {!item.audience}
+                </apex:column>
+                <apex:column headerValue="Display Sequence">
+                    {!item.displaySequence}
+                </apex:column>
+                <apex:column headerValue="Active">
+                    {!item.active}
+                </apex:column>
+            </apex:pageblocktable>
+
+            <apex:pageblocktable value="{!articleContentItems}" var="item" rendered="{!mode == 'articles'}">
+                <apex:column headerValue="Changed">
+                    {!item.changed}
+                </apex:column>
+                <apex:column headerValue="Found">
+                    {!item.record != null}
+                </apex:column>
+                <apex:column headerValue="Title">
+                    {!item.title}
+                </apex:column>
+                <apex:column headerValue="URL">
+                    {!item.url}
+                </apex:column>
+                <apex:column headerValue="Rating">
+                    {!item.rating}
+                </apex:column>
+                <apex:column headerValue="Publish Date">
+                    {!item.publishDate}
+                </apex:column>
+                <apex:column headerValue="Format">
+                    {!item.format}
+                </apex:column>
+                <apex:column headerValue="Site Category">
+                    {!item.siteCategory}
+                </apex:column>
+                <apex:column headerValue="Sub Category">
+                    {!item.subCategory}
+                </apex:column>
+                <apex:column headerValue="Audience">
+                    {!item.audience}
+                </apex:column>
+                <apex:column headerValue="Display Sequence">
+                    {!item.displaySequence}
+                </apex:column>
+                <apex:column headerValue="Active">
+                    {!item.active}
+                </apex:column>
+            </apex:pageblocktable>
+
+            <apex:pageblocktable value="{!templateContentItems}" var="item" rendered="{!mode == 'templates'}">
+                <apex:column headerValue="Changed">
+                    {!item.changed}
+                </apex:column>
+                <apex:column headerValue="Found">
+                    {!item.record != null}
+                </apex:column>
+                <apex:column headerValue="Title">
+                    {!item.title}
+                </apex:column>
+                <apex:column headerValue="URL">
+                    {!item.url}
+                </apex:column>
+                <apex:column headerValue="Rating">
+                    {!item.rating}
+                </apex:column>
+                <apex:column headerValue="Format">
+                    {!item.format}
+                </apex:column>
+                <apex:column headerValue="Asset Type">
+                    {!item.assetType}
+                </apex:column>
+                <apex:column headerValue="Publish Date">
+                    {!item.publishDate}
+                </apex:column>
+                <apex:column headerValue="Remove">
+                    {!item.remove}
+                </apex:column>
+                <apex:column headerValue="Active">
+                    {!item.active}
+                </apex:column>
+            </apex:pageblocktable>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

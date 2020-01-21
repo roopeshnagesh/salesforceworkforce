@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Rootstock Sales Order --></help>
+    <label><!-- Rootstock Sales Order --></label>
+    <name>Sales_Order_Header__c</name>
+    <relationshipLabel><!-- RS Sales Order Extensions1x --></relationshipLabel>
+</CustomFieldTranslation>

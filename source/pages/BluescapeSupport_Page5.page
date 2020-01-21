@@ -1,0 +1,89 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Troubleshooting Errors on a Wall
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                    An error message may display when using Bluescape on a Wall due to a range of unexpected events. The most common errors are network errors; i.e., related to loss of internet connectivity.&nbsp;<br />
+<br />
+The following sections detail common errors and how to resolve them.
+<p>&nbsp;</p>
+
+<h2>W-101 and W-111 Errors</h2>
+The following errors are usually related to internal network issues:&nbsp;
+
+<ul>
+	<li>W-101: <i>Failed to establish a server connection. Contact Bluescape Customer Support at support@bluescape.com.</i></li>
+	<li>W-111: <i>Network connection lost. If the problem persists, contact your IT department.</i></li>
+</ul>
+<br />
+<b>Resolution</b>: Before contacting Bluescape Support, confirm that the controller has network connectivity with the following steps:
+
+<ul>
+	<li>Check that the ethernet cable connected to the Wall controller (i.e., the computer that is connected to the touch monitor) is not damaged and is properly plugged in. It should be plugged in to the controller on one end and the Wall&rsquo;s network port on the other end.&nbsp;</li>
+	<li>Confirm the green and orange lights next to the ethernet port on the controller are illuminated. There should be a solid green light and a blinking orange light.
+	<ul>
+		<li>If the lights on the controller are not illuminated, confirm the ethernet cable is active by plugging it into another computer and testing connectivity. On the test computer, make sure the wireless network is turned off. Then, open a browser and navigate to a website.</li>
+		<li>Restart the controller.</li>
+	</ul>
+	</li>
+</ul>
+<br />
+If you have confirmed network connectivity and the Wall still displays an error, contact Bluescape Support.
+
+<h2>W-114 Error</h2>
+The following error indicates that the Wall controller lost its connection with the Bluescape Service:&nbsp;<br />
+<br />
+W-114:&nbsp;<i>Network connection lost. Contact Bluescape Customer Support at support@bluescape.com.</i><br />
+<br />
+<b>Resolution</b>: Dismiss the error message and start or send a new workspace to the Wall.
+
+<p>&nbsp;</p>
+
+<h2>All Other Errors</h2>
+For all other errors, contact Bluescape Support.
+
+<h3>Contacting Support</h3>
+When you contact Support, be prepared to provide the following information:
+
+<ul>
+	<li>The error number of the error message that displayed</li>
+	<li>The four-digit asset number of the Wall&#39;s controller. This is located on the blue and silver Bluescape sticker on the front of the controller.</li>
+	<li>What you were doing before the error occurred.</li>
+</ul>
+<p>
+ 
+                                    </p>
+Contact Bluescape Customer Support at support@bluescape.com.
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

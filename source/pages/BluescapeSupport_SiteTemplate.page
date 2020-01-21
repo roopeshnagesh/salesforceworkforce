@@ -1,0 +1,23 @@
+<apex:page id="BluescapeSupport_SiteTemplate" controller="BluescapeSupport_SiteTemplateCtrl" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <c:BluescapeSupport_Includes />
+
+    <apex:insert name="styles" />
+
+    <c:BluescapeSupport_MobileMenu userName="{!userName}" isPartner="{!isPartner}" />
+
+    <div id="mainContent" class="content">
+
+        <c:BluescapeSupport_Nav userName="{!userName}" isPartner="{!isPartner}" />
+
+        <apex:insert name="body"/>
+
+    </div>
+
+    <c:BluescapeSupport_Footer />
+
+    <c:BluescapeSupport_AutoJavascript panelId="mainContent" />
+
+    <apex:insert name="scripts" />
+
+</apex:page>

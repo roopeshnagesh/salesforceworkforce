@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- total value of most recent closed won opp --></help>
+    <label><!-- TCV --></label>
+    <name>TCV__c</name>
+</CustomFieldTranslation>

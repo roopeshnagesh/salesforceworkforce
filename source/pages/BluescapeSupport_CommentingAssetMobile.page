@@ -1,0 +1,63 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Commenting on an Asset (Mobile)
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+          Comments in Bluescape<b>&nbsp;</b>let you leave&nbsp;notes for collaborators to see. They provide a structured approach to viewing and adding feedback, including audit history. You can comment on an asset in Bluescape Mobile, and collaborators can respond to start a conversation in a thread.<br />
+<br />
+To comment on an asset in Mobile:<br />
+&nbsp;
+<ol>
+    <li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+    <li>The workspace details screen opens. Tap the desired canvas to display its assets, or tap <b>All Workspace Contents</b> to display assets both in and outside of canvases in the workspace.</li>
+<li> Tap a workspace&nbsp;asset to expand it.</li>
+<li> From the expanded asset view, tap the speech bubble icon.</li>
+<li> The <b>Comments</b> pop-over opens. Type your comment in the field.</li>
+<li>Tap <b>Add</b>.</li>
+</ol>
+<br />
+Your comment displays with a timestamp.<br />
+
+Other collaborators can reply to the comment and start a thread.<br />
+<br />
+To reply to the comment:
+<ol>
+    <li>Tap <b>Reply</b>.</li>
+    <li>The <b>Reply to &lt;user name&gt; (Mobile)</b> pop-over opens. Type your reply in the field at the bottom.</li>
+<li>When you&#39;re finished, tap <b>Add</b>.</li>
+</ol>
+<br />
+Your reply displays in a thread.<br />
+<br />
+<b>Note</b>: As of October 2019, you cannot @mention users in a comment.
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

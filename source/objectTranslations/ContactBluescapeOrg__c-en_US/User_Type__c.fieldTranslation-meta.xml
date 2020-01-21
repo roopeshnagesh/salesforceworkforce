@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The type of User access in the Bluescape Org --></help>
+    <label><!-- User Type --></label>
+    <name>User_Type__c</name>
+    <picklistValues>
+        <masterLabel>Full</masterLabel>
+        <translation><!-- Full --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guest</masterLabel>
+        <translation><!-- Guest --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

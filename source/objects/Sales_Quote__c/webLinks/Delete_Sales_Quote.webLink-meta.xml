@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delete_Sales_Quote</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Delete Sales Quote</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://www.intacct.com/ia/acct/sforcerouter.phtml?.action=DELETE_SODOCUMENT&amp;.documentid={!Sales_Quote__c.Document_Number__c}&amp;.documenttype={!Sales_Quote__c.Document_Type__c}&amp;.sforcekey={!API.Session_ID}&amp;.endpoint={!API.Partner_Server_URL_70}&amp;.mega=shared&amp;.userentity={!$User.Intacct_Company_ID__c}&amp;.objectentity={!Sales_Quote__c.Intacct_Entity__c}&amp;.accountentity={!Sales_Quote__c.Parent_Entity__c}</url>
+</WebLink>

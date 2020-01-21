@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field covers the important historical details that drive the context for the opportunity.  What is driving this opportunity? Why are they looking at Bluescape? What internal and external factors are driving them? --></help>
+    <label><!-- Opportunity Overview --></label>
+    <name>Opportunity_Overview__c</name>
+</CustomFieldTranslation>

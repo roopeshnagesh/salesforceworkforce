@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Estimated # of screens associated with a partner -&gt; end customer deal --></help>
+    <label><!-- (Opportunity) Initial LFD Quantity --></label>
+    <name>Initial_LFD_Quantity__c</name>
+</CustomFieldTranslation>

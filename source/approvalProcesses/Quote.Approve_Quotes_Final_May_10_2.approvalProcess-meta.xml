@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Assistant_Controller</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>COO</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>VP_Customer_Success</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>VP_Finance</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>joe.gomez@bluescape.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>marcel.dubois@bluescape.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Account</field>
+        <field>Contract</field>
+        <field>AdditionalAddress</field>
+        <field>AdditionalName</field>
+        <field>BillingAddress</field>
+        <field>BillingName</field>
+        <field>rstk__Quote_csoproduct__c</field>
+        <field>Contact</field>
+        <field>CreatedBy</field>
+        <field>Description</field>
+        <field>Discount</field>
+        <field>Discounts_Total__c</field>
+        <field>Email</field>
+        <field>ExpirationDate</field>
+        <field>Fax</field>
+        <field>GrandTotal</field>
+        <field>Hardware_Total__c</field>
+        <field>LastModifiedBy</field>
+        <field>Licenses_Total__c</field>
+        <field>LineItemCount</field>
+        <field>Notes__c</field>
+        <field>Ongoing_Annual_Licensing__c</field>
+        <field>Ongoing_Licensing3__c</field>
+        <field>Ongoing_Licensing__c</field>
+        <field>Ongoing_Licensing2__c</field>
+        <field>Opportunity</field>
+        <field>Other_Costs_Total__c</field>
+        <field>Phone</field>
+        <field>rstk__Quote_rsjob__c</field>
+        <field>QuoteNumber</field>
+        <field>QuoteToAddress</field>
+        <field>QuoteToName</field>
+        <field>rstk__Quote_salesdiv__c</field>
+        <field>rstk__Quote_sohdr__c</field>
+        <field>rstk__Quote_soline__c</field>
+        <field>rstk__Quote_price__c</field>
+        <field>Services_Total__c</field>
+        <field>ShippingHandling</field>
+        <field>ShippingAddress</field>
+        <field>ShippingName</field>
+        <field>Status</field>
+        <field>Subtotal</field>
+        <field>Subtotal2__c</field>
+        <field>TotalPrice</field>
+        <field>IsSyncing</field>
+        <field>Tax</field>
+        <field>Terms2__c</field>
+        <field>Three_Year_Commitment2__c</field>
+        <field>Three_Year_Commitment__c</field>
+        <field>Total_Services_Licenses__c</field>
+        <field>Total_Services_Licenses2__c</field>
+        <field>Total_Up_Front_Investment__c</field>
+        <field>Total_Up_Front_Investment2__c</field>
+        <field>rstk__triggeroptions__c</field>
+        <field>MAX_Hardware_Discount__c</field>
+        <field>MAX_License_Discount__c</field>
+        <field>MAX_Service_Discount__c</field>
+        <field>Concurrent_License_Count__c</field>
+        <field>List_Price_Total__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Quote_Approved_by_VP_Sales</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <label>VP Sales Approval Step</label>
+        <name>VP_Sales_Approval_Step</name>
+        <rejectionActions>
+            <action>
+                <name>Quote_Rejected_by_VP_Sales</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Quote_Approved_by_VP_Customer_Sucess</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>kevin.beals@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>VP Customer Success Approval Step</label>
+        <name>VP_Customer_Success_Approval_Step</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Quote_Rejected_Email</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>elizabeth.mcglauflin@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>COO Approval Step</label>
+        <name>COO_Approval_Step</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Quote_Rejected_Email</name>
+                <type>Alert</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>(Sent to Sales Manager -&gt; VP, Cust Success -&gt; COO) 
+Approvals are needed when: 
+a) Discount is &gt;5% 
+b) Discount &gt;0% &amp; License Count &lt;100 
+c) Hardware Discount &gt;0% 
+d) Services Discount &gt;0% 
+e) Discounts Total (Legacy) &gt;$0 
+f) Notes exist 
+g) Sales Price &lt; List Price</description>
+    <emailTemplate>Opportunity_Quote_Approval_Process/Quote_needs_Approval</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>MAX_License_Discount__c &gt;0.05 || 
+MAX_Hardware_Discount__c &gt; 0.00 || 
+( 
+(MAX_License_Discount__c &gt;0.00 &amp;&amp; NOT(ISNULL(MAX_License_Discount__c))) &amp;&amp; 
+(Named_License_Count__c + Concurrent_License_Count__c ) &lt; 100 
+)|| 
+Sale_Price_Total__c &lt; List_Price_Total__c || 
+NOT(ISBLANK( Notes__c )) || 
+Discounts_Total__c &gt; 0 ||
+ MAX_Service_Discount__c &gt;0.00</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Quote_Approved_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Quote_Status_Set_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Quote_Record_Type_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Quote_Status_Set_to_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Notify_Liz_of_new_Quote_for_Approval_COO</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Quote_Status_Set_to_In_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Approve Quotes Final May 10 #2</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <recallActions>
+        <action>
+            <name>Quote_Recalled_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Quote_Status_Set_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

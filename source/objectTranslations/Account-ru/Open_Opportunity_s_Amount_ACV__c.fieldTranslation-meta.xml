@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The sum of ACV value for all open opportunities --></help>
+    <label><!-- Open Opportunity(s) Amount (ACV) --></label>
+    <name>Open_Opportunity_s_Amount_ACV__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,47 @@
+<apex:page title="Bluescape Support: Videos" controller="BluescapeSupport_VideosController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">>
+       <apex:composition template="BluescapeSupport_SiteTemplate">
+    <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    
+                        <h1>
+                             Creating a Slideshow with Present Mode
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    <p>
+                                       Bluescape&#39;s Present mode lets you create a presentation with multiple workspace assets forming the slides. Present mode mirrors traditional presentation tools, like Microsoft PowerPoint slide decks. Using slides ensures the audience is focused on the content you are currently presenting. Additionally, moving between slides with a single click allows you to continue the conversation without breaking the flow of your presentation.
+<div style="text-align: center;">&nbsp;</div>
+To use Present mode:
+<br />
+<ol>
+	<li>Select one or more assets in the workspace that&nbsp;you would like to present. You can select multiple assets using the Group Select feature described in the Adding Content to a Workspace section.</li>
+    <li>Click the arrow/"Play" button icon in the upper right menu, or&nbsp;click on the asset or group of assets to open the context menu. Click the <b>Present</b> option.&nbsp;</li>
+    <li>The assets resize to full screen mode. Use the arrows on your keyboard to move forward or backward amongst the assets similar to moving between slides.</li>
+    <li>Once you are ready to exit Present mode, click &ldquo;ESC&rdquo; on your keyboard to return to the workspace. If you accidentally exit the presentation and would like to resume from where you left off, re-entering Present mode will start the presentation at the last slide before you exited (as long as all of the assets that are part of the presentation remain selected).</li>
+</ol>
+<br />
+<b>Note</b>: Interactions with assets such as drawing and interactive browsers are disabled in Present mode. Assets are static and cannot be interacted with. 
+                                    </p>
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+        </apex:composition>
+
+</apex:page>

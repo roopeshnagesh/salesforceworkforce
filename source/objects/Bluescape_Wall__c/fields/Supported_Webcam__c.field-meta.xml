@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supported_Webcam__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If supported, select which webcam is installed on the wall</inlineHelpText>
+    <label>Supported Webcam</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Webcam__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Logitech C920</fullName>
+                <default>false</default>
+                <label>Logitech C920</label>
+            </value>
+            <value>
+                <fullName>Logitech C930</fullName>
+                <default>false</default>
+                <label>Logitech C930</label>
+            </value>
+            <value>
+                <fullName>Panasonic AW-HE2</fullName>
+                <default>false</default>
+                <label>Panasonic AW-HE2</label>
+            </value>
+            <value>
+                <fullName>Unsupported</fullName>
+                <default>false</default>
+                <label>Unsupported</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Logitech C920</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Logitech C930</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Panasonic AW-HE2</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

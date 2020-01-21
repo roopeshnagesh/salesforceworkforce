@@ -1,0 +1,392 @@
+<apex:page title="Bluescape Support: Home" controller="BluescapeSupport_HomeController" sidebar="false" showHeader="false" showChat="false" standardStylesheets="false">
+    
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+        
+        <apex:define name="styles">
+            <style type="text/css">
+                #home #welcome {
+                background-color: #F6F6F6;
+                padding: 1rem;
+                }
+                
+                #home #welcome img {
+                max-height: 30rem;
+                max-width: 100%;
+                width: auto;
+                margin: 0 auto;
+                display: block;
+                }
+                
+                #home #search {
+                margin-top: 2rem;
+                }
+                
+                #home #search input {
+                width: 100%;
+                font-weight: 200;
+                border: 1px solid #CCC;
+                }
+                
+                #home #search #navSearch {
+                padding-left: 0;
+                }
+                
+                #home #search #navSearch {
+                margin-left: 0;
+                margin-right: 0;
+                }
+                
+                #home #search #navSearch #searchSubmit .fa-search {
+                color: #FFF;
+                }
+                
+                #home #search #navSearch .input-group {
+                width: 100%;
+                }
+                
+                #home .title {
+                font-weight: 600;
+                color: #112128;
+                }
+                
+                #home .description {
+                color: #53565A;
+                }
+                
+                #home a.jump {
+                display: block;
+                font-weight: bold;
+                margin-top: 1rem;
+                font-size: 1.3rem;
+                }
+                
+                #home i {
+                color: #00B388;
+                }
+                
+                #home #latestRelease img {
+                max-width: 100%;
+                max-height: 10rem;
+                }
+                
+                #home #siteCategories .flexContainer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                }
+                
+                @media (max-width: 1199px) {
+                #home #siteCategories .title {
+                font-size: 1.5rem;
+                }
+                
+                #home #siteCategories .description {
+                font-size: 1.3rem;
+                }
+                }
+                
+                @media (min-width: 1200px) {
+                #home #siteCategories .title {
+                font-size: 1.7rem;
+                }
+                
+                #home #siteCategories .description {
+                font-size: 1.5rem;
+                }
+                
+                #home #siteCategories a.jump {
+                font-size: 1.5rem;
+                }
+                }
+                
+                #home .subsection-icon {
+                font-size: 2rem;
+                }
+                
+                #home .subsection-icon i {
+                width: 2rem;
+                display: block;
+                text-align: center;
+                }
+                
+                #home .colorRow {
+                background-color: #F6F6F6;
+                padding: 1rem;
+                }
+                
+                #home #lastSession .header {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: #BD472A;
+                margin-bottom: 1rem;
+                }
+                
+                #home #lastSession img {
+                max-width: 100%;
+                }
+                
+                #home #openSessions #lastSession img {
+                max-width: 100%;
+                }
+                
+                #home #sysStatus {
+                background-color: #E3E3E3;
+                font-size: 11px;
+                padding: 1rem 0;
+                }
+                
+                #home #sysStatus .statusLbl {
+                display: inline-block;
+                }
+                
+                #home #sysStatus .statusIcon {
+                display: inline-block;
+                }
+                
+                #home #sysStatus .statusIcon i {
+                color: {!systemStatus.color};
+                }
+                
+                #home #sysStatus .statusMsg {
+                display: inline-block;
+                }
+            </style>
+        </apex:define>
+        
+        <apex:define name="body">
+            <div id="home">
+                
+                <div id="sysStatus">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="statusLbl">System Status: </div>
+                                <div class="statusIcon"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                                <div class="statusMsg">{!systemStatus.message}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="welcome">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> -->
+                                <h1>Welcome to Bluescape Support</h1>
+                                
+                                <!-- <div class="row" id="search"> 
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+                                        <p>
+                                            Our site is currently under construction. While we work to build a new community where
+                                            you can more easily search for help and communicate with
+                                            <a href="https://fullsandbx-bluescape.cs2.force.com/support/BluescapeSupport_Contact">Support</a>, use the links below to find useful information. If you don't find what you're
+                                            looking for, reach out to support and we'll help you out.
+                                        </p>
+                             <p>
+                                 Note that you can still login and access existing case information while we work on the new community.
+                            </p>
+                                        <p>
+                                            You can also try checking out <a href="https://university.bluescape.com">Bluescape University</a>.
+                                            
+                                        </p>
+                                        <p>
+                                            <br></br><h2>Get in touch with us</h2>
+                                            <a href="{!$Page.BluescapeSupport_Contact}" class="btn btn-warning">Contact Support</a>
+                                        </p>
+                                   <!--   </div>
+                                 </div> -->
+                            <!-- </div> -->
+                    
+                            <!-- <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                                 <img src="{!URLFOR($Resource.BluescapeSupport_StaticResources, '/images/splash/benefit2_opt_wshadow.gif')}" />
+                            </div> -->
+                         </div>
+                    </div>
+               </div>
+          </div>
+    <div class="container">
+        <div class="row" id="siteCategories">
+            <div class="flexContainer">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+                    <div class="description">
+                        <h4>
+                            Introduction to Bluescape
+                        </h4>
+                        <p>
+                            Learn about our product and our vision for visual collaboration in the 21st century.
+                        </p>
+                        <a class="jump" href="{!$Page.BluescapeSupport_SiteCategory}?name=Introduction_to_Bluescape">LEARN MORE</a>
+                        <h4>Bluescape for Windows Installation Guide</h4>
+                        <p>This document instructs users how to install the Bluescape Enterprise Wall Client for Windows.</p>
+                        <a class="jump" href="https://drive.google.com/file/d/1FdcjRNetsOI2X5Z0dH0-CfZX--IoWFvR/view?usp=sharing">OPEN</a>
+
+                        <h4>Installation Guide for Bluescape Touch Displays</h4>
+                        <p>This Bluescape installation guide applies to the specific single touch display models listed in the "Certified Monitor Models and Configurations" document below. Any touch display model not listed should be verified by Bluescape to ensure its compatibility.</p>
+                        <a class="jump" href="https://drive.google.com/open?id=1SpuBOoUp5-a5mfQbX1FXuv_pp9GOEmrD">OPEN</a>
+
+                        <h4>Certified Monitor Models and Configurations</h4>
+                        <p>While remaining agnostic regarding the exact display hardware and touch technology, Bluescape does certify specific display models and configurations on which we have verified a high and supportable quality of the user experience with the Bluescape wall client software. These certified models and configurations are listed in the attached document.</p>
+                        <a class="jump" href="https://drive.google.com/open?id=10WCMns5FykDsgpBWIvbhRDapaRzh7mjj">OPEN</a>
+
+                        <h4>Bluescape Enterprise Wall Client for Windows - Hardware Recommendations</h4>
+                        <p>This document details our hardware recommendations for optimal performance when using Bluescape Enterprise Wall Client for Windows.</p>
+                        <a class="jump" href="https://drive.google.com/open?id=1d94C5_zfDQCHPUJSiIF5dVyled3GPDQr">OPEN</a>
+
+                        <h4>Quick Connect Guide for Bluescape Controllers and Single Touch Displays</h4>
+                        <p>The following table summarizes the proper connection for each display to the NVIDIA K5200 graphics card on the back of the Bluescape Controller.</p>
+                        <a class="jump" href="https://drive.google.com/open?id=1vAM7hX0_hVKzKbTDISNjZKAxhVlZFTQv">OPEN</a>
+
+                        <h4>Wall Controller Hardware Power Requirements</h4>                      
+                        <p>The small and large controllers have the following specifications relative to the physical environment that they need to be installed into. There are also network connectivity requirements that are detailed below.</p>
+                        <a class="jump" href="https://drive.google.com/open?id=14T9mP6K5rhyEuWPXOyogidNmiAZAgA2E">OPEN</a>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+                    <div class="description">
+                        <h4>
+                            Supported Data Types
+                        </h4>
+                        <p>
+                           Learn more about the data types we support and their limits here. 
+                        </p>
+                        <a class="jump" href="BluescapeSupport_SupportedDataTypes">LEARN MORE</a>
+            
+                        <h4>Bluescape Browser Requirements</h4>
+                        <p>Bluescape runs optimally on certain browsers. Learn more about our supported browsers here.</p>
+                        <a class="jump" href="BluescapeSupport_BrowserRequirements">LEARN MORE</a>
+                                    
+                        <h4>Bluescape Mobile</h4>
+                        <p>Bluescape Mobile lets you access your workspaces on your phone or tablet, making the Bluescape experience more portable and accessible.</p>
+                        <a class="jump" href="BluescapeSupport_BluescapeMobile">LEARN MORE</a>
+                        <h4>Canvas Overview</h4>
+                        <p>Canvases allow Bluescape users to segment assets into groups to better present, locate, and share content.</p>
+                        <a class="jump" href="BluescapeSupport_UsingCanvas">LEARN MORE</a>            
+ 
+                        <h4>Smart Grid Overview</h4>
+                        <p>Smart Grid allows you to format images in a persistent grid object.</p>
+                        <a class="jump" href="BluescapeSupport_SmartGrid">LEARN MORE</a>
+
+                       <h4>Using Group Select</h4>
+                        <p>You can select multiple assets with the Group Select feature.</p>
+                        <a class="jump" href="BluescapeSupport_UsingGroupSelect">LEARN MORE</a>
+                        <h4>User Roles Overview</h4>
+                        <p>User roles define access level and available functionality. Bluescape has both built-in and custom roles.</p>
+                        <a class="jump" href="BluescapeSupport_CustomRole">LEARN MORE</a>
+                        <h4>Guest User Overview</h4>
+                        <p>You can invite guest users to view or collaborate in your workspace. Guests do not have to belong to any Organization in Bluescape prior to being invited.</p>
+                        <a class="jump" href="BluescapeSupport_Page4">LEARN MORE</a>
+                        <h4>Creating a Presentation</h4>
+                        <p>Bluescape's Present mode lets you create a presentation with multiple workspace assets forming the slides.</p>
+                        <a class="jump" href="BluescapeSupport_Presenting">LEARN MORE</a>                        
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+                    <div class="description">
+                        <h4>
+                            Common Touch Gestures on a Wall
+                        </h4>
+                        <p>
+                            When a workspace is on a Wall, you interact with it via touch instead of a mouse. The touch gestures mirror those on existing touch devices like tablets and mobile phones. 
+                        </p>
+                        <a class="jump" href="BluescapeSupport_Page1">LEARN MORE</a>
+                        <h4>Setting Up Single Sign-On</h4>
+                        <p>Bluescape supports SSO via IDPs using the SAML 2.0 standard. Learn more about the process of setting up SSO for your Bluescape Organization.</p>
+                        <a class="jump" href="BluescapeSupport_SettingUpSingleSignOn">LEARN MORE</a>
+
+                        <h4>Adding Assets to a Workspace</h4>
+                        <p>You can add different types of assets to a workspace including documents, images, and web browser windows.</p>
+                        <a class="jump" href="BluescapeSupport_AddingAssets">LEARN MORE</a>
+                        <h4>Meet Video Conferencing</h4>
+                        <p>The Bluescape workspace includes Meet, a teleconferencing tool that utilizes your webcam and computer microphone to virtually communicate with collaborators.</p>
+                        <a class="jump" href="BluescapeSupport_MeetBasics">LEARN MORE</a>
+                        <h4>Troubleshooting Errors on a Wall</h4>
+                        <p>An error message may display when using Bluescape on a Wall due to a range of unexpected events.</p>
+                        <a class="jump" href="BluescapeSupport_Page5">LEARN MORE</a>
+                        <h4>Adding Collaborators to a Workspace</h4>
+                        <p>Once you’ve created a workspace, you can share it with others.</p>
+                        <a class="jump" href="BluescapeSupport_AddingCollaborators">LEARN MORE</a>
+                        <h4>
+                            HDMI Screen Sharing on a Wall
+                        </h4>
+                        <p>
+                            You can display additional video sources on the Wall if you have the proper hardware attached to a controller.
+                        </p>
+                        <a class="jump" href="BluescapeSupport_Page2">LEARN MORE</a>  
+                        <h4>
+                            Adobe Creative Cloud Plugins
+                        </h4>
+                        <p>
+                            Learn about how Bluescape and Adobe Creative Cloud work seamlessly together via plugins.   
+                        </p>
+                        <a class="jump" href="BluescapeSupport_Page3">LEARN MORE</a>                                              
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="siteCategories">
+            <div class="flexContainer">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+                    <div class="description">
+ 
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+                    <div class="description">
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+                    <div class="description">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</apex:define> 
+
+<!--  <div class="container">
+<div class="row" id="siteCategories">
+<div class="flexContainer">
+<apex:repeat value="{!siteCategories}" var="cat">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 subsection">
+<div class="row">
+<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 subsection-icon">
+<i class="fa {!cat.icon}" aria-hidden="true"></i>
+</div>
+<div class="col-xs-10 col-sm-11 col-md-11 col-lg-11">
+<div class="title">{!cat.name}</div>
+<div class="description">{!cat.description}</div>
+<div>
+<a class="jump" href="{!$Page.BluescapeSupport_SiteCategory}?name={!cat.name}">LEARN MORE</a>
+</div>
+</div>
+</div>
+</div>
+</apex:repeat>
+</div>
+</div>
+</div> -->
+
+
+
+<apex:define name="scripts">
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#welcome #searchSubmit").on("click", function() {
+            if ($("#welcome #searchQry").val().trim() !== "") {
+                $("#welcome #navSearch").submit();
+            }
+        });
+    });
+    </script>
+    
+</apex:define>
+
+</apex:composition>
+
+</apex:page>

@@ -1,0 +1,48 @@
+<apex:page sidebar="false" controller="BluescapeUserGuide_controller" showHeader="true" title="Bluescape User Guide">
+
+    <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bootstrap.css')}" />
+
+    <style type="text/css">
+        #userGuide h1 {
+          display: block;
+        }
+
+        #userGuide ul {
+          padding-left: 1rem;
+          margin-bottom: 3rem;
+        }
+
+        #userGuide ul li {
+          margin: 1rem 0;
+        }
+    </style>
+
+    <div class="container" id="userGuide">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <h1>{!siteCategory.label} Guide</h1>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+              <ul>
+                <apex:repeat value="{!siteCategory.articles}" var="article">
+                    <li><a href="{!article.url}?popup=false">{!article.title}</a></li>
+                </apex:repeat>
+              </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(() => {
+
+
+        });
+    </script>
+
+</apex:page>

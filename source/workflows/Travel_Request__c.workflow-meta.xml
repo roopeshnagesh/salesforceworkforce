@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Copy_VP_Customer_Success_on_travel_request</fullName>
+        <description>Copy VP Customer Success on travel request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Travel_Requests/Copy_VPCS_on_Travel_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Recalled_Travel_Request</fullName>
+        <description>Recalled Travel Request</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Travel_Requests/Travel_Request_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Approved_Travel_Request_to_Haworth_Travel_Agents</fullName>
+        <ccEmails>travel@bluescape.com</ccEmails>
+        <ccEmails>anne.youhana@bluescape.com</ccEmails>
+        <description>Send Approved Travel Request to Haworth Travel Agents</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Travel_Requests/Approved_Travel_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Travel_Request_Rejected</fullName>
+        <description>Travel Request Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Travel_Requests/Rejected_Travel_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Travel_Request_Submitted_for_Approval</fullName>
+        <description>Travel Request Submitted for Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Travel_Requests/Travel_Request_Submission</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Travel_Request_Status_to_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Travel Request Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Travel_Request_Status_to_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Travel Request Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Travel_Request_Status_to_Submitted</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Travel Request Status to Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Travel_Request_Status_to_Unapproved</fullName>
+        <field>Status__c</field>
+        <literalValue>Unapproved</literalValue>
+        <name>Travel Request Status to Unapproved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>

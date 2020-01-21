@@ -1,0 +1,87 @@
+<apex:page id="Partner" showHeader="false" title="Partner">
+    
+    <style>
+        head {
+            margin-bottom:50px;   
+        }
+        
+        table {
+            margin-left:180px;
+            border:#0672a6;
+        }
+
+  h1{
+      color:#12759E;
+      font-size:140%;
+      font-family:Helvetica;
+      margin-top:50px;
+      margin-left:20px;
+     
+  }
+  
+  h2{
+      color: #0672a6;
+      font-size: 130%;
+      font-family:Helvetica;
+      margin-top:40px;
+      margin-left:20px;
+ 
+  }
+
+  
+ </style>
+     <apex:composition template="PortalTemplate2"> 
+     <apex:define name="body">   
+           <table cellPadding="1" cellspacing="1" style="static:left;"> 
+              <tr>
+                <td>
+                <br></br>  
+                <apex:form id="SignIn" forceSSL="true"> 
+                    <table style="margin-left:0px;" cellPadding="5" cellspacing="5" columns="2" >
+                      <tr>
+                          <h1> Helpful Partner Resources </h1>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div style="border-style: solid; border-color: #12759E; border-width: 1px;  height: 80px; width: 190px; padding: 20px;" columns="2" >
+                                       <apex:image id="getstarted" value="{!$Resource.Getstarted}" style="width:60px; height:60px; "/>
+                                      <input type="button" style="background:#00BFFF;color:white;width:100px;height:30px; margin-top:2px; margin-left:5px;" value="Get Started" onclick="window.location = '{!$Page.PartnerResources}';"/>
+                          </div>
+                        </td>
+                        <td>
+                          <div style="border-style: solid; border-color: #12759E; border-width: 1px;  height: 80px; width: 190px; padding: 20px;" columns="2" >
+                                       <apex:image id="registerlead" value="{!$Resource.Registerlead}" style="width:60px; height:60px; "/>
+                                      <input type="button" style="background:#00BFFF;color:white;width:120px;height:30px; margin-top:2px; margin-left:5px;" value="Register a Lead" onclick="window.location = '{!$Page.PortalPartnerLeadRegistration}';"/>
+                          </div>
+                        </td>
+                       </tr> 
+                        
+<!-- 
+                          <apex:image id="events" value="{!$Resource.events}" style="width:120px; height:120px; "/> 
+                          <input type="button" style="background:#00BFFF;width:100px;height:30px; margin-top:10px;" value="Events" onclick="window.location = '{!$Page.PortalPartner}';"/>
+                          <apex:image id="news" value="{!$Resource.news}" style="width:120px; height:120px; "/> 
+                          <input type="button" style="background:#00BFFF;width:100px;height:30px; margin-top:10px;" value="News" onclick="window.location = '{!$Page.PortalPartner}';"/>
+ -->
+                </table>
+            </apex:form> 
+          </td> 
+       </tr> 
+    </table>
+
+<!--     
+          <table border="1" cellPadding="5" cellspacing="1" style="float:left; margin-top:40px;">
+             <td>
+                <h2>Latest News </h2> 
+              <body>
+                <apex:form id="LatestNews" forceSSL="true">  
+                <apex:panelGrid width="200" cellpadding="1" cellspacing="1" columns="1" bgcolor="white" style="margin:1em;">
+                 <p> Text populates from  the source Text populates from  the source Text populates from  the source Text populates from  the source .</p>
+                 </apex:panelGrid>
+                 </apex:form>
+              </body>
+            </td>
+          </table>
+ -->
+       </apex:define>
+        </apex:composition> 
+</apex:page>

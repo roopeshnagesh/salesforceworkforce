@@ -1,0 +1,94 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Common Touch Gestures on a Wall
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                    <p>When a workspace is on a Wall, you interact with it via touch instead of a mouse. The touch gestures mirror those on existing touch devices like tablets and mobile phones. Once you familiarize yourself with them, you can more effectively and easily present on a Wall.</p>
+
+<h2><br />
+Touch Gestures to Navigate the Workspace</h2>
+<br />
+There are two main gestures to navigate within the workspace on a Wall. Both are familiar and based on current and popular touch devices.<br />
+&nbsp;
+<h3>Pinch</h3>
+<br />
+Pinching the screen allows you to zoom in or zoom out of your view of the workspace. To zoom in, place your index finger and thumb on the screen and then bring them toward each other. To zoom out, reverse the motion and spread your index finger and thumb apart.<br />
+&nbsp;
+<h3>Drag</h3>
+<br />
+To move your view of the workspace, place a single finger on the background grid of the workspace and drag your finger. This moves the view of the workspace in whatever direction your finger goes. To stop, lift your finger from the screen.&nbsp;<br />
+<br />
+&nbsp;
+<h2>Touch Gestures for Interacting with Content</h2>
+<br />
+There are five touch gestures for interacting with your content on the Wall. Each gesture allows you to interact with the assets in the workspace in different ways.<br />
+&nbsp;
+<h3>Tap</h3>
+<br />
+A tap activates a button or asset. Only certain assets are actionable via tap. For example, tapping any of the side panel menu options opens them. In addition, tapping the play button on a YouTube video starts the video, or tapping on a link in the browser navigates to the new page.<br />
+<br />
+To tap, press your finger on an asset or button for less than a second and then lift it up. This gesture is the equivalent of a single click on your mouse when using a computer.&nbsp;<br />
+&nbsp;
+<h3>Long Touch</h3>
+<br />
+A long touch on an asset highlights it and opens its context menu. For example, long touching a notecard opens the text editing options, or long touching a browser opens its context menu and makes the browser &quot;live&quot; and navigable.&nbsp;<br />
+<br />
+To long touch, press your finger on an asset and hold for two seconds or more. This gesture is equivalent to the right-click on your mouse when using a computer.&nbsp;<br />
+&nbsp;
+<h3>Tap &amp; Drag</h3>
+<br />
+Tapping and dragging allows you to move an asset or highlighted group of assets.<br />
+<br />
+To tap and drag, press your finger on the asset(s), then move your finger across the screen. The asset(s) will follow your finger and move to a new location once you lift your finger from the screen. This gesture is the equivalent of clicking and dragging with your mouse when using a computer.&nbsp;<br />
+&nbsp;
+<h3>Pinch</h3>
+<br />
+Pinching an asset resizes it.<br />
+<br />
+To shrink an asset, bring your thumb and index finger together.<br />
+<br />
+To enlarge an asset, reverse the gesture and spread your thumb and index finger apart.<br />
+<br />
+<b>Note</b>: The minimum and maximum size of any given object is based upon its native resolution.
+                                    <br />
+                                    &nbsp;
+
+<h3>Group Select</h3>
+                                    <br />
+This gesture is the equivalent of the Group Select feature on the web. To group select multiple assets, frame the assets with two fingers on the upper left-hand and lower right-hand corners. &nbsp;The group is framed in a shimmering blue box. This is the selection area. You can adjust any one of your four fingers to change the selection area - the boundaries will follow wherever your fingers move.
+
+<h3>&nbsp;</h3>
+
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

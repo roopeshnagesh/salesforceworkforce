@@ -1,0 +1,177 @@
+<apex:page title="Bluescape Support: Search Results '{!searchTerm}'" controller="BluescapeSupport_SearchResultsController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #searchResults #resultCount h3 {
+                    display: block;
+                    margin-bottom: 2rem;
+                }
+
+                #searchResults #resultsContainer .nav {
+                    border-bottom: none;
+                    margin-top: 1rem;
+                    margin-bottom: 3rem;
+                }
+
+                #searchResults #resultsContainer .nav>li {
+                    margin-left: 0;
+                    margin-right: 3rem;
+                    display: inline-block;
+                }
+
+                #searchResults #resultsContainer .nav>li>a {
+                    border: none;
+                    padding: 0;
+                    font-weight: 100;
+                }
+
+                #searchResults #resultsContainer .nav>li.active>a {
+                    color: #000;
+                    border-bottom: 2px solid #000;
+                }
+
+                #searchResults #resultsContainer .item {
+                    margin-bottom: 2rem;
+                }
+
+                #searchResults #resultsContainer .item .title {
+                    font-size: 1.6rem;
+                }
+
+                #searchResults #resultsContainer .item .summary {
+                    font-size: 1.5rem;
+                    color: #444;
+                }
+
+                #searchResults #resultsContainer img.media-object {
+                    max-width: 15rem;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="searchResults" class="container">
+
+                <div class="row" id="resultCount">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <h2>Search results for `{!searchTerm}`:</h2>
+                    </div>
+                </div>
+
+                <div class="row" id="resultsContainer">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+
+                        <ul class="nav hidden-xs visible-sm visible-md visible-lg" role="tablist">
+                            <li role="presentation" class="active"><a href="#articles" aria-controls="articles" role="tab" data-toggle="tab">Articles</a></li>
+                            <li role="presentation"><a href="#videos" aria-controls="videos" role="tab" data-toggle="tab">Videos</a></li>
+                            <li role="presentation"><a href="#templates" aria-controls="templates" role="tab" data-toggle="tab">Templates</a></li>
+                        </ul>
+
+                        <select class="nav visible-xs hidden-sm hidden-md hidden-lg" role="tablist">
+                        <option value="articles" selected="selected">Articles</option>
+                        <option value="videos">Videos</option>
+                        <option value="caseStudies">Case Studies</option>
+                        <option value="templates">Templates</option>
+                    </select>
+
+                        <div class="tab-content">
+
+                            <div role="tabpanel" class="tab-pane active" id="articles">
+                                <div class="row">
+                                    <apex:repeat value="{!articles}" var="result">
+                                        <div class="col-xs-12 item">
+                                            <a type="button" href="{!$Page.BluescapeSupport_Article}?a={!result.url}">
+                                                <div class="title">{!result.title}</div>
+                                            </a>
+                                            <div class="summary">{!result.summary}</div>
+                                        </div>
+                                    </apex:repeat>
+
+                                    <apex:outputPanel layout="block" styleClass="col-xs-12 item" rendered="{!articles.size == 0}">
+                                        No articles were found.
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+
+                            
+                            <div role="tabpanel" class="tab-pane" id="videos">
+                                <div class="row">
+                                    <apex:repeat value="{!videos}" var="result">
+                                        <div class="col-xs-12 item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a type="button" href="{!$Page.BluescapeSupport_VideoPlayer}?videoId={!result.id}">
+                                                        <img class="media-object" src="{!result.imageUrl}" alt="{!result.title}" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="title">
+                                                        <a type="button" href="{!$Page.BluescapeSupport_VideoPlayer}?videoId={!result.id}">{!result.title}</a>
+                                                    </div>
+                                                    <div class="summary">
+                                                        {!result.description}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:repeat>
+
+                                    <apex:outputPanel layout="block" styleClass="col-xs-12 item" rendered="{!videos.size == 0}">
+                                        No videos were found.
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+
+                      <!--      <div role="tabpanel" class="tab-pane" id="templates">
+                                <div class="row">
+                                    <apex:repeat value="{!templates}" var="template">
+                                        <div class="col-xs-12 item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a type="button" href="{!$Page.BluescapeSupport_Template}?templateId={!template.id}">
+                                                        <img class="media-object" src="{!template.thumbnailUrl}" alt="{!template.title}" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="title">
+                                                        <a type="button" href="{!$Page.BluescapeSupport_Template}?templateId={!template.id}">{!template.title}</a>
+                                                    </div>
+                                                    <div class="summary">
+                                                        {!template.summary}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </apex:repeat>
+
+                                    <apex:outputPanel layout="block" styleClass="col-xs-12 item" rendered="{!templates.size == 0}">
+                                        No templates were found.
+                                    </apex:outputPanel>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </apex:define>
+
+        <apex:define name="scripts">
+            <script>
+                $('#searchResults #resultsContainer .nav a').click(function(e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                })
+
+                $('select.nav').change(function(e) {
+                    $('.tab-content .tab-pane').removeClass('active');
+                    $('.tab-content .tab-pane#' + $(this).val()).addClass('active');
+                });
+            </script>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

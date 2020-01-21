@@ -1,0 +1,83 @@
+<apex:page title="Bluescape Support: Introduct to Bluescape" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="IntroductionToBluescape" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <h1>
+                             What is Bluescape?
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                 <div style="text-align: center;"></div>
+<br />
+Bluescape is a visual collaboration tool designed to help people and enterprises produce their best work. It lets you interact in real time with colleagues virtually or in person with a unique set of tools that improve and streamline your existing workflows. Digital tools like note cards, pen writing, and canvases mirror traditional analog methods, while the ability to insert browser windows and web hosted content bring the internet to your fingertips.<br />
+<br />
+Bluescape is a cloud-based platform, so your work is available anywhere you have an internet connection and can be accessed simultaneously by other collaborators. Your team can work together in real-time regardless of location or time zone &ndash; you can collaborate on your terms.
+                                <p>
+                                    
+                                </p>
+                                <h2>
+                                    Where can I use Bluescape?
+                                </h2>
+                                <p>
+                                    
+                                </p>
+                                Bluescape is a &ldquo;Software-as-a-Service&rdquo; (SaaS) application. This means that all you need to access Bluescape is a computer with an internet connection and a web browser.<br />
+<br />
+In addition to the web browser, you can use Bluescape-enabled &ldquo;Walls&rdquo;, which are large touch-enabled monitors controlled by a computer and software. This creates a premium working experience in a conference room, executive briefing center, or other group space.&nbsp;Walls are ideal for presentations or working in-person with large groups.
+<p>&nbsp;</p>
+
+<h2>Using a Web Browser</h2>
+
+<p>&nbsp;</p>
+You can access Bluescape on any computer with a modern web browser. Simply go to <a href="http://portal.bluescape.com" target="_blank">https://portal.bluescape.com</a> and sign in.<br />
+<br />
+Google Chrome is the recommended browser for Bluescape and allows you to utilize its full functionality. Other browsers can be used, but Meet, Bluescape's native teleconferencing tool, is currently not supported outside of Chrome.
+
+<p>&nbsp;</p>
+
+<h2>Using a Wall</h2>
+
+<p>&nbsp;</p>
+A Wall is one or more touch screen monitors that are configured to run Bluescape via a connected computer. This connected computer is referred to as a &quot;controller&quot;. It enables you to interactively create, collaborate, and present in Bluescape on the monitor(s).<br />
+<br />
+You can send your workspace to a Wall from your web browser or mobile device. This is different from screen sharing. The Wall becomes another participant in the workspace, and users can interact independently from the device that sent the workspace to the wall. On a Wall, touch actions are used to interact with workspace assets.&nbsp;<br />
+<br />
+Whether accessing Bluescape via a web browser or a Wall, the overall experience is similar. However, each medium provides its own unique benefits. One may be preferable over the other, depending on your goal.<br />
+<br />
+For example, if your work is drawing-intensive, a Wall might be better than a non-touch device.<br />
+<br />
+If you need to enter text, the Web version may be the best option since you can utilize a keyboard.<br />
+<br />
+In general, accessing a workspace via a Wall is better suited to tasks like whiteboarding, group presentations, and team-based work. The Web version is well suited for adding, organizing, and reviewing content.<br />
+
+<p>&nbsp;</p>
+
+<h2>Using Mobile Devices</h2>
+
+<p>&nbsp;</p>
+For mobile devices, we recommend using our mobile app, Bluescape Mobile. Mobile devices such as iPhones and Android smartphones can be used to access Bluescape through a web browser. However, these devices are not officially supported, so some functionality is lost. Additionally, the smaller screen does not allow for optimal visibility.<br />
+<br />
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

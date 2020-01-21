@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Dell Representative Type for targeted and specific outreach --></help>
+    <label><!-- Dell Representative Type --></label>
+    <name>Dell_Representative_Type__c</name>
+    <picklistValues>
+        <masterLabel>Account Executive</masterLabel>
+        <translation><!-- Account Executive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Technologist- Site and Field</masterLabel>
+        <translation><!-- Client Technologist- Site and Field --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dell Federal Rep</masterLabel>
+        <translation><!-- Dell Federal Rep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dell Sales Leadership Team</masterLabel>
+        <translation><!-- Dell Sales Leadership Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dell TSR/Inside Sales Reps</masterLabel>
+        <translation><!-- Dell TSR/Inside Sales Reps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federal Inside Sales Rep</masterLabel>
+        <translation><!-- Federal Inside Sales Rep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GCCS Acquisition Rep</masterLabel>
+        <translation><!-- GCCS Acquisition Rep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International Sales</masterLabel>
+        <translation><!-- International Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS- Outside Sales Specialist</masterLabel>
+        <translation><!-- OSS- Outside Sales Specialist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional Sales Director</masterLabel>
+        <translation><!-- Regional Sales Director --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

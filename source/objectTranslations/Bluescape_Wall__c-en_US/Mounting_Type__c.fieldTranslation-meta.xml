@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate whether the wall is installed on an easel or mounted on a wall --></help>
+    <label><!-- Mounting Type --></label>
+    <name>Mounting_Type__c</name>
+    <picklistValues>
+        <masterLabel>Easel</masterLabel>
+        <translation><!-- Easel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wall mounted</masterLabel>
+        <translation><!-- Wall mounted --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

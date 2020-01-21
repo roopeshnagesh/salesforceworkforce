@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is about deal strategy and not tactics.The terms tactics are the actual means used to gain an objective, while strategy is the overall campaign plan which may involve factors that lead to tactical execution --></help>
+    <label><!-- Why Buy Bluescape? --></label>
+    <name>Why_Buy_Bluescape__c</name>
+</CustomFieldTranslation>

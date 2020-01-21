@@ -1,0 +1,11 @@
+<apex:page showHeader="false" id="PortalTemplate2">
+    <!--     <apex:stylesheet value="Text"/> -->
+          <apex:insert name="header">
+            <c:PortalHeader1 />
+        </apex:insert>
+          <apex:insert name="body"/>
+          <apex:insert name="footer">
+
+        <c:PortalFooter />
+      </apex:insert>
+</apex:page>

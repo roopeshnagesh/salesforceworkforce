@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the individual with the vision and the budget. This person is an executive who usually has responsibility over large numbers of people and budgets. They should have vision and ability to make tough decisions and apply resources to those decisions. --></help>
+    <label><!-- Client Executive Sponsor --></label>
+    <name>Client_Executive_Sponsor__c</name>
+    <relationshipLabel><!-- Opportunities (Client Executive Sponsor) --></relationshipLabel>
+</CustomFieldTranslation>

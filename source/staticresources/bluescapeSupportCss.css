@@ -1,0 +1,263 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11px;
+  /*overflow-x: hidden;*/
+}
+
+.content {
+  background-color: #FFF;
+  min-height: calc(100% - 50px);
+  font-size: 1.5rem;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  display: block;
+}
+
+.content h2 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  display: block;
+}
+
+.content h3 {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.content h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.content a:not(.btn) {
+  color: #0072FF;
+}
+
+.content a.btn.btn-standard {
+  color: #fff;
+  background-color: #0072FF;
+  border-color: #0072FF;
+}
+
+.content a.btn.btn-disabled {
+  color: #FFF;
+  background-color: #CCC;
+  border-color: #CCC;
+}
+
+.content .section {
+  margin: 2rem 0;
+}
+
+.content .subsection {
+  margin: 2rem 0;
+}
+
+#supportNav {
+  background-color: #53565A;
+  border-color: #53565A;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+#supportNav .navbar-header {
+  width: 100%;
+}
+
+#supportNav img.logoB {
+  height: 2.2rem;
+  position: relative;
+  top: -6px;
+}
+
+#supportNav .navTitle {
+  position: relative;
+  display: inline-block;
+  left: 1rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #FFF;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#supportNav i {
+  font-size: 2rem;
+  color: #FFF;
+}
+
+#supportNav .mobile-bars {
+  margin-right: 1.5em;
+}
+
+#supportNav .navbar-toggle {
+  border: 1px solid #FFF;
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+#supportNav .navbar p.navbar-text {
+  margin: 0;
+}
+
+#supportNav .icon-bar {
+  border: 1px solid #FFF;
+}
+
+#supportNav .btn-hamburger a {
+  color: #FFF;
+}
+
+#supportNav #navSearch {
+  position: relative;
+  top: 3px;
+}
+
+#supportNav #navSearch i {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+#supportNav li, #supportNav a, #supportNav button {
+  font-size: 1.2rem;
+}
+
+#supportNav .nav>li.menuitem {
+  top: 1px;
+  color: #FFF;
+}
+
+#supportNav .nav>li.menuitem:hover, #supportNav .nav>li.menuitem:active {
+  background-color: #7A7D86;
+  color: #FFF;
+}
+
+#supportNav .nav>li.menuitem.mobile-bars:hover, #supportNav .nav>li.menuitem.mobile-bars:active {
+  background-color: transparent;
+}
+
+#supportNav .nav>li.menuitem>a {
+  color: #FFF;
+}
+
+#supportNav .nav>li.menuitem>a:hover, #supportNav .nav>li.menuitem>a:active {
+  color: #FFF;
+  background-color: transparent;
+}
+
+#supportNav .nav>li>.dropdown {
+  padding: 0;
+  margin: 0;
+}
+
+#supportNav .nav>li>.dropdown>button {
+  background: none;
+  color: #FFF;
+  border: 0;
+  border-radius: 0;
+  padding: 16px 20px 16px 20px;
+  margin: 0;
+}
+
+#supportNav .nav>li>.dropdown>button:hover, #supportNav .nav>li>.dropdown>button:active {
+  background: #7A7D86;
+  color: #FFF;
+}
+
+#supportNav .nav>li>.dropdown.open>button {
+  background: #7A7D86;
+  color: #FFF;
+}
+
+#supportNav .nav>li>.dropdown>ul.dropdown-menu {
+  background-color: #B5B7BA;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
+#supportNav .nav>li>.dropdown>ul.dropdown-menu>li {
+  background-color: #7A7D86;
+  color: #FFF;
+  margin: 0;
+}
+
+#supportNav .nav>li>.dropdown>ul.dropdown-menu>li:hover, #supportNav .nav>li>.dropdown>ul.dropdown-menu>li:active {
+  background-color: #53565A;
+}
+
+#supportNav .nav>li>.dropdown>ul.dropdown-menu>li>a {
+  padding: 14px 20px;
+  color: #FFF;
+}
+
+#supportNav .nav>li>.dropdown>ul.dropdown-menu>li>a:hover, #supportNav .nav>li>.dropdown>ul.dropdown-menu>li>a:active {
+  color: #FFF;
+  background-color: #53565A;
+}
+
+@media (min-width: 992px) {
+  #supportNav .navbar-header .navbar-right {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #supportNav .navbar-header .navbar-right {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+#menu {
+  background-color: #112128;
+  color: #F0F0EE;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#menu .userInfo {
+  border-bottom: 1px solid #B5B7BA;
+  padding: 1rem 0;
+}
+
+#menu .userInfo i {
+  font-size: 2rem;
+}
+
+#menu .userInfo .col-sm-1 {
+  padding-right: 10px;
+}
+
+#menu .userInfo .username {
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+#menu .userInfo>div {
+  display: inline-block;
+}
+
+#menu .navigation .item {
+  padding: 1rem 0;
+}
+
+#menu .navigation .item a {
+  color: #F0F0EE;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Department ID --></label>
+    <name>Department_ID__c</name>
+    <picklistValues>
+        <masterLabel>CS--Customer Success</masterLabel>
+        <translation><!-- CS- - Customer Success --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSC--Customer Success COGS</masterLabel>
+        <translation><!-- CSC- - Customer Success COGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EA--Executive and Administration</masterLabel>
+        <translation><!-- EA- - Executive and Administration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA--Marketng</masterLabel>
+        <translation><!-- MA- - Marketng --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SA--Sales</masterLabel>
+        <translation><!-- SA- - Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TD--Technology Development</masterLabel>
+        <translation><!-- TD- - Technology Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TDC--Technology Development COGS</masterLabel>
+        <translation><!-- TDC- - Technology Development COGS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

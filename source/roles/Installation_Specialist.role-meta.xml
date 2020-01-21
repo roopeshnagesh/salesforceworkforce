@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Installation Specialist</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Installation Specialist</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Project_Manager_Deployment_Lead</parentRole>
+</Role>

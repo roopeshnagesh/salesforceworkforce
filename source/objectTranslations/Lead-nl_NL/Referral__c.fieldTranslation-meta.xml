@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Referral --></label>
+    <name>Referral__c</name>
+    <picklistValues>
+        <masterLabel>Ads</masterLabel>
+        <translation><!-- Ads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event</masterLabel>
+        <translation><!-- Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Friends/Colleagues</masterLabel>
+        <translation><!-- Friends/Colleagues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Search</masterLabel>
+        <translation><!-- Google Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth</masterLabel>
+        <translation><!-- Haworth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinkedIn</masterLabel>
+        <translation><!-- LinkedIn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep.</masterLabel>
+        <translation><!-- Sales Rep. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Twitter</masterLabel>
+        <translation><!-- Twitter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YouTube</masterLabel>
+        <translation><!-- YouTube --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If AHPC, indicate what type of USB card is installed --></help>
+    <label><!-- USB Card --></label>
+    <name>USB_Card__c</name>
+    <picklistValues>
+        <masterLabel>Dual 2 Port</masterLabel>
+        <translation><!-- Dual 2 Port --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single 4 Port</masterLabel>
+        <translation><!-- Single 4 Port --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

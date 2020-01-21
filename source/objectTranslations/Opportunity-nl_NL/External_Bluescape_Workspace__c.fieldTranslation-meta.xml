@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Bluescape Workspace used with the Customer in working this Oppportunity.  For access to this space see Account owner or any member of the Account Team. --></help>
+    <label><!-- External Bluescape Workspace --></label>
+    <name>External_Bluescape_Workspace__c</name>
+</CustomFieldTranslation>

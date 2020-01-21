@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Order_Header__c</fullName>
+    <description>Rootstock Sales Order</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rootstock Sales Order</inlineHelpText>
+    <label>Rootstock Sales Order</label>
+    <referenceTo>rstk__sohdr__c</referenceTo>
+    <relationshipLabel>RS Sales Order Extensions1x</relationshipLabel>
+    <relationshipName>RS_Sales_Order_Extensions1x</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- JIRA Status --></label>
+    <name>JIRA_Status__c</name>
+    <picklistValues>
+        <masterLabel>Accepted</masterLabel>
+        <translation><!-- Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed</masterLabel>
+        <translation><!-- Closed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Current Dev.</masterLabel>
+        <translation><!-- Current Dev. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivered</masterLabel>
+        <translation><!-- Delivered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Done</masterLabel>
+        <translation><!-- Done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engr. Done</masterLabel>
+        <translation><!-- Engr. Done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Final Signoff</masterLabel>
+        <translation><!-- Final Signoff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finished</masterLabel>
+        <translation><!-- Finished --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Icebox</masterLabel>
+        <translation><!-- Icebox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress</masterLabel>
+        <translation><!-- In Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In QA</masterLabel>
+        <translation><!-- In QA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initial QA</masterLabel>
+        <translation><!-- Initial QA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Merge Ready</masterLabel>
+        <translation><!-- Merge Ready --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moved to Development</masterLabel>
+        <translation><!-- Moved to Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moving to Development</masterLabel>
+        <translation><!-- Moving to Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Needs Merge</masterLabel>
+        <translation><!-- Needs Merge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Needs Review</masterLabel>
+        <translation><!-- Needs Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Reproducible</masterLabel>
+        <translation><!-- Not Reproducible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Yet Started</masterLabel>
+        <translation><!-- Not Yet Started --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open</masterLabel>
+        <translation><!-- Open --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Released</masterLabel>
+        <translation><!-- Released --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reopened</masterLabel>
+        <translation><!-- Reopened --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review Customer Issue</masterLabel>
+        <translation><!-- Review Customer Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reviewed</masterLabel>
+        <translation><!-- Reviewed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Started</masterLabel>
+        <translation><!-- Started --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To Do</masterLabel>
+        <translation><!-- To Do --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Under Review</masterLabel>
+        <translation><!-- Under Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unprioritized</masterLabel>
+        <translation><!-- Unprioritized --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

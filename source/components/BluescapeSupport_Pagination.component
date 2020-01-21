@@ -1,0 +1,43 @@
+<apex:component >
+    <apex:attribute name="pageUrl" type="String" description="Base url for links" />
+    <apex:attribute name="pageData" type="BluescapeSupport_PaginationData" description="Pagination data" />
+
+    <nav class="pull-right">
+        <ul class="pagination">
+            <apex:outputPanel layout="none" rendered="{!pageData.prevPage == null}">
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!pageData.prevPage != null}">
+                <li class="page-item">
+                    <a class="page-link" href="{!pageUrl}&p={!pageData.prevPage.pageNumber}">Previous</a>
+                </li>
+            </apex:outputPanel>
+
+            <apex:repeat value="{!pageData.pages}" var="page">
+                <apex:outputPanel layout="none" rendered="{!page.isCurrent == true}">
+                    <li class="page-item active">
+                        <span class="page-link">{!page.pageNumber}</span>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!page.isCurrent == false}">
+                    <li class="page-item">
+                        <a class="page-link" href="{!pageUrl}&p={!page.pageNumber}">{!page.pageNumber}</a>
+                    </li>
+                </apex:outputPanel>
+            </apex:repeat>
+
+            <apex:outputPanel layout="none" rendered="{!pageData.nextPage == null}">
+                <li class="page-item disabled">
+                    <span class="page-link">Next</span>
+                </li>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!pageData.nextPage != null}">
+                <li class="page-item">
+                    <a class="page-link" href="{!pageUrl}&p={!pageData.nextPage.pageNumber}">Next</a>
+                </li>
+            </apex:outputPanel>
+        </ul>
+    </nav>
+</apex:component>

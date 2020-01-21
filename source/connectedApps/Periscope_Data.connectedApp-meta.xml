@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>jason.atallah@bluescape.com</contactEmail>
+    <label>Periscope Data</label>
+    <oauthConfig>
+        <callbackUrl>https://app.periscopedata.com/salesforce_oauth</callbackUrl>
+        <consumerKey>3MVG9y6x0357HlecqCjiev3mzqhBrOJqjXsHp8AZYUoyQIWmA8.rJxosT4MyxDMzmaVtb.dWgIh45yPAz0WCO</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Api</scopes>
+    </oauthConfig>
+</ConnectedApp>

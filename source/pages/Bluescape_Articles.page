@@ -1,0 +1,170 @@
+<apex:page controller="BluescapeSupport_BaseController" showHeader="true" showChat="false" sidebar="false">
+
+   <!-- <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bluescape.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bootstrap.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bluescaperesponsive.css')}" />
+
+    <style>
+        #searchBox {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        #resultsContainer .item {
+            margin-bottom: 2rem;
+        }
+
+        #resultsContainer .item .title {
+            font-size: 1.4rem;
+            color: #017FFB;
+        }
+
+        #resultsContainer .item .summary {
+            font-size: 1.5rem;
+            color: #444;
+        }
+
+        #resultCount {
+            display: none;
+        }
+
+        #resultCount h3 {
+            display: block;
+            margin-bottom: 2rem;
+        }
+    </style>
+
+    <div class="main-wraper">
+        <div class="container">
+
+            <div class="row">
+                <div id="searchBox" class="col-sm-8 col-sm-offset-2">
+                    <h3>How Can We Help You?</h3>
+                    <div class="searchBox">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="searchInput" />
+                            <div class="input-group-addon" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="resultCount">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h3>136 results found for “message”</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="row" id="resultsContainer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function getUrlParameter(key) {
+            var re = new RegExp("([?&])" + key + "=(.*?)(&|$)", "i");
+            var match = window.location.href.match(re);
+
+            if (match) {
+                return match[2];
+            } else {
+                return undefined;
+            }
+        }
+
+        let data = {
+            articles: undefined
+        };
+
+        function loadArticles(searchTerm, cb) {
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.BluescapeArticles_controller.searchArticles}',
+                searchTerm,
+                function(articles, event) {
+                    if (event.status) {
+                        data.articles = articles
+                        cb();
+                    } else if (event.type === 'exception') {
+                        console.log(event.message + ' ' + event.where);
+                    } else {
+                        console.log(event.message);
+                    }
+                }, {
+                    escape: true
+                }
+            );
+        }
+
+        function createResultsSection(container, articles) {
+            for (i = 0; i < articles.length; i++) {
+                let article = articles[i];
+                let result =
+                    `
+                    <div class="col-md-12 item">
+                      <a type="button" href="/community/articles/Article/${article.urlName}" target="_blank">
+                        <div class="title">${article.title}</div>
+                      </a>
+                      <div class="summary">${article.summary}</div>
+                    </div>
+                `;
+                container.append(result);
+            }
+        }
+
+        function performSearch(searchTerm) {
+            if (!searchTerm) {
+                searchTerm = $('#searchInput').val().trim();
+            } else {
+                $('#searchInput').val(searchTerm.trim());
+            }
+
+            loadArticles(searchTerm.toLowerCase(), () => {
+                if (searchTerm) {
+                    $("#resultCount h3").html(`${data.articles.length} results found for “${searchTerm.toLowerCase()}”`);
+                    $("#resultCount").show();
+                } else {
+                    $("#resultCount").hide();
+                }
+
+                let resultsContainer = $("#resultsContainer");
+                resultsContainer.empty();
+
+                createResultsSection(resultsContainer, data.articles);
+            });
+        }
+
+        function clearSearch() {
+            $('#searchInput').val("");
+            performSearch();
+        }
+
+        $(document).ready(() => {
+
+            $('#searchBtn').click(function() {
+                performSearch();
+            });
+
+            $('#searchInput').on('keypress', function(e) {
+                var key = e.which;
+                if (key == 13) {
+                    performSearch();
+                    return false;
+                }
+            });
+
+            $('#clearSearch').on('click', function(e) {
+                clearSearch();
+            });
+
+            let searchTerm = getUrlParameter('q');
+
+            performSearch(searchTerm);
+        })
+    </script> -->
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:component >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap_v3, '/css/bootstrap.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.BluescapeSupport_StaticResources, '/css/font-awesome.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.BluescapeSupport_StaticResources, '/css/slideout.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.bluescapeSupportCss)}" />
+
+    <apex:includeScript value="{!URLFOR($Resource.BluescapeSupport_StaticResources, '/js/jquery-3.2.1.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.BluescapeSupport_StaticResources, '/js/slideout.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.BluescapeSupport_StaticResources, '/js/moment.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Bootstrap_v3, '/js/bootstrap.min.js')}" />
+    <apex:includeScript value="https://c.la1c1.salesforceliveagent.com/content/g/js/31.0/deployment.js" />
+
+</apex:component>

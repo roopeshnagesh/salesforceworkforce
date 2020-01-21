@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Large Format Display --></label>
+    <name>Large_Format_Display__c</name>
+    <picklistValues>
+        <masterLabel>Avocor</masterLabel>
+        <translation><!-- Avocor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dell</masterLabel>
+        <translation><!-- Dell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTaction</masterLabel>
+        <translation><!-- MultiTaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optika</masterLabel>
+        <translation><!-- Optika --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planar</masterLabel>
+        <translation><!-- Planar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ricoh</masterLabel>
+        <translation><!-- Ricoh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Windows</masterLabel>
+        <translation><!-- Windows --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

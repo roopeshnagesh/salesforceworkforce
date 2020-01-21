@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>hardware@bluescape.com</email>
+    <name>Hardware R&amp;D</name>
+    <queueMembers>
+        <users>
+            <user>ping.huang@bluescape.com</user>
+            <user>roger.rudoff@bluescape.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>KnowledgeArticleVersion</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Other_Sales_Document__c</sobjectType>
+    </queueSobject>
+</Queue>

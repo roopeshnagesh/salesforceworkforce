@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Orders</value>
+    </caseValues>
+    <layouts>
+        <layout>Sales Order Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Install Date must be filled for Status = Installed --></errorMessage>
+        <name>Install_Date_for_Status_Installed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Launch Call Date must be filled for Status = Installed --></errorMessage>
+        <name>Launch_Call_Date_for_Status_Installed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Service Contract must exist for Status = Installed --></errorMessage>
+        <name>Service_Contract_required_for_Installati</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Trained Date must be filled for Status = Installed --></errorMessage>
+        <name>Trained_Date_for_Status_Installed</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Delete_Sales_Order --></label>
+        <name>Delete_Sales_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Service_Contract --></label>
+        <name>New_Service_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Old_Service_Contract --></label>
+        <name>Old_Service_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Print_Sales_Order --></label>
+        <name>Print_Sales_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_Sales_Order --></label>
+        <name>View_Sales_Order</name>
+    </webLinks>
+</CustomObjectTranslation>

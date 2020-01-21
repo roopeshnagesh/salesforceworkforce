@@ -1,0 +1,158 @@
+<apex:page title="Bluescape Support: Partners" controller="BluescapeSupport_PartnersController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #partners h2 {
+                    margin-bottom: 2rem;
+                }
+
+                #partners .article {
+                    margin-bottom: 2rem;
+                }
+
+                #partners .article .media-left {
+                    text-align: center;
+                }
+
+                #partners .article .media-left i {
+                    font-size: 4rem;
+                }
+
+                #partners .article .media-left div {
+                    font-size: 1.3rem;
+                }
+
+                #partners .article .media-body .title {
+                    font-size: 1.8rem;
+                }
+
+                #partners .article .media-body .summary {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    color: #53565A;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="partners" class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <h2>Installation Resources</h2>
+                    </div>
+                </div>
+
+                    <div class="row article">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                            <div class="media">
+								<div class="media-left">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="https://drive.google.com/file/d/1FdcjRNetsOI2X5Z0dH0-CfZX--IoWFvR/view?usp=sharing">Download</a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>
+                                        Bluescape Enterprise Wall Client for Windows Installation Guide
+                                    </h4>
+										<p>
+                                        This document instructs users how to install the Bluescape Enterprise Wall 
+                                            Client for Windows.
+                                        </p>
+                                </div>
+                                <br/>
+                                
+                                <div class="media-left">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="https://drive.google.com/open?id=1SpuBOoUp5-a5mfQbX1FXuv_pp9GOEmrD">Download</a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>
+                                        Installation Guide for Bluescape Touch Displays
+                                    </h4>
+                                    <p>
+                                        This Bluescape installation guide applies to the specific single 
+                                        touch display models listed in the "Certified Monitor Models and 
+                                        Configurations" document below. Any touch display model not listed 
+                                        should be verified by Bluescape to ensure its compatibility.
+
+                                    </p>
+                                </div>
+                                <br/>
+                                                              
+								<div class="media-left">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="https://drive.google.com/open?id=10WCMns5FykDsgpBWIvbhRDapaRzh7mjj">Download</a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>
+                                        Certified Monitor Models and Configurations
+                                    </h4>
+									<p>
+                                      While remaining agnostic regarding the exact display hardware and touch technology, 
+                                        Bluescape does certify specific display 
+                                        models and configurations on which we have verified a high and supportable quality 
+                                        of the user experience with the Bluescape wall client software. These certified 
+                                        models and configurations are listed in the attached document.     
+  
+                                    </p>
+                                </div>
+                                <br/>
+                                
+                                
+								<div class="media-left">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="https://drive.google.com/open?id=1d94C5_zfDQCHPUJSiIF5dVyled3GPDQr">Download</a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>
+                                        Bluescape Enterprise Wall Client for Windows - Hardware Recommendations
+                                    </h4>
+									<p>
+    									This document details our hardware recommendations for optimal 
+                                        performance when using Bluescape Enterprise Wall Client for Windows.
+                                    </p>
+                                </div>
+                                <br/>
+                                
+                                
+								<div class="media-left">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="https://drive.google.com/open?id=1vAM7hX0_hVKzKbTDISNjZKAxhVlZFTQv">Download</a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>
+                                        Quick Connect Guide for Bluescape Controllers and Single Touch Displays
+                                    </h4>
+                                    <p>
+                                    	The following table summarizes the proper connection for each display
+                                        to the NVIDIA K5200 graphics card on the back of the Bluescape Controller.  
+                                    </p>
+                                </div>
+                                <br/>
+                                
+                                
+								<div class="media-left">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="https://drive.google.com/open?id=14T9mP6K5rhyEuWPXOyogidNmiAZAgA2E">Download</a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>
+                                        Wall Controller Hardware Power Requirements
+                                    </h4>
+                                    <p>
+                                        The small and large controllers have the following specifications relative to the 
+                                        physical environment that they need to be installed into. There are also network 
+                                        connectivity requirements that are detailed below.
+                                    </p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

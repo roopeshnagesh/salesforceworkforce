@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When checked, record is maintained by Bluescape Portal.  Email, Last Name, First Name, &amp; Phone are locked. --></help>
+    <label><!-- Bluescape Portal User --></label>
+    <name>Bluescape_Portal_User__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Trip_Title__c</field>
+        <field>Name</field>
+        <field>Travel_Method__c</field>
+        <field>Owner</field>
+        <field>Reason__c</field>
+        <field>Departure_City_Airport__c</field>
+        <field>Destination_City_Airport__c</field>
+        <field>Departure_Date__c</field>
+        <field>Departure_Time__c</field>
+        <field>Return_Date__c</field>
+        <field>Return_Time__c</field>
+        <field>Flight_Special_Requests__c</field>
+        <field>Hotel__c</field>
+        <field>Hotel_Check_in_Date__c</field>
+        <field>Hotel_Check_out_Date__c</field>
+        <field>Hotel_Special_Requests__c</field>
+        <field>Vehicle_Needed__c</field>
+        <field>Rental_Car_Special_Requests__c</field>
+        <field>Additional_Notes__c</field>
+        <field>Status__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>andy.markham@bluescape.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Send Approval Request to VP Prod Dev</label>
+        <name>Send_Approval_Request_to_VP_Prod_Dev</name>
+    </approvalStep>
+    <description>Approved by Andy M.</description>
+    <emailTemplate>Travel_Requests/Travel_Request_Needs_to_be_Approved</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>OR(
+Owner:User.UserRole.Name = &quot;Product Manager&quot;,
+Owner:User.UserRole.Name = &quot;Product Marketing Manager&quot;,
+Owner:User.UserRole.Name = &quot;Director, Hardware Strategy &amp; Research&quot;
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Send_Approved_Travel_Request_to_Haworth_Travel_Agents</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Travel_Request_Status_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Travel_Request_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Travel_Request_Status_to_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Copy_VP_Customer_Success_on_travel_request</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Travel_Request_Status_to_Submitted</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Travel_Request_Submitted_for_Approval</name>
+            <type>Alert</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Approving a Travel Request - Product Dev</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <recallActions>
+        <action>
+            <name>Recalled_Travel_Request</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Travel_Request_Status_to_Unapproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

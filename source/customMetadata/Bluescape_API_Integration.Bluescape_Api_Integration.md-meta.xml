@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Bluescape Api Integration</label>
+    <protected>false</protected>
+    <values>
+        <field>Bearer__c</field>
+        <value xsi:type="xsd:string">Bearer</value>
+    </values>
+    <values>
+        <field>Client_ID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Client_Secret__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Error_Email__c</field>
+        <value xsi:type="xsd:string">salesforce.errors@bluescape.com</value>
+    </values>
+    <values>
+        <field>Redirect_URI__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Refresh_Token__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Token__c</field>
+        <value xsi:type="xsd:string">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQyMDEsImF1ZCI6WyIwMTVmNDgxYWNmZTQwMmM5YmFlNDM1Mzg5ZWZiYjY5MTQ5MjliZjhjIiwiNmM0MzcyMjNlM2IwOTYyYzMxZjI5ZTc5ZjBiZmRhMjllYTFhNjg5YyIsIjM2ZjhjZjUxNzVlNGZhYWE0ZjA2NzE4NDA0YjdkZjk0ZGRjMGQ4YWUiLCIwMTVmNDgxYWNmZTQwMmM5YmFlNDM1Mzg5ZWZiYjY5MTQ5MjljZTlkIl0sImV4cCI6MTU1ODU0ODkwNywiY2xpZW50VG9rZW4iOm51bGwsImF6cCI6Ijg5YWNjZTgyIiwic2NvcGVzIjpbInVzZXIiXSwibmJmIjoxNTU3MzM5Mjk3LCJpYXQiOjE1NTczMzkzMDcsImlzcyI6Imh0dHBzOi8vaWRlbnRpdHktYXBpLmFwcHMudXMuYmx1ZXNjYXBlLmNvbSJ9.I8hr-reebYnr-M1GZn-X4tIjmcphff1YnT1LkE9Gi4w</value>
+    </values>
+</CustomMetadata>

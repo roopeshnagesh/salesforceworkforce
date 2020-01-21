@@ -1,0 +1,485 @@
+<apex:page title="Bluescape Support: Custom Roles Details" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             User Roles Overview
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <p>User roles define access level and available functionality. Bluescape has&nbsp;both&nbsp;built-in and custom roles. Built-in roles are default roles provided to all Organizations. Custom roles combine different permissions of&nbsp;built-in roles, enabling greater flexibility, security, and access control.<br />
+<br />
+<b>Note</b>: Custom roles are a premium feature, and are in beta as of March 2019. Contact your Bluescape Account Representative for more information.<br />
+<br />
+There are two role levels:</p>
+
+<ul>
+	<li>Organization:&nbsp;Enables admins to manage users and Organization settings.</li>
+	<li>Workspace:&nbsp;Controls what users can do within a workspace, such as access to content and sharing permissions.</li>
+</ul>
+<br />
+                                <b>Organization Roles</b>
+                                <p>
+                                    
+                                </p>
+                                <p>There are four user types at the Organization level:</p>
+
+<ul>
+	<li>Owner</li>
+	<li>Admin</li>
+	<li>User</li>
+	<li>Guest</li>
+</ul>
+                                <p>
+                                    
+                                </p>
+
+<p>Custom Roles can be created based off of the Admin and User role types.&nbsp;<br />
+<br />
+The table below describes the permissions for each built-in Organization role.
+
+</p>
+
+<table border="1" style="width: 100%;">
+	<thead>
+		<tr>
+			<th colspan="1" rowspan="1">Built-in Role/Role Type</th>
+			<th colspan="1" rowspan="1">Definition/Permissions</th>
+			<th colspan="1" rowspan="1">Custom Roles Available?</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="1">Organization Owner</td>
+			<td colspan="1" rowspan="1">
+			<ul>
+				<li>Edit Organization Settings</li>
+				<li>Edit user name/email</li>
+				<li>Create, delete, and move workspaces they own</li>
+				<li>Add and delete Users and Admins</li>
+				<li>Upgrade Guests to Users and Users to Admins</li>
+				<li>Downgrade Admins to Users</li>
+				<li>Approve Guest invites</li>
+				<li>Delete Guests</li>
+				<li>Create custom roles at the Organization and Workspace levels&nbsp;</li>
+			</ul>
+			<b>Note</b>: Workspaces owned by users removed from the Organization are transferred to the Organization Owner.</td>
+			<td colspan="1" rowspan="1">No</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Admin</td>
+			<td colspan="1" rowspan="1">Admins have the same permissions as an Organization Owner (listed above).</td>
+			<td colspan="1" rowspan="1">Yes; Admin type custom roles.</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">User</td>
+			<td colspan="1" rowspan="1">&nbsp;
+			<ul>
+				<li>Create, delete, and move workspaces</li>
+				<li>View user lists, but not add or remove other users to the Organization</li>
+			</ul>
+			</td>
+			<td colspan="1" rowspan="1">Yes; User type custom roles.</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Guest</td>
+			<td colspan="1" rowspan="1">Guests are users outside of the team or company that have been added as workspace collaborators. They can only enter workspaces they have been invited to.</td>
+			<td colspan="1" rowspan="1">No</td>
+		</tr>
+	</tbody>
+</table>
+                                <p>
+                                    
+                                </p>
+                                <b>Organization Permissions</b>
+                                <p>
+                                    
+                                </p>
+                                <p>&nbsp;When creating a custom Organization role, the following permissions apply. Note that the permissions available are determined by the role type you select.<br />
+<br />
+</p>
+
+<ul>
+	<li><b>Create Workspace</b>:
+
+	<ul>
+		<li>Can create and own a workspace</li>
+		<li>Can edit Workspace Settings:
+		<ul>
+			<li>Edit workspace name and description</li>
+			<li>Change a workspace to public or private</li>
+			<li>Select a default workspace role for all users in the Organization</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><b>View Public Workspace List</b>:&nbsp;Can view public workspaces on the <b>Workspaces</b> page in the portal. If this permission is not selected, users can only see the private workspaces they created or have been added to as collaborators.</li>
+	<li><b>View Organization User List</b>:&nbsp;Can view the <b>Users</b> page in the portal. If the user belongs to multiple organizations, they can switch between organizations to see the user list of each organization.</li>
+	<li><b>Manage Organization Users</b>:&nbsp;Can perform the following tasks on the <b>Users</b> page in the portal:<b>&nbsp;</b>
+	<ul>
+		<li>Upgrade Users to Admins</li>
+		<li>Downgrade Admins to Users</li>
+		<li>Upgrade Guests to Users</li>
+		<li>Downgrade Users to Guests</li>
+		<li>Add users</li>
+		<li>Remove users</li>
+		<li>Change user&#39;s first name, last name, and email</li>
+		<li>Change the roles of users within the same type. For example, a User can change a user to another User Type role, while an Admin can change a user to an Admin Type role. This includes both built-in and custom roles.&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Manage Guests</b>:&nbsp;Can perform the following tasks on the <b>Users</b> page in the portal:<b>&nbsp;</b>
+	<ul>
+		<li>Add Guests</li>
+		<li>Remove Guests</li>
+		<li>Change Guest&#39;s first name, last name, and email</li>
+		<li>Approve Guests before they join a workspace. <b>Note</b>: This permission is only available when the <b>Guest invites require admin approval checkbox</b> is selected under <b>User invite settings</b> on the <b>Organization Settings</b> page.&nbsp;</li>
+	</ul>
+	</li>
+	<li><b>Manage Workspace Roles</b>: Can create custom workspace roles and edit their permissions.</li>
+</ul>
+                                <p>
+                                    
+                                </p>
+                                <b>Workspace Roles</b>
+                                <p>
+                                    
+                                </p>
+                                <p>Workspace roles control what a user can do within a workspace.&nbsp;</p>
+
+<table border="1" style="width: 650px;">
+	<thead>
+		<tr>
+			<th colspan="1" rowspan="1" style="width: 100px;">Role Name</th>
+			<th colspan="1" rowspan="1" style="width: 350px;">Permissions (User)</th>
+			<th colspan="1" rowspan="1">Permissions (Guest)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="1">&nbsp;Workspace&nbsp; &nbsp;Owner</td>
+			<td colspan="1" rowspan="1">&nbsp;There can be only one workspace Owner. The workspace Owner can perform the following tasks:
+			<ul>
+				<li>Edit, delete, and upload content</li>
+				<li>Manage workspace collaborators&nbsp;</li>
+				<li>Select a default workspace role for public workspaces they own*</li>
+				<li>Comment on content</li>
+				<li>Edit workspace Name, Description, and Owner*</li>
+				<li>Change a workspace to public or private*</li>
+				<li>Move a workspace between Organizations*</li>
+				<li>Duplicate and delete the workspace*</li>
+			</ul>
+			* indicates a task that only workspace Owners can perform</td>
+			<td colspan="1" rowspan="1">
+			<p>Guests cannot be&nbsp;Workspace Owners.&nbsp; Guests cannot create&nbsp;workspaces.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">&nbsp;Editor+ (Sharer)</td>
+			<td colspan="1" rowspan="1">&nbsp;Editors+ can perform the following tasks:
+			<ul>
+				<li>Edit, delete, or upload content</li>
+				<li>Comment on content</li>
+				<li>Edit collaborators:
+				<ul>
+					<li>Add and remove users and guests as collaborators</li>
+					<li>Change collaborator&#39;s workspace roles</li>
+				</ul>
+				</li>
+			</ul>
+			</td>
+			<td colspan="1" rowspan="1">
+			<p>&nbsp;A Guest Editor+ has all of&nbsp;the same privileges as an&nbsp;Editor+, but cannot view the list of Users in the Organization.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">&nbsp;Editor</td>
+			<td colspan="1" rowspan="1">&nbsp;Editors can perform the following tasks:
+			<ul>
+				<li>Edit, delete, or upload content</li>
+				<li>Comment on content</li>
+				<li>View (but not edit) collaborators</li>
+			</ul>
+			</td>
+			<td colspan="1" rowspan="1">
+			<p>&nbsp;A Guest Editor has all of&nbsp;the privileges of an Editor.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">&nbsp;Commenter</td>
+			<td colspan="1" rowspan="1">&nbsp;Can perform the following tasks:
+			<ul>
+				<li>View all workspace content and collaborators</li>
+				<li>Comment on content</li>
+				<li>@mention collaborators</li>
+			</ul>
+			</td>
+			<td colspan="1" rowspan="1">
+			<p>&nbsp;A Guest Commenter has&nbsp;all of the same privileges&nbsp;as a Commenter, but can&nbsp;only @mention users&nbsp;whose email address&nbsp;they&nbsp;know.</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">&nbsp;Viewer</td>
+			<td colspan="1" rowspan="1">&nbsp;Can view all workspace content and collaborators</td>
+			<td colspan="1" rowspan="1">
+			<p>&nbsp;A Guest Viewer has all of&nbsp;the same privileges as a&nbsp;Viewer.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><br />
+To view a list of permissions for each workspace&nbsp;role within the application:&nbsp;</p>
+
+<ol>
+	<li>&nbsp;Navigate to the <b>Workspaces</b> page in the portal.</li>
+	<li>&nbsp;Click the context menu of a workspace you own.</li>
+	<li>&nbsp;Click <b>Workspace Collaborators</b>. The <b>Workspace Collaborators</b> page opens.&nbsp;</li>
+    <p><b>Note</b>: You can also access the <b>Workspace Collaborators</b> page by clicking the icon next to a workspace you own.&nbsp;</p>
+    <li>Click the icon next to <b>Workspace Role</b>.</li>
+    <li>The <b>Collaborator permissions</b> pop-up window opens</li>
+</ol>
+<p>
+    
+                                </p>
+You can scroll through to read the description of each role.
+                                <p>
+                                    
+                                </p>
+                                <b>Workspace Permissions</b>
+                                <p>
+                                    
+                                </p>
+                                When creating custom workspace roles, the following permissions are available.&nbsp;<br />
+&nbsp;
+
+<ul>
+	<li><b>Workspace Content Permissions</b>: Controls if the role can view, comment, or edit workspace content. Includes the optional permissions for downloading workspace content and/or duplicating a workspace.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><b>Workspace Settings Permissions</b>: Controls if the role can view or edit workspace settings from the context menu on the <b>Workspaces</b> page in&nbsp;the portal. If <b>Edit</b> is selected, the user can perform the following tasks:
+
+	<ul>
+		<li>Edit workspace name and description</li>
+		<li>Change the workspace to public or private</li>
+		<li>Select a default workspace role for all users in the Organization</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><b>Workspace Collaborator Permissions</b>: Controls if the role can view workspace collaborators, add/edit collaborators (both users in the Organization and guests), and change their role to any workspace role. Guests have guest badges indicating their Organization role.&nbsp;</li>
+</ul>
+                                <p>
+                                    
+                                </p>
+<b>Note</b>: To prevent security issues, users can only edit workspace collaborators if they can edit workspace content.&nbsp;<br />
+<br />
+                                <p>
+                                    
+                                </p>
+                                <b>Creating Custom Organization Roles</b>
+                                <p>
+                                    
+                                </p>
+                                <p>As an Admin, you can create custom Organization roles with different combinations of Organization permissions.</p>
+
+<p>Custom Organization roles are&nbsp;based on the built-in Admin and User roles. Admins&nbsp;can manage users, settings, and workspaces. Users&nbsp;can manage workspaces but not other users.<br />
+</p>
+
+To create custom roles at the Organization level:
+<p></p>
+<ol>
+	<li>Login to Bluescape as an Organization Owner or Admin.</li>
+	<li>Click the icon to open the <b>Organization Settings</b> page in the portal.</li>
+	<li>Select an Organization from the drop-down menu.</li>
+	<li>Click the <b>+ Custom Role</b> button next to <b>Organization Roles</b>.</li>
+    <li>The <b>New organization role</b> pop-up window displays. Enter the desired role name and (optional) description.</li>
+    <li>Select whether you want the custom role to be an <b>Admin</b> or <b>User</b> type. The Workspace Permissions below automatically change based on the role type you select.</li>
+    <li>Select and deselect the desired permissions.</li>
+    <li>Click <b>Save</b>.</li>
+</ol>
+                                <p>
+                                    
+                                </p>
+                                <b>Creating Custom Workspace Roles</b>
+<p>
+    
+                                </p>
+                                <p>Admins can create custom roles&nbsp;with different combinations of workspace permissions. These permissions control what a user can do with workspace content, settings, and collaborators.<br />
+<br />
+<b>Note</b>: Custom roles are a premium feature, and are in beta as of March 2019. Contact your Bluescape account representative for more information.<br />
+<br />
+To create custom roles at the workspace level:</p>
+
+<p></p>
+
+<ol>
+	<li>Login to Bluescape as an Organization Owner or Administrator role.</li>
+	<li>Click the icon to open the&nbsp;<b>Organization Settings</b>&nbsp;page in the portal.</li>
+	<li>Select the organization you want to create custom roles for from the <b>Organization</b> dropdown.</li>
+	<li>Click the <b>+ Custom&nbsp;Role</b>&nbsp;button&nbsp;next to&nbsp;<b>Workspace Roles</b>.</li>
+	<li>The <b>New workspace role</b> pop-up opens. Enter the desired role name and (optional) description.</li>
+    <li>Select the desired workspace permissions.</li>
+    <li>Click <b>Save</b>.</li>
+</ol>
+                                <p>
+                                    
+                                </p>
+                                <b>Changing a User's Organization Role</b>
+                                <p>
+                                  
+                                </p>
+                                <p>Admins can change a user&rsquo;s Organization role to a built-in or custom role.&nbsp;<br />
+<br />
+<b>Note</b>: Custom roles are a premium feature, and are in beta as of March 2019. Contact your Bluescape account representative for more information.<br />
+<br />
+To change a user&#39;s Organization role:</p>
+
+<ol>
+	<li>Login to Bluescape as an Admin.</li>
+	<li>Navigate to the <b>Users</b> page in the portal.</li>
+	<li>Click the <b>Change Role </b>icon at the top of the screen.</li>
+</ol>
+                                <p>
+                                    
+                                </p>
+Or:
+                                <p>
+                                    
+                                </p>
+
+<ol>
+	<li>Click the right-hand context menu of the desired user.</li>
+	<li>Select <b>Change role</b>.</li>
+    <li>The <b>Change organization role</b> pop-up window opens. Use the <b>Organization Role</b> drop-down menu to select the desired role.</li>
+    <li>Click<b> Save</b>. A message displays that your change is successful.</li>
+</ol>
+<p>
+    
+                                </p>
+<p><b>Note</b>: To change a user&rsquo;s role to another User Type custom role, you must have the <b>Manage Organization Users</b> permission enabled under <b>Organization Roles. </b>To upgrade a User to an Admin Type custom role, you must be a built-in Admin.</p>
+<p>
+    
+                                </p>
+                                <b>Changing a Collaborator's Workspace Role</b>
+                                <p>
+                                    
+                                </p>
+                                <p>Workspace Owners and users with appropriate permissions can assign and edit&nbsp;the workspace&nbsp;role of individual collaborators. Collaborators can have any workspace role, including custom roles.<br />
+<br />
+                                    <b>Note</b>: As a workspace Owner, you can edit the role of any collaborator in a workspace you own. However, you can edit the roles of collaborators even in workspaces you do not own if you have the <b>Can Edit</b> option enabled under <b>Workspace Collaborator Permissions</b>.<br />
+<p>
+    
+                                </p>
+    
+                                    <p>To assign&nbsp;an individual collaborator&rsquo;s workspace role:</p>
+
+<ol>
+	<li>&nbsp;Navigate to the <b>Workspaces</b> page in the portal.</li>
+	<li>&nbsp;Click the context menu of the desired workspace.</li>
+	<li>&nbsp;Select&nbsp;<b>Workspace Collaborators</b>. The <b>Workspace Collaborators</b> page opens.&nbsp;</li>
+    <p>
+        
+    </p>
+    <p><b>Note</b>: You can also click the <b>Add Users</b> icon next to a workspace you own in the portal to access the <b>Workspace Collaborators</b> page.</p>
+    <li>Find the desired user. Click the drop-down menu in the <b>Workspace Role</b> column.</li>
+    <li>Select one of the available&nbsp;roles. Custom roles are listed after built-in roles.</li>
+</ol>
+                                <p>
+                                    
+                                </p>
+<p>                            
+<b>Note</b>: Custom roles are a premium feature, and are in beta as of March 2019. Contact your Bluescape account representative for more information.</p>
+
+<p>
+The workspace&nbsp;role is set&nbsp;for that specific user. You can change it again at any time from this page, and for any of the users in the list.<br />
+<br />
+&nbsp;To view an explanation of the workspace role permissions, you can click the question mark icon on the <b>Workspace Collaborators</b> page.<br />
+<br />
+<b>Note</b>: Existing collaborators might already have a default workspace role assigned by a workspace Owner or Admin. However, their role on the <b>Workspace Collaborators</b> page overrides their default workspace role.<br />
+<br />
+<b>Related Materials</b><br />
+<br />
+Bluescape University- <a href="https://university.bluescape.com/editing-collaborators/277576" target="_blank">Editing Collaborators</a></p>
+                                <p>
+                                    
+                                </p>
+                                <b>Batch Changing a User's Organization Role</b>
+                                <p>
+                                    
+                                </p>
+                                <p>Admins can change the Organization role of multiple users at once to a built-in or custom role.<br />
+<br />
+
+To batch change users&#39; roles:</p>
+
+<ol>
+	<li>Login to Bluescape as an Admin.</li>
+	<li>Navigate to the <b>Users</b> page in the portal.</li>
+	<li>If using a Mac, press and hold the Command&nbsp;key. If using a PC, press and hold&nbsp;the Ctrl key.</li>
+	<li>Click to select&nbsp;multiple users.&nbsp;</li>
+    <li>Click the <b>Change Role </b>icon at the top of the screen.</li>
+    <li>The <b>Change organization role</b> pop-up window opens. Use the dropdown menu to change the role for selected users to another built-in or custom Organization role.</li>
+    <li>Click <b>Save</b>. A message will display informing you that your change was successful.</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p><b>Note</b>: You must have proper permissions to change the role for the users you selected.&nbsp;To change a User&rsquo;s role, you must have the <b>Manage Organization Users</b> permission enabled under <b>Organization Roles. </b>To upgrade a User to an Admin Type custom role, you must be a built-in Organization Admin.</p>
+                                <p>
+                                    
+                                </p>
+<b>Deleting a Custom Role</b>
+                                <p>
+                                    
+                                </p>
+                                <p>Admins can delete custom roles. However, because each user must be assigned to a role, a custom role that is currently in use cannot be deleted.&nbsp;You can change the role of a user with the role you want to delete, then delete the role when it is no longer in use.<br />
+<br />
+
+To delete a custom role:</p>
+
+<ol>
+	<li>Click the Org Tree icon to open the <b>Organization Settings</b> page in the portal.</li>
+	<li>Click the right-hand context menu of the desired custom role.</li>
+    <li>Select <b>Delete</b>.</li>
+</ol>
+<p>
+    
+                                </p>
+<b>Note</b>: Built-in roles cannot be deleted.
+
+<br />
+<br />
+<br />
+                       
+                                    
+                                </p>
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

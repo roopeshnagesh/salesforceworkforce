@@ -1,0 +1,21 @@
+<apex:component id="PortalFooter">
+
+             <div>  
+                 <apex:panelGrid width="100%" columns="1" bgcolor="#D3D3D3" style="margin-top:80px; margin-left:30px; ">
+                 <apex:panelGrid width="100%" cellpadding="1" cellspacing="1" columns="3" bgcolor="#D3D3D3" style="margin-left:1px; margin-top:20px;">       
+                       <apex:outputText style="font-family:Helvetica; font-style:bold; font-weight:bold; margin-left:70px; color:#0672a6" value="SALES" />
+                       <apex:outputText style="font-family:Helvetica; font-style:bold; font-weight:bold; margin-left:100px; color:#0672a6" value="SUPPORT COMMUNITY"/>
+                       <apex:outputText style="font-family:Helvetica; font-style:bold; font-weight:bold; margin-left:100px; color:#0672a6" value="ABOUT"/>
+                       <apex:outputLink style="color:black;text-decoration:underline;background-color:transparent;font-size: 100%;font-family:Arial Unicode MS; margin-left:70px" value="mailto:sales@bluescape.com">sales@bluescape.com</apex:outputLink>
+                       <apex:outputLink style="color:black;text-decoration:underline;background-color:transparent;font-size: 100%;font-family:Arial Unicode MS; margin-left:100px" value="mailto:support@bluescape.com">support@bluescape.com</apex:outputLink>
+                       <apex:outputLink style="color:black;text-decoration:underline;background-color:transparent;font-size: 100%;font-family:Arial Unicode MS; margin-left:100px" value="https://www.bluescape.com/about/" id="theLink" target="_blank">Bluescape</apex:outputLink>
+                       <apex:outputText style="font-family:Arial Unicode MS; margin-left:70px" value="800-503-0300"/>
+                       <apex:outputText style="font-family:Arial Unicode MS; margin-left:100px" value="800-507-0057"/>
+                     <!--  <apex:outputText style="font-family:Arial Unicode MS; margin-left:100px" value=""/>
+                       <apex:outputText style="font-family:Arial Unicode MS; margin-left:100px" value=""/> -->
+                          </apex:panelgrid>
+                   <hr> </hr>
+                         <apex:outputText style="font-family:Arial Unicode MS; margin-left:500px" value="@2015 Bluescape. All rights reserved"/>
+              </apex:panelGrid>
+                </div>             
+</apex:component>

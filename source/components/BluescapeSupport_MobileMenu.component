@@ -1,0 +1,29 @@
+<apex:component >
+    <apex:attribute name="userName" type="String" description="Name of logged in user" />
+    <apex:attribute name="isPartner" type="Boolean" description="Whether user is considered a Partner" />
+
+    <nav id="menu">
+        <apex:outputPanel layout="block" styleClass="userInfo row" rendered="{!userName != ''}">
+            <div class="col-sm-12">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i> {!userName}
+            </div>
+        </apex:outputPanel>
+        <div class="navigation">
+            <apex:outputPanel layout="block" styleClass="item" rendered="{!userName != ''}">
+                <a href="{!$Site.Prefix}/secur/logout.jsp?retUrl={!$Page.BluescapeSupport_Home}">Logout</a>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" styleClass="item" rendered="{!userName == ''}">
+                <a href="{!$Page.BluescapeSupport_Login}">Login/Sign Up</a>
+            </apex:outputPanel>
+            <div class="item"><a href="{!$Page.BluescapeSupport_Home}">Home</a></div>
+            <div class="item"><a href="{!$Page.BluescapeSupport_Search}">Search</a></div>
+            <div class="item"><a href="{!$Page.BluescapeSupport_Videos}">Videos</a></div>
+            <div class="item"><a href="{!$Page.BluescapeSupport_Partners}">Installations</a></div>
+            <div class="item"><a href="{!$Page.BluescapeSupport_Contact}">Contact Us</a></div>
+
+            <apex:outputPanel layout="block" styleClass="item" rendered="{!userName != ''}">
+                <a href="{!$Page.BluescapeSupport_MyCases}">My Cases</a>
+            </apex:outputPanel>
+        </div>
+    </nav>
+</apex:component>

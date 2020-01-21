@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please indicate whether or not wall is using an AV Control System --></help>
+    <label><!-- AV Control System --></label>
+    <name>AV_Control_System__c</name>
+</CustomFieldTranslation>

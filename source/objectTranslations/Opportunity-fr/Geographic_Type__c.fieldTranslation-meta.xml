@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Geographic Type --></label>
+    <name>Geographic_Type__c</name>
+    <picklistValues>
+        <masterLabel>Local</masterLabel>
+        <translation><!-- Local --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National</masterLabel>
+        <translation><!-- National --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional</masterLabel>
+        <translation><!-- Regional --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

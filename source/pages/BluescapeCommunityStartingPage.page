@@ -1,0 +1,329 @@
+<!-- *********************************************************************
+*
+*   File Name: BluescapeCommunityStartingPage.page
+*
+*   File Description: Home page of the Bluescape Community
+*
+**************************************************************************
+*
+*   Date        Author              Change
+*   08/14/14    Rob                 Initial Creation                             
+*
+********************************************************************** -->
+
+<apex:page sidebar="false" standardStylesheets="false">
+<head>
+    <meta name="google-site-verification" content="p2jN6-6jTzWz6b92YxzhARDYKzwzcZsTxQ1Qcqya1Lc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <link href="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/css/bootstrap.min.css')}" rel="stylesheet" media="screen" />    
+    <link href="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/css/custome.css')}" rel="stylesheet" media="screen" />
+    <meta name="description" content="Welcome to the Bluescape Community! Find answers to your questions, guides, demos, and discussions here. Start engaging with other members of the Bluescape Community." />
+    <meta name="keywords" content="bluescape community, connect, create, execute, accelerate, visual, collaborative, collaborate, workplace, breakthrough, ideas, ideation, seamess, execution, insights, decisions, decision-making, transformative, transform, real-time, media, note, devices, apps, application, whitehat, security, services, screen, tablets, phone, mobile, multi-touch, touch, display, obscura, haworth"/>
+    <title>Bluescape Community</title>
+</head>
+   
+
+<body>   
+    <!-- Custom Tabs Shown when Accessing Page Publicly -->
+    <apex:outputPanel rendered="{!ISPICKVAL($User.UserType,'Guest')}" >
+        <div class="zen" style="margin-bottom: 14px;">
+            <div class="zen-hasTabOrganizer zen-headerBottom brdPalette" id="tabContainer" role="navigation" >
+                <h1 class="zen-assistiveText">Tab Navigation</h1>
+                <nav>
+                    <ul class="zen-inlineList zen-tabMenu" id="tabBar">
+                        <li class="brandPrimaryBgr primaryPalette zen-active zen-firstItem primaryPalette" id="01rf00000000TZw_Tab">
+                            <a href="javascript: void(0);" class="brandPrimaryFgr" title="Bluescape Community Home">Community Home</a>
+                            <span class="zen-assistiveText">(Currently Selected)</span>
+                        </li>
+                        <li id="Knowledge_Tab">
+                            <a href="{!$Page.CommunitiesLogin}?startURL=/_ui/knowledge/ui/KnowledgeHome" title="Bluescape Community Knowledge Articles">Knowledge</a>
+                        </li>
+                        <li id="ChatterAnswers_Tab">
+                            <a href="{!$Page.CommunitiesLogin}?startURL=/_ui/chatter/service/ChatterAnswersUi" title="Bluescape Community Questions & Answers">Questions &amp; Answers</a>
+                        </li>
+                        <li id="Case_Tab">
+                            <a href="{!$Page.CommunitiesLogin}?startURL=/500/o" title="Bluescape Community Cases">Cases</a>
+                        </li>
+                        <li id="Idea_Tab">
+                            <a href="{!$Page.CommunitiesLogin}?startURL=/ideas/ideaList.apexp" title="Bluescape Community Ideas">Ideas</a>
+                        </li>
+                        <li id="Chatter_Tab">
+                            <a href="{!$Page.CommunitiesLogin}?startURL=/_ui/core/chatter/ui/ChatterPage" title="Bluescape Community Discussions">Discussions</a>
+                        </li>
+                        <li id="File_Tab">
+                            <a href="{!$Page.CommunitiesLogin}?startURL=/_ui/core/chatter/files/FileTabPage" title="Bluescape Community Files">Files</a>
+                        </li>
+                        <li id="01rE0000000VHEd_Tab">
+                          <a href="{!$Page.CommunitiesLogin}?startURL=/servlet/servlet.Integration?lid=01rE0000000VHEd&ic=1" title="Bluescape Community Blog" >Blogs</a>
+                          <!--  <a href="http://www.bluescape.com/blog/" title="Blog Tab" target="_new">Blog</a>  -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </apex:outputPanel>
+
+    <div class="container" style="text-align: left;">
+        <div class="row">                    
+            <div class="col-md-12 no_space">                        
+               <img src="{!URLFOR($Resource.bluescape_community_banner)}"  class="img-responsive" />
+            </div>
+            
+            <div class="col-md-12 no_space login_section border_separators">
+                <div class="col-md-8 no_space">
+                    
+                    <apex:outputPanel rendered="{!ISPICKVAL($User.UserType,'Guest')}" >
+                        <div class="col-md-12 border_separators" style="padding-top: 3px;">
+                            <section class="section_left">
+                                <span class="text1">Join the Bluescape Community.</span>
+                                <span class="text2">Register and join fellow Bluescapers in discussion.</span>
+                            </section>
+                            
+                            <section class="section_right"> 
+                                <input type="button" value="Log in" onclick="window.location = '{!$Page.CommunitiesLogin}';" class="blue-btns" style="margin-left:50px;" />
+                                <input type="button" value="Register" onclick="window.location = '{!$Page.CommunitiesSelfReg}';" class="blue-btns" />
+                            </section>
+                        </div>
+                    </apex:outputPanel>
+                         
+                    <div class="col-md-12 border_separators" style="padding-top: 1px;">
+                        <h3 class="third_bold_level">Featured Content</h3>
+                        
+                        <div class="col-md-6 no_space featured_item">
+                            <a href="https://www.bluescape.com/blog/project-management-software-spending-to-increase-says-new-study/" target="_blank">
+                                <section class="featured_left">
+                                    <img src="{!URLFOR($Resource.project_mgmt_blog)}" class="img-responsive" />
+                                </section>
+                                
+                                <section class="featured_right">
+                                    <span>New Study: Project Management Software Spending to Increase</span>
+                                    <span class="posted"><h6>Posted July 20, 2015</h6></span><span><h6>By Bluescape</h6></span>
+                                </section>
+                            </a>
+                        </div>
+                         
+                        <div class="col-md-6 no_space featured_item">
+                            <a href="https://www.bluescape.com/in-the-news/telecom-reseller-why-the-telephone-bias-has-got-to-go/" target="_blank">
+                                <section class="featured_left">
+                                    <img src="{!URLFOR($Resource.telecom_blog)}" class="img-responsive" />
+                                </section>
+                                <section class="featured_right">
+                                    <span>Telecom Reseller: Why the Telephone Bias Has Got to Go</span>
+                                    <span  class="posted"><h6>Posted July 13, 2015</h6></span> <span> <h6> By Bluescape</h6></span>
+                                </section>
+                            </a>
+                        </div>
+                         
+                        <div class="col-md-6 no_space featured_item">
+                            <a href="https://www.bluescape.com/blog/creating-art-and-design-in-bluescape/" target="_blank">
+                                <section class="featured_left">
+                                    <img src="{!URLFOR($Resource.artdesign)}" class="img-responsive" />
+                                </section>
+                                
+                                <section class="featured_right">
+                                    <span>Creating Art and New Designs in Bluescape</span>
+                                    <span class="posted"><h6>Posted June 18, 2015</h6></span><span><h6>By Bluescape</h6></span>
+                                </section>
+                            </a>
+                        </div> 
+                        <div class="col-md-6 no_space featured_item">
+                            <a href="https://www.bluescape.com/blog/project-management-in-bluescape/" target="_blank">
+                                <section class="featured_left">
+                                    <img src="{!URLFOR($Resource.pmpcalendar)}" class="img-responsive" />
+                                </section>
+                                <section class="featured_right">
+                                    <span> Project Management in a Bluescape Workspace </span>
+                                    <span class="posted"><h6>Posted June 18, 2015 </h6></span> <span><h6> By Bluescape</h6></span>
+                                </section>
+                            </a>
+                        </div>
+                    </div>  
+                                       
+                    <div class="col-md-12 border_separators featured_video_section" style="border-bottom:none;">
+                        <h3 class="third_bold_level">What's New</h3>
+                        
+                        <div class="col-md-4 featured_video">
+                            <div class="col-md-12 no_space">
+                                <img onclick="loadVideo('QxR-ARQ8ne0');" src="{!URLFOR($Resource.CopyPasteVideo)}" class="img-responsive" style="display:inline; cursor: pointer;" height='100px' width='206px' />
+                            </div>  
+                            <div class="col-md-12 no_space"> 
+                                <span class="video_content">Copy and Paste Functionality</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 featured_video">
+                            <div class="col-md-12 no_space">
+                                <img onclick="loadVideo('7-8fUBsTa8U');" src="{!URLFOR($Resource.meetatwallvideo1)}" class="img-responsive" style="display:inline; cursor: pointer;" height='100px' width='206px' />
+                            </div>  
+                            <div class="col-md-12 no_space"> 
+                                <span class="video_content">"Meet" at the Wall </span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 featured_video">
+                            <div class="col-md-12 no_space">
+                                <img onclick="loadVideo('SG9Y7GIjRIc');" src="{!URLFOR($Resource.PublishVideo1)}" class="img-responsive" style="display:inline; cursor: pointer;" height='100px' width='206px'/>
+                            </div>  
+                            <div class="col-md-12 no_space"> 
+                                <span class="video_content">Publish Your Workspace</span>
+                            </div>
+                        </div>                        
+                    </div>  
+                        
+                   <div class="col-md-12  coming_events_section no_space">                                                                  
+                        <div class="col-md-12">
+                            <div class="override">
+                                <h3 class="third_bold_level"></h3>
+                            
+                                <div class="col-md-12 no_space">
+                                    <ul class="discussons">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>   
+                    </div><div class="col-md-12 border_separators featured_video_section" style="border-bottom:none;">
+                        <h3 class="third_bold_level">Featured Videos</h3>
+                        
+                        <div class="col-md-4 featured_video">
+                            <div class="col-md-12 no_space">
+                                <img onclick="loadVideo('MMZkyZszWGs');" src="{!URLFOR($Resource.AutoFollowVideo1)}" class="img-responsive" style="display:inline; cursor: pointer;" height='100px' width='206px' />
+                            </div>  
+                            <div class="col-md-12 no_space"> 
+                                <span class="video_content">Auto Follow in the Workspace</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 featured_video">
+                            <div class="col-md-12 no_space">
+                                <img onclick="loadVideo('PX6wmOyK_Sc');" src="{!URLFOR($Resource.ProjectManagementWebinar)}" class="img-responsive" style="display:inline; cursor: pointer;" height='100px' width='206px' />
+                            </div>  
+                            <div class="col-md-12 no_space"> 
+                                <span class="video_content">Webinar: Project Management with Bluescape</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 featured_video">
+                            <div class="col-md-12 no_space">
+                                <img onclick="loadVideo('OZz6qWCT4rM');" src="{!URLFOR($Resource.community_youtube_icon)}" class="img-responsive" style="display:inline; cursor: pointer;" height='100px' width='206px'/>
+                            </div>  
+                            <div class="col-md-12 no_space"> 
+                                <span class="video_content">Bluescape Community</span>
+                            </div>
+                        </div>                        
+                    </div>  
+                </div>
+                            
+                <div class="col-md-4">                
+                    <div class="col-md-12 border_separators" style="padding-top: 9px;">
+                        <section>
+                            <h2 class="right_heads">
+
+                            </h2>
+                        </section>
+                        <div class="row trial">
+                            <section class="spot_light_left">
+                            </section>
+                            
+                            <section class="spot_light_center">
+                           
+ 
+                            </section>                       
+                        </div>
+                    </div>    
+                    
+                    <div class="col-md-12 border_separators">
+                        <h3 class="right_heads">
+                            Member Spotlight 
+                        </h3><br> </br>
+                        
+                        <div class="row spot_light">
+                            <section class="spot_light_left2">
+                                <a href="https://bluescape.force.com/community/_ui/core/userprofile/UserProfilePage?u=005E0000005bH5w&tab=sfdc.ProfilePlatformFeed"> <img src="{!URLFOR($Resource.d_dancey)}" class="img-responsive" height="100" width="100" /> </a>
+                            </section> <p><b>Danielle Dobies</b><br></br>Project Manager @ BTS</P> <!-- @JC White -->
+                            
+                            <section class="spot_light_right2"> <p> </p>
+                            <!--<h5>Welcome to the Bluescape Community!</h5> -->
+                            <h5>Danielle is a Project Manager for BTS Consulting, a training company out of Southeast Michigan. She uses Bluescape to track projects as well as develop and deliver training curriculum.</h5>
+                           
+                            </section>
+                        </div>                    
+                    </div>
+                     
+                     
+                     <!--<div class="col-md-12 no-space border_separators">-->
+                              <!--<a href="https://attendee.gotowebinar.com/register/23673955184860673?mkt_tok=3RkMMJWWfF9wsRomrfCcI63Em2iQPJWpsrB0B%2FDC18kX3RUvIbqafkz6htBZF5s8TM3DUFRJXrxP9EEITbI%3D"> <img src="{!URLFOR($Resource.webinar_nov182015_newfeatures)}" class="img-responsive" /> </a> <br> </br>-->
+             
+                               <a href="https://bluescape.force.com/community/articles/Article/Web-Release-Notes-1-11"> <img src="{!URLFOR($Resource.release1_11banner)}" class="img-responsive" /> </a> <hr style="height:2px;border:none;color:#B8B8B8;background-color:#B8B8B8;" />
+
+                    <!--</div>--> 
+                    <!-- <hr style="height:2px;border:none;color:#B8B8B8;background-color:#B8B8B8;" />
+
+                     <FORM METHOD="LINK" target="_blank" ACTION="https://bluescape.force.com/community/articles/How_To_Articles/Writing-and-drawing-with-the-browser-client"> <DIV style="position: absolute; top:560px; left:18px; width:390px; height:25px"> <INPUT TYPE="submit" class="tr_now" Value="Learn More"> </input></div> </FORM>
+                        
+                                <img src="{!URLFOR($Resource.release1_11banner)}" class="img-responsive ad" />
+ <hr style="height:2px;border:none;color:#B8B8B8;background-color:#B8B8B8;" /> -->
+                    <div class="col-md-12 no_space">
+                        <h3 class="right_heads">
+                            Twitter Live Feed
+                        </h3>
+                        <div style="padding-top: 7px;">
+                            <a class="twitter-timeline"  href="https://twitter.com/bluescaper"  data-widget-id="500024050437992450">Tweets by @bluescaper</a>
+                            <script>
+                                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                            </script>
+                        </div>
+                        
+                        <div style="width:100%; float:left; padding-top: 7px; padding-bottom: 20px;">
+                            <span class="join">Join Us</span>
+                            <div class="icons" >                                                    
+                                <li><a href="https://twitter.com/bluescaper" target="_blank"><img src="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/images/twitter.png')}" class="img-responsive" /></a></li>
+                                
+                                <li><a href="https://www.facebook.com/bluescaper" target="_blank"><img src="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/images/facebook.png')}" class="img-responsive" /></a></li>
+                                
+                                <li><a href="http://www.youtube.com/user/aaaaaaaaaaaa758" target="_blank"><img src="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/images/youtube.png')}" class="img-responsive" /></a></li>
+                                
+                                <li><a href="https://www.linkedin.com/company/bluescape-sf" target="blank"><img src="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/images/linkin.png')}" class="img-responsive" /></a></li>
+          
+                                
+                            </div> 
+                        </div>   
+                    </div>
+                </div>                
+            </div>
+        </div> 
+    </div>
+            
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="{!URLFOR($Resource.BluescapeCommunityAssets, 'BluescapeAssets/js/bootstrap.min.js')}"></script>
+    
+    <!-- Youtube Video Modal -->
+    <div class="modal fade" id="mediaModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="height: 42px;">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                </div>
+                <div class="modal-body">
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    j$ = jQuery.noConflict();
+    
+    function loadVideo(videoId){
+        var iframeCode = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '?rel="0" frameborder="0" allowfullscreen></iframe>';
+        j$('#mediaModal1 .modal-body').html(iframeCode);
+        j$('#mediaModal1').modal();
+    }
+    
+    // Clear modal contents on close so video doesn't continue playing
+    j$('#mediaModal1').on('hidden.bs.modal', function () {
+        j$('#mediaModal1 .modal-body').html('');
+    });
+    </script>
+</body>
+</apex:page>

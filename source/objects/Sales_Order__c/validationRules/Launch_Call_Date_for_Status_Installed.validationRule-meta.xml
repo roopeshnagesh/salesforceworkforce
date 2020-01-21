@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Launch_Call_Date_for_Status_Installed</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(  ISPICKVAL(Status__c, &#39;Installed&#39;),  ISBLANK(  Launch_Call_Date__c  ) , FALSE)</errorConditionFormula>
+    <errorMessage>Launch Call Date must be filled for Status = Installed</errorMessage>
+</ValidationRule>

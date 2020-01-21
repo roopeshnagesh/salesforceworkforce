@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Use Case --></label>
+    <name>Use_Case__c</name>
+    <picklistValues>
+        <masterLabel>Communication Ecosystem</masterLabel>
+        <translation><!-- Communication Ecosystem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Engagement</masterLabel>
+        <translation><!-- Customer Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Visualization &amp; Monitoring</masterLabel>
+        <translation><!-- Data Visualization &amp; Monitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Product</masterLabel>
+        <translation><!-- Design Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Software</masterLabel>
+        <translation><!-- Design Software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Storyboarding</masterLabel>
+        <translation><!-- Design Storyboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital Whiteboard</masterLabel>
+        <translation><!-- Digital Whiteboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EBC Presentation</masterLabel>
+        <translation><!-- EBC Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education &amp; Training</masterLabel>
+        <translation><!-- Education &amp; Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Software Development</masterLabel>
+        <translation><!-- Software Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

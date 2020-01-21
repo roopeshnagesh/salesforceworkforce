@@ -1,0 +1,92 @@
+<apex:page id="PartnerResources" showHeader="false" title="PartnerResources">
+    
+  <style>
+ 
+          table {
+            margin-top:1px;
+            margin-left:180px;
+            border:#0672a6;
+        }
+  
+  h1{
+      color:#000000;
+      font-size:140%;
+      font-family:Helvetica;
+      margin-top:50px;
+      margin-left:10px;
+     
+  }
+  
+  h2{
+      color:#000000;
+      font-size:140%;
+      font-family:Helvetica;
+      margin-top:50px;
+      margin-left:10px;
+  }
+
+     h3{
+      color: #0672a6;
+      font-size: 140%;
+      font-family:Helvetica;
+      margin-top:10px;
+      margin-left:0px;
+ 
+  }
+   
+ </style>
+  
+   <apex:composition template="PortalTemplate2"> 
+     <apex:define name="body">   
+        <table width="750" cellPadding="1" cellspacing="1" style="float:center; margin-top:20px;margin-left:180px;"> 
+                   <tr>
+                     <td>
+
+        <h3>Partner Resources</h3>  
+
+        <p>Bluescape is a presistent cloud-based platform for real time collaboration, making it easy for individuals
+        and teams to create, interact with, and share content on different devices.</p>
+
+</td>
+</tr>
+</table>
+
+<table  style="static:left;" cellPadding="5" cellspacing="5" columns="1" >
+<tr>
+<td>
+<h2> Videos</h2>
+
+<ul>
+<li><a target="_blank" href="https://www.youtube.com/watch?v=_aefZBbvstI">Getting Started with Bluescape wall</a></li>
+<li><a target="_blank" href="https://www.youtube.com/watch?v=3yxvr2yDR_k">Everything is Connected</a></li>
+<li><a target="_blank" href="https://www.youtube.com/watch?v=QC6-nxDAtGI">Team Collaboration with Bluescape </a></li>
+
+</ul>
+
+<br/>
+
+<h2>Downloads</h2>
+<ul>
+<li><a href="{!$Resource.Getting_Started_with_Bluescape }" target="_blank">Getting Started with Bluescape</a></li>
+<li><a href="{!$Resource.Battlecard }" target="_blank">Battlecard</a></li>
+<li><a href="{!$Resource.Product_Quick_Start_Guide   }" target="_blank">Product Quick Start Guide  </a></li>
+<li><a href="{!$Resource.Designing_office_space_with_Bluescape_case_study       }" target="_blank">Designing office space with Bluescape - case study  </a></li>
+
+</ul>
+                 
+<br/>
+<br/>
+
+<span style="font-size:100%" > Please visit our <a href="https://www.youtube.com/bluescape" target="_blank" style="margin:0px">YouTube channel </a>for
+more useful videos. 
+ </span>
+
+</td>
+</tr>
+</table>
+     
+         <br/>
+
+       </apex:define>
+        </apex:composition> 
+</apex:page>

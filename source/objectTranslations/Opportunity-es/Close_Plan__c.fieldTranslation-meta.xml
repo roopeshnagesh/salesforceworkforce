@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- These are the tactical step-by-step tasks that need to be taken to execute the strategy as outlined in the How We Succeed. This might also be defined as the task plan. --></help>
+    <label><!-- Close Plan --></label>
+    <name>Close_Plan__c</name>
+</CustomFieldTranslation>

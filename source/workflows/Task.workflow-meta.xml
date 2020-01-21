@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Task_Type_to_Email</fullName>
+        <description>Change Task Type to &quot;Email&quot;</description>
+        <field>Type</field>
+        <literalValue>Email</literalValue>
+        <name>Task Type to &quot;Email&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Sales Insight Task Type</fullName>
+        <actions>
+            <name>Task_Type_to_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>startsWith</operation>
+            <value>Was Sent Sales Email:</value>
+        </criteriaItems>
+        <description>Change Task Type for all Sales Insight Emails to &quot;Email&quot; instead of Blank</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Trigger Sent Sales Email</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Created_by_Role__c</field>
+            <operation>equals</operation>
+            <value>Head of Demand Generation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>contains</operation>
+            <value>Email:</value>
+        </criteriaItems>
+        <description>(SDR) Sent Sales Email is &#39;TRUE&#39; when created role is &quot;Account Executive&quot; and subject contains &quot;Email: &quot;</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

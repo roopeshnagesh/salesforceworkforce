@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>31.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>&lt;a id=&quot;liveagent_button_online_573300000005PPe&quot; href=&quot;javascript://Chat&quot; style=&quot;display: none;&quot; onclick=&quot;liveagent.startChat(&#39;573300000005PPe&#39;)&quot;&gt;&lt;!-- Online Chat Content --&gt;&lt;/a&gt;&lt;div id=&quot;liveagent_button_offline_573300000005PPe&quot; style=&quot;display: none;&quot;&gt;&lt;!-- Offline Chat Content --&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline(&#39;573300000005PPe&#39;, document.getElementById(&#39;liveagent_button_online_573300000005PPe&#39;));
+liveagent.showWhenOffline(&#39;573300000005PPe&#39;, document.getElementById(&#39;liveagent_button_offline_573300000005PPe&#39;));</description>
+    <label>Live Agent</label>
+</ApexPage>

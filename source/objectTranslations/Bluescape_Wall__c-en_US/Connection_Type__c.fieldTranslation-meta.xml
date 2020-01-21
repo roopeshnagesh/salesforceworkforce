@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate wall network type --></help>
+    <label><!-- Connection Type --></label>
+    <name>Connection_Type__c</name>
+    <picklistValues>
+        <masterLabel>Ethernet</masterLabel>
+        <translation><!-- Ethernet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wireless</masterLabel>
+        <translation><!-- Wireless --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

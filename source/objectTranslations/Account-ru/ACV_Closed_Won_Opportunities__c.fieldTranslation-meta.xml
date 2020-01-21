@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Value of Closed Won Opportunities --></help>
+    <label><!-- Direct Account Value (ACV) --></label>
+    <name>ACV_Closed_Won_Opportunities__c</name>
+</CustomFieldTranslation>

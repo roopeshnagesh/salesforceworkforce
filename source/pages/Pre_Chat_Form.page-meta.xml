@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>31.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>The following code is for a pre-chat form that:
+Requests a visitor’s name and email address.
+Displays that information in the chat log.
+Enables mapping and auto-query, which triggers a search on the visitor’s email address when a support agent opens the CRM chatlet in the Live Agent console.
+Displays a drop-down list that enables visitors choose a different Live Chat button through which to route their chat request.</description>
+    <label>Pre-Chat Form</label>
+</ApexPage>

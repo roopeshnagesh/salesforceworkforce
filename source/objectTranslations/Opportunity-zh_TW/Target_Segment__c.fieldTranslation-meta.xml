@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Target Segment --></label>
+    <name>Target_Segment__c</name>
+    <picklistValues>
+        <masterLabel>Customer Engagement - Consulting Firms</masterLabel>
+        <translation><!-- Customer Engagement - Consulting Firms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Engagement - Product Companies</masterLabel>
+        <translation><!-- Customer Engagement - Product Companies --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation><!-- Education --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Experience Design - Broad Market Need</masterLabel>
+        <translation><!-- Experience Design - Broad Market Need --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Experience Design - Film/Entertainment</masterLabel>
+        <translation><!-- Experience Design - Film/Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Experience Design - Financial Services</masterLabel>
+        <translation><!-- Experience Design - Financial Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scientific Research - BioTech</masterLabel>
+        <translation><!-- Scientific Research - BioTech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scientific Research - Pharma</masterLabel>
+        <translation><!-- Scientific Research - Pharma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State and Local Government</masterLabel>
+        <translation><!-- State and Local Government --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visual Intelligence</masterLabel>
+        <translation><!-- Visual Intelligence --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

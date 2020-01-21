@@ -1,0 +1,109 @@
+<apex:page id="RegistrationPage" showHeader="false" title="Registration" controller="PartnerPortalController">
+
+<style>
+
+   head{
+    margin-bottom:50px;   
+   }
+
+ table {
+       margin-top:50px;
+       margin-left:280px;
+       border:#0672a6;
+}
+
+  h1{
+      color: #0672a6;
+      font-size: 130%;
+      font-family:Helvetica;
+      margin-top:40px;
+      margin-left:20px;
+ 
+  }
+  
+ </style>
+
+  <script>  
+        function createPartnerContact() {
+            createPartnerContact();
+        }
+        
+    </script>
+
+  
+    <apex:composition template="PortalTemplate"> 
+         <apex:define name="body"> 
+              <table cellPadding="1" cellspacing="1" style="static:left; border-style:solid; border-width:1.5px; "> 
+             <apex:form id="theForm" forceSSL="true">
+                   <tr>
+                     <td>
+                     <br/>
+                      <h1> Request a New Account </h1>
+                   <apex:actionFunction name="createPartnerContact" action="{!createPartnerContact}"/>
+
+                   <apex:pageMessages id="error" escape="false" showDetail="false"/>
+                   <apex:panelGrid width="600" bgcolor="white" columns="2" style="margin:1em;"> 
+                      <apex:outputLabel value="FIRST NAME *"/>
+                      <apex:outputLabel value="LAST NAME *"/>
+                      <apex:inputField value="{!partnerContact.FirstName}" ></apex:inputField>
+                      <apex:inputField value="{!partnerContact.LastName}" ></apex:inputField>
+
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value="EMAIL *"/>
+                         <apex:outputLabel value="COMPANY *"/>
+                      <apex:inputField value="{!partnerContact.Email}" ></apex:inputField>
+                      <apex:inputText value="{!company}" ></apex:inputText>
+
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+
+                         <apex:outputLabel value="JOB ROLE *"/>
+                      <apex:outputLabel value="TITLE *"/>
+                      <apex:inputField value="{!partnerContact.Job_Role__c}" ></apex:inputField>
+                      <apex:inputField value="{!partnerContact.Title}" ></apex:inputField>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                      <apex:outputLabel value="PHONE *"/>
+                      <apex:outputLabel value="ADDRESS *"/>
+                      <apex:inputField value="{!partnerContact.Phone}" ></apex:inputField>
+                      <apex:inputText value="{!addressLine}" ></apex:inputText>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                      <apex:outputLabel value="CITY *"/>
+                      <apex:outputLabel value="STATE *"/>
+                      <apex:inputField value="{!partnerContact.MailingCity}" ></apex:inputField>
+                      <apex:inputField value="{!partnerAccount.BillingStateCode}" ></apex:inputField>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                      <apex:outputLabel value="ZIP *"/>
+                      <apex:outputLabel value="COUNTRY *"/>
+                      <apex:inputField value="{!partnerContact.MailingPostalCode}" ></apex:inputField>
+                      <apex:inputField style="width:170px;" value="{!partnerAccount.BillingCountryCode}" />
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                    <apex:inputCheckbox value="{!partnerContact.Is_Haworth__c}"> Haworth </apex:inputCheckbox>
+                    <apex:inputCheckbox value="{!partnerContact.Is_JBA__c}">  Reseller  </apex:inputCheckbox>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+                      </apex:panelgrid>    
+                <apex:panelGrid width="600" bgcolor="white" columns="1" style="margin:1em; margin-top:1px;">    
+                  <p>  By clicking Register, I agree to the use of my personal information according to the Bluescape Privacy Statement. 
+                    I understand that my personal information may be transferred for processing outside my country of residence, where standards of data protection may be different. </p>
+                        <apex:outputLabel value=""/>
+                        <apex:outputLabel value=""/>
+              <input type="button" style="background:#3eb9e6;color:white;width:120px;height:40px;margin-top:10px; margin-bottom:20px;" value="Register Now" onclick="createPartnerContact();return false"/>
+              <p>  Already a partner ? <a href="{!$Page.PortalSignIn}">Sign In </a> </p>
+                   </apex:panelgrid> 
+                </td>
+                </tr>
+              </apex:form>   
+         </table>
+      </apex:define>
+    </apex:composition>  
+
+</apex:page>

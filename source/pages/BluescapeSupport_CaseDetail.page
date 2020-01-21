@@ -1,0 +1,196 @@
+<apex:page title="Bluescape Support: My Cases" controller="BluescapeSupport_CaseDetailController" sidebar="false" showHeader="false" showChat="false" standardStylesheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #caseDetail {
+                    margin-bottom: 2rem;
+                }
+
+                #caseDetail .headerRow {
+                    font-weight: bold;
+                }
+
+                #caseDetail #emails .subject {
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+
+                #caseDetail #comments .row:nth-child(2n+1),
+                #caseDetail #attachments .row:nth-child(2n+1),
+                #caseDetail #emails .row:nth-child(2n+1),
+                #caseDetail #articles .row:nth-child(2n+1) {
+                    background-color: #f9f9f9;
+                }
+
+                @media (max-width: 768px) {
+                    #caseDetail .dataRow .date {
+                        font-size: 1.2rem;
+                        font-weight: bold
+                    }
+                }
+
+                #caseDetail .actionBtns>* {
+                    display: inline-block;
+                }
+
+                #caseDetail .actionBtn {
+                    background-color: #0072FF;
+                    color: #FFF;
+                    padding: .5rem 2rem;
+                    display: inline-block;
+                    margin: 2rem 0;
+                    margin-left: 3rem;
+                }
+
+                #caseDetail .actionBtn a {
+                    color: #FFF;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="caseDetail" class="container">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1>Case #{!caseRec.CaseNumber}</h1>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>Details</h2>
+                        <table class="table table-striped table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th>Status</th>
+                                    <td>{!caseRec.Status}</td>
+                                </tr>
+                                <tr>
+                                    <th>Type</th>
+                                    <td>{!caseRec.Type}</td>
+                                </tr>
+                                <tr>
+                                    <th>Priority</th>
+                                    <td>{!caseRec.Priority}</td>
+                                </tr>
+                                <tr>
+                                    <th>Subject</th>
+                                    <td>{!caseRec.Subject}</td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>{!caseRec.Description}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <apex:outputPanel layout="block" styleClass="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="comments">
+                        <div class="actionBtns">
+                            <h2>Comments</h2>
+                            <div class="actionBtn">
+                                <a href="{!$Page.BluescapeSupport_CaseComment}?caseId={!caseRec.Id}">New Comment</a>
+                            </div>
+                        </div>
+                        <apex:outputPanel layout="block" styleClass="row headerRow hidden-xs" rendered="{!comments.size > 0}">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">Date</div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Comment By</div>
+                            <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Comment</div>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="row" rendered="{!comments.size == 0}">
+                            <div class="col-xs-12">No Comments</div>
+                        </apex:outputPanel>
+                        <apex:repeat value="{!comments}" var="comment">
+                            <div class="row dataRow">
+                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 date">{!comment.creationDate}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">{!comment.creator}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">{!comment.comment}</div>
+                            </div>
+                        </apex:repeat>
+                    </div>
+
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="block" styleClass="row" rendered="{!attachments.size > 0}">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="attachments">
+                        <h2>Attachments</h2>
+                        <div class="row headerRow hidden-xs">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">Upload Date</div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Uploaded By</div>
+                            <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">File Name</div>
+                        </div>
+                        <apex:repeat value="{!attachments}" var="attachment">
+                            <div class="row dataRow">
+                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 date">{!attachment.uploadDate}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">{!attachment.uploader}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
+                                    <apex:outputLink value="{!URLFOR($Action.Attachment.Download, attachment.id)}" target="_blank">{!attachment.title}</apex:outputLink>
+                                </div>
+                            </div>
+                        </apex:repeat>
+                    </div>
+
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="block" styleClass="row" rendered="{!emails.size > 0}">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="emails">
+                        <h2>Emails</h2>
+                        <div class="row headerRow hidden-xs">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">Email Date</div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Sent By</div>
+                            <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Message</div>
+                        </div>
+                        <apex:repeat value="{!emails}" var="email">
+                            <div class="row dataRow">
+                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 date">{!email.sendDate}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">{!email.sender}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
+                                    <div class="subject">{!email.subject}</div>
+                                    <div class="message">{!email.message}</div>
+                                </div>
+                            </div>
+                        </apex:repeat>
+                    </div>
+
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="block" styleClass="row" rendered="{!articles.size > 0}">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="articles">
+                        <h2>Articles</h2>
+                        <div class="row headerRow hidden-xs">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">Publish Date</div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">Title</div>
+                            <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">Summary</div>
+                        </div>
+                        <apex:repeat value="{!articles}" var="article">
+                            <div class="row dataRow">
+                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 date">{!article.publishDate}</div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <a href="{!$Page.BluescapeSupport_Article}?articleId={!article.id}">{!article.title}</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">{!article.summary}</div>
+                            </div>
+                        </apex:repeat>
+                    </div>
+
+                </apex:outputPanel>
+
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

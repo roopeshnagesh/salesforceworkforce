@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Article_Support_Site_Sub_Category__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Support Site Sub Category</label>
+    <referenceTo>BluescapeSupport_Site_Sub_Category__c</referenceTo>
+    <relationshipLabel>Articles</relationshipLabel>
+    <relationshipName>Knowledge_Article_Support_Site_Sub_Cate2</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the number of employees in the account that could be considered potential Bluescape users. It is used to calculate potential value of the account as well. --></help>
+    <label><!-- Potential Bluescape Customer Employees --></label>
+    <name>Potential_Bluescape_Customer_Employees__c</name>
+</CustomFieldTranslation>

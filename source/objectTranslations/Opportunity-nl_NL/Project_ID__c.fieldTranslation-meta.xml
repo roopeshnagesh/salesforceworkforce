@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Template Project ID --></label>
+    <name>Project_ID__c</name>
+    <picklistValues>
+        <masterLabel>00 Adoption Project</masterLabel>
+        <translation><!-- 00 Adoption Project --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00 Install and Confi</masterLabel>
+        <translation><!-- 00 Install and Confi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS-Initial</masterLabel>
+        <translation><!-- CS-Initial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Houston</masterLabel>
+        <translation><!-- Houston --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liz Test</masterLabel>
+        <translation><!-- Liz Test --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Customer- Channel</masterLabel>
+        <translation><!-- Customer- Channel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer- KTA</masterLabel>
+        <translation><!-- Customer- KTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner-consultant</masterLabel>
+        <translation><!-- Partner-consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner-distributor</masterLabel>
+        <translation><!-- Partner-distributor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner-reseller</masterLabel>
+        <translation><!-- Partner-reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect- Channel</masterLabel>
+        <translation><!-- Prospect- Channel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect- KTA</masterLabel>
+        <translation><!-- Prospect- KTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect- NKTA</masterLabel>
+        <translation><!-- Prospect- NKTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>other</masterLabel>
+        <translation><!-- other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

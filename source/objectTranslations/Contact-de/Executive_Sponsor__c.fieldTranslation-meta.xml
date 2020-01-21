@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The point of contact who needs to see an ROI in order to renew the organization’s contract when it is time for renewal.  This is typically someone more senior than the key contact who has the authority to fund additional service terms. --></help>
+    <label><!-- Executive Sponsor --></label>
+    <name>Executive_Sponsor__c</name>
+</CustomFieldTranslation>

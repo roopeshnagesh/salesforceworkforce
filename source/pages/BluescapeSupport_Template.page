@@ -1,0 +1,81 @@
+<apex:page title="Bluescape Support:" controller="BluescapeSupport_TemplateController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #template img {
+                    max-width: 100%;
+                }
+
+                @media (max-width: 992px) {
+                    #template .relatedTemplates h2 {
+                        display: block;
+                        background-color: #F0F0EE;
+                        margin-top: 2rem;
+                    }
+                }
+
+                #template .relatedTemplates ul {
+                    padding-left: 0;
+                    list-style: none;
+                    font-size: 1.5rem;
+                }
+
+                #template .relatedTemplates li {
+                    margin-left: 0;
+                    margin-bottom: 1rem;
+                }
+
+                #template .template {
+                    position: relative;
+                }
+
+                #template .template .templateThumbnail img {
+                    max-width: 100%;
+                }
+
+                #template .template .downloadLink {
+                    background-color: #0072FF;
+                    color: #FFF;
+                    padding: .5rem 2rem;
+                    display: inline-block;
+                    margin: 2rem 0;
+                }
+
+                #template .template .downloadLink a {
+                    color: #FFF;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="template" class="container">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7 col-lg-offset-1">
+                        <div class="template">
+                             
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="relatedTemplates">
+                            <h2>Related Templates:</h2>
+                            <ul>
+                               <!-- <apex:repeat value="{!relatedTemplates}" var="template">
+                                    <li><a href="{!$Page.BluescapeSupport_Template}?templateId={!template.id}">{!template.title}</a></li>
+                                </apex:repeat>-->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </apex:define>
+        
+    </apex:composition>
+
+</apex:page>

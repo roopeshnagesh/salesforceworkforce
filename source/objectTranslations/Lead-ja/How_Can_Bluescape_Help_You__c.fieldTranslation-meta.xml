@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to Direct new users to the correct trial --></help>
+    <label><!-- How Can Bluescape Help You? --></label>
+    <name>How_Can_Bluescape_Help_You__c</name>
+    <picklistValues>
+        <masterLabel>Deploying Bluescape with federal entities</masterLabel>
+        <translation><!-- Deploying Bluescape with federal entities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Developing new connectors and integrations</masterLabel>
+        <translation><!-- Developing new connectors and integrations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ideating and creating</masterLabel>
+        <translation><!-- Ideating and creating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting in-room and remote</masterLabel>
+        <translation><!-- Meeting in-room and remote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presentations</masterLabel>
+        <translation><!-- Presentations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storyboarding</masterLabel>
+        <translation><!-- Storyboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical evaluation of Bluescape</masterLabel>
+        <translation><!-- Technical evaluation of Bluescape --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

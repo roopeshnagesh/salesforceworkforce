@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate the speakers associated with the wall --></help>
+    <label><!-- Speaker Type --></label>
+    <name>Speaker_Type__c</name>
+    <picklistValues>
+        <masterLabel>Customer Provided</masterLabel>
+        <translation><!-- Customer Provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>External</masterLabel>
+        <translation><!-- External --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

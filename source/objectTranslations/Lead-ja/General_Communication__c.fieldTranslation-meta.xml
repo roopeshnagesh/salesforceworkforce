@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check box if lead is interested in receiving Bluescape General Communications --></help>
+    <label><!-- General Communication Opt In --></label>
+    <name>General_Communication__c</name>
+</CustomFieldTranslation>

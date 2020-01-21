@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Team_of_Renewal</fullName>
+        <description>Email Team of Renewal</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Opportunity Owner</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Executive Sponsor</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Chief_Revenue_Officer</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Finance</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>dina.joudeh@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff.smith@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>parul.sakhuja@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>All_Templates/Renewal_3_Month_Alert</template>
+    </alerts>
+    <rules>
+        <fullName>Contract Renewal 3 month alert</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Entitlement.Status</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Entitlement.Type</field>
+            <operation>equals</operation>
+            <value>User Licenses</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Entitlement.Name</field>
+            <operation>notContain</operation>
+            <value>Trial-</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Entitlement.Renewed__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_Team_of_Renewal</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Entitlement.EndDate</offsetFromField>
+            <timeLength>-90</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

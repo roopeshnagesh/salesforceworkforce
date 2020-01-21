@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_Travel_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Trip_Title__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Travel_Method__c</columns>
+    <columns>Destination_City_Airport__c</columns>
+    <columns>Departure_Date__c</columns>
+    <columns>Return_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Rejected</value>
+    </filters>
+    <label>Rejected Travel Requests</label>
+    <language>en_US</language>
+</ListView>

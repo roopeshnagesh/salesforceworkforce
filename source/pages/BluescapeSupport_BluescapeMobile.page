@@ -1,0 +1,283 @@
+<apex:page title="Bluescape Support: Videos" controller="BluescapeSupport_VideosController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Bluescape Mobile
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                    Bluescape Mobile lets you access your workspaces on your phone or tablet, making the Bluescape experience more portable and accessible. The ability to transition from small devices to large or from large to small creates more entry points into Bluescape, allowing for greater convenience and easier collaboration on your projects.<br />
+<br />
+<b>Note</b>: While Bluescape Mobile supports both phones and tablets, it is optimized for phone as of July 2019.
+<p>&nbsp;</p>
+
+<h2>Prerequisites</h2>
+
+<ul>
+	<li>A Bluescape account. If you do not have one, contact sales@bluescape.com.</li>
+	<li>An Apple or Android mobile device, with a minimum of iOS 9 and Android API 28, respectively.</li>
+	<li>Bluescape Mobile downloaded to your device from the Apple App&nbsp;or Google Play store.</li>
+</ul>
+
+<h2><br />
+Known Limitations</h2>
+
+<ul>
+	<li>As of July 2019, Bluescape Mobile does not support the following workspace assets:
+	<ul>
+		<li>Video</li>
+		<li><a href="https://support.bluescape.com/BluescapeSupport_Article?a=Drawing-Writing-and-Erasing-in-a-Workspace" target="_blank">Touch/pen strokes</a></li>
+		<li><a href="https://support.bluescape.com/BluescapeSupport_Article?a=Commenting-on-an-Asset" target="_blank">Comments</a></li>
+		<li><a href="https://support.bluescape.com/BluescapeSupport_Article?a=Creating-a-Smart-Grid" target="_blank">Smart Grids</a></li>
+	</ul>
+	</li>
+	<li>Any <a href="https://support.bluescape.com/BluescapeSupport_Article?a=Attaching-One-Asset-to-Another" target="_blank">attached</a> asset on Wall or Web displays as a standalone asset on Mobile. In addition, workspaces with&nbsp;many attached assets&nbsp;may not load.</li>
+	<li>There may be performance issues on Android devices when loading workspaces that contain over 2000 images.</li>
+	<li>If a user&#39;s <a href="https://support.bluescape.com/BluescapeSupport_Article?a=Workspace-Roles" target="_blank">workspace role</a> does not include download permissions (i.e., Commenters, Viewers, or <a href="https://support.bluescape.com/BluescapeSupport_Article?a=Creating-Workspace-Custom-Roles" target="_blank">custom roles</a> based off of these roles), they can not access the associated workspace.</li>
+	<li>As of 2019, you can not create workspaces or add new assets to existing ones in Bluescape Mobile.</li>
+</ul>
+                                    <h2>
+                                        Accessing Your Workspaces
+                                    </h2>
+                                    
+                                    You can access your workspaces from your phone or tablet with Bluescape Mobile,&nbsp;making the Bluescape experience more portable and accessible.<br />
+<br />
+To view a list of your workspaces in Bluescape Mobile:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Open Bluescape Mobile on your device.</li>
+	<li>Enter the username and password for your Bluescape account.&nbsp;</li>
+	<li>The <b>Workspaces</b> screen opens, displaying a list of workspaces in all Organizations you belong to.</li>
+</ol>
+<br />
+You can navigate back to this area at any time using the breadcrumb menus at the top of the screen. For example, in the screenshot below, you would tap <b>&lt; My workspace</b> (i.e., the workspace name) to return to the list of workspaces.<br />
+<br />
+                                    <h2>
+                                        Filtering and Searching for Workspaces
+                                    </h2>
+                                    You can filter and search for specific workspaces&nbsp;in Bluescape Mobile.&nbsp;<br />
+<br />
+To filter workspaces by Organization:&nbsp;
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the blue <b>All</b> at the top of the <b>Workspace</b>s screen. &nbsp;A list of Organizations you belong to displays.</li>
+	<li>Tap the desired Organization.</li>
+</ol>
+<br />
+In addition, you can search for a specific workspace from the list.<br />
+<br />
+To search for a workspace:&nbsp;
+<ol>
+	<li>Tap&nbsp;the magnifying glass icon at the top of the <b>Workspaces</b> screen. A search field opens.</li>
+</ol>
+<br />
+&nbsp; &nbsp;2. Enter keywords in the search field.<br />
+<br />
+The matching results will automatically display below.<br />
+&nbsp;
+                                    <h2>
+                                        Starring a Workspace
+                                    </h2>
+                                    
+                                    You can star a workspace, which marks it as a favorite for easier locating later.&nbsp;<br />
+<br />
+To star a workspace, tap&nbsp;the star icon next to the desired workspace name on the <b>Workspaces</b> screen. The star will change from white to yellow.<br />
+<br />
+The starred workspace now displays at the top of the workspace list.&nbsp;<br />
+<br />
+To un-star the workspace, simply tap the star icon &nbsp;again. It will turn from yellow to white.<br />
+&nbsp;
+                                    <h2>
+                                        Checking App Version and Build
+                                    </h2>
+                                    
+                                    To check the version and build of Bluescape Mobile on your device, tap&nbsp;the hamburger menu on the top left of the <b>Workspaces</b> screen.<br />
+<br />
+
+The&nbsp;<b>Settings</b>&nbsp;screen opens, displaying&nbsp;<b>User info</b> (name and email) and <b>App info</b> (Version and Build).<br />
+<br />
+                                    <h2>
+                                        Signing Out
+                                    </h2>
+                                    To sign out of your account on Bluescape Mobile:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the hamburger menu on the top left of the <b>Workspaces</b> screen.&nbsp;</li>
+	<li>The <b>Settings</b> screen opens. Tap the <b>Sign Out</b> button.</li>
+</ol>
+<p></p>
+    <h2>
+        Accessing Workspace Content
+                                    </h2>
+                                    <p>
+                                        You can access all canvases and certain assets within a workspace in Bluescape Mobile.<br />
+<br />
+<b>Note</b>: As of July 2019, Bluescape Mobile currently supports images, notecards, text, documents (i.e., PDF, Powerpoint, Excel, and Word files), but not video, touch/pen strokes, or comments.<br />
+<br />
+To access workspace content:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+	<li>The workspace detail screen&nbsp;opens, displaying all canvases in the workspace in list form.&nbsp;</li>
+    <li>Tap a canvas from the list to view its contents. Optionally, you can tap <b>All Workspace Contents</b> to display workspace content, both in and outside of canvases.</li>
+</ol>
+                                     </p>
+
+                                    <h2>
+                                        Viewing Canvases
+                                    </h2>
+                                <p>
+                                    You can open a canvas with Bluescape Mobile as you would in the Bluescape Web app. To open a canvas:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b>&nbsp;screen.&nbsp;</li>
+    <li>The workspace details screen opens, displaying a list of canvases in the workspace. Tap the desired canvas name.</li>
+    <li>The canvas opens.</li>
+</ol>
+<br />
+To return to the workspace details screen and select another canvas, tap the canvas name at the top of the screen.&nbsp;<br />
+&nbsp;
+                                </p>
+                        <h2>
+                            Changing the Color Scheme
+                        </h2>
+                        <p>
+                            You can change the canvas background from white to black or black to white.<br />
+<br />
+To change the canvas color scheme:
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+	<li>The workspace detail screen opens. Tap the desired canvas.</li>
+    <li>The canvas opens. Tap the black or white color palette&nbsp;on the bottom right</li>
+</ol>
+<br />
+The background changes color correspondingly.<br />
+<br />
+                        </p>
+                        <h2>
+                            Searching for Assets
+                        </h2>
+                        <p>
+                          You can search the workspace for specific assets for easier locating. To search for an asset:&nbsp;
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+	<li>The workspace details screen opens. Tap the desired canvas name to enter a canvas, or tap <b>All Workspace Contents</b> to view all workspace content, both inside and outside of canvases.</li>
+    <li>Tap the magnifying glass icon at the top right of the screen.</li>
+    <li>A search field opens. Enter keywords in the search field.</li>
+</ol>
+
+<br />
+&nbsp;  
+                        </p>
+                <h2>
+                    Viewing Assets in a Canvas
+                </h2>
+                <p>
+                    You can change how assets are displayed in a canvas.&nbsp;You can view the assets in a vertical list sorted by type, or in traditional canvas format.&nbsp;<br />
+<br />
+To toggle the view for canvas assets:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+	<li>The workspace details screen opens. Tap the desired canvas.</li>
+	<li>The canvas details screen opens.&nbsp;Tap&nbsp; the list icon at the top of the screen to&nbsp;arrange&nbsp;the assets in a vertical list&nbsp;sorted by type.</li>
+</ol>
+<br />
+To return to the traditional canvas view, tap&nbsp; the canvas icon at the top right of the canvas details screen.<br />
+<br />
+To expand an individual asset, tap it.&nbsp;<br />
+<br />
+You can swipe through to view the rest of the workspace assets in the expanded view.
+                </p>
+            <h2>
+                Downloading and Sharing a Workspace Assets
+            </h2>
+            <p>
+                You can download a workspace asset to save on your mobile device and/or share through other apps.<br />
+<br />
+To download an asset:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+	<li>The workspace details screen opens. Tap the desired canvas to display its assets, or tap <b>All Workspace Contents</b> to display assets both in and outside of canvases in the workspace.</li>
+	<li>Tap a workspace&nbsp;asset to expand it.</li>
+    <li>Tap the icon with a square and a right diagonal arrow at the top right of the screen.</li>
+    <li>The download screen opens.</li>
+</ol>
+<br />
+If the asset is a document, you can also tap the <b>Open Document</b> button to open the download screen.<br />
+<br />
+To share the downloaded asset using your device&rsquo;s sharing apps:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the sharing icon from the download screen. Your sharing options display.</li>
+    <li>Tap the desired sharing app.</li>
+</ol>
+<br />
+To save the asset:
+<p>&nbsp;</p>
+<ol>
+	<li>Long touch on the asset from the download screen.</li>
+	<li>A pop-up menu opens, allowing you to save or copy the image. Tap <b>Save Image</b>.</li>
+</ol>
+<br />
+The asset is saved to your device.
+            </p>
+        <h2>
+            Sending a Workspace to a Wall
+        </h2>
+        <p>
+            You can send the workspace you are viewing on your mobile device to a Bluescape Wall.<br />
+<br />
+To send the workspace to a Wall:&nbsp;
+<p>&nbsp;</p>
+
+<ol>
+	<li>Tap the desired workspace from the <b>Workspaces</b> screen.</li>
+	<li>The workspace details screen opens. Tap the monitor icon at the top right of the screen.</li>
+	<li>&nbsp;A pop-up opens. Enter the Wall&rsquo;s pin in the field.</li>
+    <li>Tap <b>Submit</b>.</li>
+</ol>
+<br />
+The workspace loads on the Wall and is available for you to interact with.
+        </p>
+        
+
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

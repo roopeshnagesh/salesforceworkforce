@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hotel_Check_in_and_Check_out_Dates</fullName>
+    <active>true</active>
+    <errorConditionFormula>Hotel_Check_in_Date__c &gt; Hotel_Check_out_Date__c</errorConditionFormula>
+    <errorMessage>Hotel Check-out date has to come after the check-in date.</errorMessage>
+</ValidationRule>

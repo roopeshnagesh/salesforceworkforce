@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Lead_Type__c</name>
+    <picklistValues>
+        <masterLabel>Fortune 1000</masterLabel>
+        <translation><!-- Fortune 1000 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Junk</masterLabel>
+        <translation><!-- Junk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SMB</masterLabel>
+        <translation><!-- SMB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP</masterLabel>
+        <translation><!-- VIP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

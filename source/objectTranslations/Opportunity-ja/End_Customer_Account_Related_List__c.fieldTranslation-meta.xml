@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to show/hide Opportunity on End Customer Account related list --></help>
+    <label><!-- End Customer Account(Related List) --></label>
+    <name>End_Customer_Account_Related_List__c</name>
+    <relationshipLabel><!-- Opportunities (End Customer) --></relationshipLabel>
+</CustomFieldTranslation>

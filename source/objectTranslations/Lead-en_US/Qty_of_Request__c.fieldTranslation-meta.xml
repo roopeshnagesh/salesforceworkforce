@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The number of requests to the service to get copied Workspace Id (2 seconds step) --></help>
+    <label><!-- Qty of Request --></label>
+    <name>Qty_of_Request__c</name>
+</CustomFieldTranslation>

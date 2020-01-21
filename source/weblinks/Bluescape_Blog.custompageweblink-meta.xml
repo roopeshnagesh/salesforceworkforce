@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>Custom Link to the Bluescape Blog to work around the clickjacking browser proection 
+
+https://help.salesforce.com/htviewhelpdoc?id=creating_web_tabs.htm&amp;siteLang=en_US</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Bluescape Blog</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>http://www.bluescape.com/blog</url>
+</CustomPageWebLink>

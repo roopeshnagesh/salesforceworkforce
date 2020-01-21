@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Earliest Entitlement Start Date --></help>
+    <label><!-- Entitlement Start Date (Min) --></label>
+    <name>Entitlement_Start_Date_Min__c</name>
+</CustomFieldTranslation>

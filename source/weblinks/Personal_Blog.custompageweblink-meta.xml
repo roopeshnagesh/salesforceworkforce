@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>[Test] trying to get a Blog tab on User Chatter Profile Page. May not need this because using a weblink instead.</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Personal Blog</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!User.FirstName}atbluescape.wordpress.com</url>
+</CustomPageWebLink>

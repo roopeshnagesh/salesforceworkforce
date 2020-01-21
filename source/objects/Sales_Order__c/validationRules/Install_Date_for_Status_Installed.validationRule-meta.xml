@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Install_Date_for_Status_Installed</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(  ISPICKVAL(Status__c, &#39;Installed&#39;),  ISBLANK( Install_Date__c ) , FALSE)</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>Install Date must be filled for Status = Installed</errorMessage>
+</ValidationRule>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Partner_Portal_New_Lead_Alert</fullName>
+        <description>Partner Portal New Lead Email  Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>neil@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>All_Templates/New_Partner_Portal_Lead</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Assign_Lead_to_BizDev_Mgr</fullName>
+        <description>1/16/17 this used to go to Chris. I redirect these to Peter S now.</description>
+        <field>OwnerId</field>
+        <lookupValue>peter.shutte@bluescape.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assign Lead to BizDev Mgr</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assign_Leads_to_Queue_Lead_Managers</fullName>
+        <description>updates lead owner to the queue Leda Managers when created from portal</description>
+        <field>OwnerId</field>
+        <lookupValue>Lead_Managers</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Assign Leads to Queue Lead Managers</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Lead_Owner_to_Bluescape</fullName>
+        <field>OwnerId</field>
+        <lookupValue>admin@bluescape.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Change Lead Owner to Bluescape</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Lead_Owner_to_SDR_Man_ager</fullName>
+        <description>(SDR) Change Lead owner to SDR Manager when Lead has Lead Status of &quot;InsideView&quot; and Lead Owner of an AE</description>
+        <field>OwnerId</field>
+        <lookupValue>rashad.burroughs@bluescape.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Change Lead Owner to SDR Man ager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Lead_Owner_to_SDR_Manager</fullName>
+        <description>(SDR) Change Lead Owner to &quot;Rashad&quot; when Lead has Lead Source equal to &quot;InsideView&quot; and Lead Owner of AE.</description>
+        <field>OwnerId</field>
+        <lookupValue>rashad.burroughs@bluescape.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Change Lead Owner to SDR Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Do_Not_Call</fullName>
+        <field>Status</field>
+        <literalValue>Do Not Contact</literalValue>
+        <name>Change Status to Do Not Call</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_Email_Out_Out_Box</fullName>
+        <description>(SDR/AE) Check Email Opt Out box or change Email Opt Out field to &quot;TRUE&quot;</description>
+        <field>HasOptedOutOfEmail</field>
+        <literalValue>1</literalValue>
+        <name>Check Email Out Out Box</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SDR_Assigned_Lead</fullName>
+        <field>SDR__c</field>
+        <formula>$User.FirstName &amp;&quot; &quot;&amp;  $User.LastName</formula>
+        <name>SDR Assigned (Lead)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SQL_Timestamp_when_SDR_Creates_Opptyq</fullName>
+        <field>SQL_Timestamp__c</field>
+        <formula>NOW()</formula>
+        <name>SQL Timestamp when SDR Creates Opptyq</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SQL_True_when_SDR_Creates_Oppty</fullName>
+        <field>SQL__c</field>
+        <literalValue>1</literalValue>
+        <name>SQL True when SDR Creates Oppty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Change Lead Owner to David</fullName>
+        <actions>
+            <name>Change_Lead_Owner_to_SDR_Man_ager</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>Jamie Winter,Wayne Langan,Anthony Caraffa,Alex Luna</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>InsideView</value>
+        </criteriaItems>
+        <description>(SDR/AE) Automatically change Lead owner to &quot;David Choi&quot; for an incoming lead with lead source &quot;InsideView&quot; and Sales Rep equal to &quot;Matt B, Garen, Scott, Amin, Lindsey, Stef&quot;.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Change Lead Owner to SDR Manager</fullName>
+        <actions>
+            <name>Change_Lead_Owner_to_SDR_Manager</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>Amin Tavana</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>InsideView</value>
+        </criteriaItems>
+        <description>(SDR/AE) Automatically change Lead owner to SDR Manager for an incoming lead with lead source &quot;InsideView&quot; and Sales Rep equal to &quot;Lindsey, Garen, Matt B, Amin, Stef&quot;.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Do Not Contact %2F Email Opt Out</fullName>
+        <actions>
+            <name>Change_Lead_Owner_to_Bluescape</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Change_Status_to_Do_Not_Call</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Check_Email_Out_Out_Box</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Do Not Contact</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.HasOptedOutOfEmail</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>(SDR/AE) When SDRs change lead status to &quot;Do Not Contact&quot;, automatically check &quot;Email Opt Out&quot; box.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Partner Lead Registration</fullName>
+        <actions>
+            <name>Partner_Portal_New_Lead_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Partner Page Leads Assigned to Chris</fullName>
+        <actions>
+            <name>Assign_Lead_to_BizDev_Mgr</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>(
+( ISPICKVAL(Lead_Source_deprecated__c, &quot;Website&quot;)) &amp;&amp; ( ISPICKVAL(Origin__c, &quot;Channel&quot;)) &amp;&amp; ( INCLUDES(Inquiry_Type__c, &quot;Partnerships&quot;))
+)
+|| 
+(
+(ISPICKVAL(Lead_Source_deprecated__c, &quot;Partner&quot;)) &amp;&amp; ( ISPICKVAL(Lead_Source_Detail__c, &quot;AVI-SPL&quot;))
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Partner portal update lead owner</fullName>
+        <actions>
+            <name>Assign_Leads_to_Queue_Lead_Managers</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When lead is created from Portal, it will automatically be assigned to Lead Managers</description>
+        <formula>ISPICKVAL(LeadSource,&quot;Partner&quot;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SQL True when Lead Status is SQL</fullName>
+        <actions>
+            <name>SDR_Assigned_Lead</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>SQL_Timestamp_when_SDR_Creates_Opptyq</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>SQL_True_when_SDR_Creates_Oppty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>(SDR) Change SQL field to &quot;TRUE&quot; if SDR changes Lead Status to SQL</description>
+        <formula>AND(
+TEXT( Status )=&quot;SQL&quot;, 
+ $UserRole.Name  = &quot;Sales Development Representative&quot; 
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

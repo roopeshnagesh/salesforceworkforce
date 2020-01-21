@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Platform --></label>
+    <name>Platform__c</name>
+    <picklistValues>
+        <masterLabel>API</masterLabel>
+        <translation><!-- API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Backend Service</masterLabel>
+        <translation><!-- Backend Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cross Platform</masterLabel>
+        <translation><!-- Cross Platform --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instance Admin Request</masterLabel>
+        <translation><!-- Instance Admin Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile</masterLabel>
+        <translation><!-- Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portal</masterLabel>
+        <translation><!-- Portal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wall Client</masterLabel>
+        <translation><!-- Wall Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wall Client (Linux)</masterLabel>
+        <translation><!-- Wall Client (Linux) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wall Client (Windows)</masterLabel>
+        <translation><!-- Wall Client (Windows) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Client</masterLabel>
+        <translation><!-- Web Client --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Direct Opportunity Layout for Finance/Admins</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- BANT Information --></label>
+            <section>BANT Information</section>
+        </sections>
+        <sections>
+            <label><!-- Hardware Information --></label>
+            <section>Hardware Information</section>
+        </sections>
+        <sections>
+            <label><!-- How We Win Information --></label>
+            <section>How We Win Information</section>
+        </sections>
+        <sections>
+            <label><!-- Intacct Details --></label>
+            <section>Intacct Details</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Information --></label>
+            <section>Qualification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Operations Use ONLY --></label>
+            <section>Sales Operations Use ONLY</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Direct Opportunity Layout for Sales</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- BANT Information --></label>
+            <section>BANT Information</section>
+        </sections>
+        <sections>
+            <label><!-- Hardware Information --></label>
+            <section>Hardware Information</section>
+        </sections>
+        <sections>
+            <label><!-- How We Win Information --></label>
+            <section>How We Win Information</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Information --></label>
+            <section>Qualification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Direct Opportunity Layout for Standard</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- BANT Information --></label>
+            <section>BANT Information</section>
+        </sections>
+        <sections>
+            <label><!-- Hardware Information --></label>
+            <section>Hardware Information</section>
+        </sections>
+        <sections>
+            <label><!-- How We Win Information --></label>
+            <section>How We Win Information</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Information --></label>
+            <section>Qualification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Opportunity Layout 12/18</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- How We Win Information --></label>
+            <section>How We Win Information</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Information --></label>
+            <section>Qualification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Opportunity Layout for Finance/Admins</layout>
+        <sections>
+            <label><!-- Intacct Details --></label>
+            <section>Intacct Details</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Information --></label>
+            <section>Qualification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Operations Use ONLY --></label>
+            <section>Sales Operations Use ONLY</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Opportunity Layout for Standard</layout>
+        <sections>
+            <label><!-- Partner Information --></label>
+            <section>Partner Information</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Information --></label>
+            <section>Qualification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Use this record type for all net new opportunities --></description>
+        <label><!-- New Business --></label>
+        <name>New_Business</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for Quota Opportunities for performance analysis --></description>
+        <label><!-- Quota --></label>
+        <name>Quota</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Use this record type for Renewals --></description>
+        <label><!-- Renewal --></label>
+        <name>Renewal</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please verify if the bill-to, ship-to contacts, and addresses on the quote for this opportunity are true and accurate by checking the &quot;Address Verification&quot; checkbox. --></errorMessage>
+        <name>Address_Verification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please complete the Address section on the Account page. Billing &amp; Shipping address and billing email on Account are required before moving the opportunity to &quot;7-Pending Booking&quot; --></errorMessage>
+        <name>Address_section_on_account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Amount: An amount is required --></errorMessage>
+        <name>Amount_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that a Billing Email Address has been entered. --></errorMessage>
+        <name>Billing_Email_Required_at_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Client Executive Sponsor: An executive sponsor must be selected from an existing contact --></errorMessage>
+        <name>Client_Executive_Sponsor_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Close Date: Cannot be in the future or 14 days in the past for closed won opportunities. Contact an administrator for exceptions. --></errorMessage>
+        <name>Close_Date_for_Closed_Opportunities</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Close Date cannot be in the past. Contact an administrator for exceptions. --></errorMessage>
+        <name>Close_Date_for_Open_Opportunities</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Close Plan: Enter the steps (strategy plan) we must follow to win this deal --></errorMessage>
+        <name>Close_Plan_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Competitor must be selected in the &apos;Competitors&apos; field --></errorMessage>
+        <name>Competitor_field_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contact Role is Mandatory --></errorMessage>
+        <name>Contact_Role_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- On a direct opportunity, the end customer must match the account --></errorMessage>
+        <name>Direct_Opportunity_End_Customer_And_Acco</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Functional Champion: A functional champion must be selected from an existing contact --></errorMessage>
+        <name>Functional_Champion_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hardware Details: Hardware details must be filled out since you indicated that there&apos;s hardware involved --></errorMessage>
+        <name>Hardware_Details_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hardware Involved: Select if there&apos;s hardware involved in this opportunity --></errorMessage>
+        <name>Hardware_Involved_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Any opportunity designated as an indirect opportunity requires that End Customer be listed --></errorMessage>
+        <name>Indirect_Opportunity_Requires_End_Cus</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Insufficient privileges to modify &apos;Installed / Invoiced&apos; opportunities. Please contact an Administrator for further assistance. --></errorMessage>
+        <name>Lock_Opptys_when_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Next Step Date: Enter the next step date for this opportunity --></errorMessage>
+        <name>Next_Step_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Finance Team and/or VP of Sales can change the Opp stage to &quot;Closed Won&quot; --></errorMessage>
+        <name>Opportunity_Closed_Won_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity Overview: Enter the background and basic description of this opportunity --></errorMessage>
+        <name>Opportunity_Overview_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &apos;Other Segment Description&apos; must be filled out if &apos;Other&apos; is selected as a Target Segment. --></errorMessage>
+        <name>Other_Segment_Description_reqd_if_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select whether a partner is involved in this deal --></errorMessage>
+        <name>Partner_Involved_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Product Section: Products must be entered into the opportunity --></errorMessage>
+        <name>Products_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quote Section: A quote must be created --></errorMessage>
+        <name>Quote_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Referral Contact Information must be filled out if Referral is involved --></errorMessage>
+        <name>Referral_Contact_Information_Is_Requied</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select whether a referral is involved in this deal --></errorMessage>
+        <name>Referral_Involved_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Referral Partner: Referral Partner must be identified since you indicated that there&apos;s a referral involved --></errorMessage>
+        <name>Referral_Partner_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunities at stage &quot;3-Justify Technically&quot; MUST have a primary contact. If adding a new opportunity - please add at an earlier stage and edit the &quot;Contact Roles&quot; on the right side of the page to include a primary contact before moving this forward. --></errorMessage>
+        <name>Require_Contact_Roles_if_Probability_30</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select whether a reseller is involved in this deal --></errorMessage>
+        <name>Reseller_Involved_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reseller Partner: Reseller Partner must be identified since you indicated that there&apos;s a reseller involved --></errorMessage>
+        <name>Reseller_Partner_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Risks: Enter the obstacles/risks we are facing in this opportunity --></errorMessage>
+        <name>Risks_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Stage: Only SDRs can set an opportunity to Stage &quot;1-Sales Qualified Lead&quot; --></errorMessage>
+        <name>Sales_Qualified_Lead_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that a Shipping Address has been entered. --></errorMessage>
+        <name>Shipping_Address_Required_at_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Target Segment: Select the target segment for this opportunity --></errorMessage>
+        <name>Target_Segment_is_required_at_Stage_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select whether a teaming partner is involved in this deal --></errorMessage>
+        <name>Teaming_Partner_Involved_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Teaming Partner: Teaming Partner must be identified since you indicated that there&apos;s a Teaming Partner involved --></errorMessage>
+        <name>Teaming_Partner_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Top Opportunity: Select whether this opportunity is a &apos;Top Opportunity&apos; or not. --></errorMessage>
+        <name>Top_Opportunity_is_required_at_Stage_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The field &quot;Type&quot; must not be blank to save a record --></errorMessage>
+        <name>Type_Must_be_added</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Why Buy Bluescape?: Enter a brief description of why they need Bluescape --></errorMessage>
+        <name>Why_Buy_Bluescape_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Why Buy Now?: Enter a brief description of why they need to buy now --></errorMessage>
+        <name>Why_Buy_Now_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Why Buy?: Enter a brief description of why they&apos;re looking to buy --></errorMessage>
+        <name>Why_Buy_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Win/Loss Reason Description: Ensure that you filled out why opportunity was Won/Lost --></errorMessage>
+        <name>Win_Loss_Reason_Description_Reqd</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Win/Loss Reason: Select the primary reason this opportunity was won/lost --></errorMessage>
+        <name>Win_Loss_Reason_Required_on_Stage_Close</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Assign_CSM</name>
+        <subject><!-- (Closed Won) Assign SC to Account Team --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>SQL_Opportunity_Created_Assign_CSM</name>
+        <subject><!-- SQL Opportunity Created- Assign CSM --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="UtilIntegration">
+    <aura:attribute name="sObjectRecord" type="Object"/>
+
+    <force:recordData aura:id="recordLoader"
+        recordId="{!v.recordId}"
+        fields="Org_Id__c"
+        targetFields="{!v.sObjectRecord}" />
+
+    <div class="create-admin-user-wrap">
+        <lightning:spinner alternativeText="Loading" size="medium" class="slds-hide" aura:id="spinner"/>
+        
+        <lightning:card title="Add Me as Sales Resource to Trial Org">
+            <p class="slds-p-horizontal_small">
+                <lightning:button variant="brand" label="Make me Admin" onclick="{!c.handleClick}"/>
+            </p>
+        </lightning:card>
+    </div>
+
+</aura:component>

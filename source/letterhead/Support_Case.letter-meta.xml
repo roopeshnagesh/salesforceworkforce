@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#FFFFFF</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#FFFFFF</color>
+        <height>5</height>
+    </bottomLine>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>50</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>SharedDocuments/bluescape_logo_new_branding_black_blue_150x25.png</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>10</height>
+        <horizontalAlignment>Right</horizontalAlignment>
+        <verticalAlignment>Bottom</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#0072ff</color>
+        <height>2</height>
+    </middleLine>
+    <name>Support Case</name>
+    <topLine>
+        <color>#FFFFFF</color>
+        <height>1</height>
+    </topLine>
+</Letterhead>

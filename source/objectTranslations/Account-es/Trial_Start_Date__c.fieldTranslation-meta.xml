@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Trial Start Date and Trial Period are combined to set Trial End Date --></help>
+    <label><!-- Trial Start Date --></label>
+    <name>Trial_Start_Date__c</name>
+</CustomFieldTranslation>

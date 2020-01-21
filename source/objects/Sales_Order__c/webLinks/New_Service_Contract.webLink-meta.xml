@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Service_Contract</fullName>
+    <availability>online</availability>
+    <description>MDubois 11-02-2015
+REQUIRESCRIPT fix taken from here:
+https://help.salesforce.com/apex/HTViewSolution?urlname=Receiving-error-sforce-apex-is-null-or-not-an-object-1327108329858&amp;language=en_US</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Service Contract</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>function loadScript(url) {
+    var request;
+    if (window.XMLHttpRequest) {
+        request = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+        if (!request) {
+            request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+        }
+    }
+
+    var se = document.createElement(&#39;script&#39;);
+    se.type = &quot;text/javascript&quot;;
+    request.open(&quot;GET&quot;, url, false);
+    request.send(null);
+    se.text = request.responseText;
+    document.getElementsByTagName(&#39;head&#39;)[0].appendChild(se);
+}
+
+loadScript(&quot;/soap/ajax/32.0/connection.js&quot;);
+loadScript(&quot;/soap/ajax/32.0/apex.js&quot;);
+    
+
+var profile = &quot;{!$Profile.Name}&quot;; 
+
+var serviceContractName; 
+serviceContractName = sforce.apex.execute(&quot;SalesOrderUtils&quot;,&quot;createServiceContract&quot;,{salesOrderId:&quot;{!Sales_Order__c.Id}&quot;}); 
+
+var s1 = &quot;&quot;+serviceContractName; 
+if (s1.indexOf(&quot;failed&quot;) &gt; -1) { 
+alert(&quot;Service Contract created with errors, please contact System Admin \n\n&quot; + s1); 
+location.reload(true); 
+} else if (s1.indexOf(&quot;Error&quot;) &gt; -1) { 
+alert(s1); 
+} else { 
+alert(&quot;Service Contract created, Name : &quot; + serviceContractName); 
+location.reload(true); 
+}</url>
+</WebLink>

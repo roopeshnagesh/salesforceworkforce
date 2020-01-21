@@ -1,0 +1,41 @@
+<apex:page title="Bluescape Support: " controller="BluescapeHome_Controller" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style type="text/css">
+                #releaseNote>.container {
+                    margin-top: 2rem;
+                }
+
+                #releaseNote .title {
+                    font-size: 2rem;
+                }
+
+                #releaseNote .summary {
+                    font-size: 1.4rem;
+                }
+
+                #releaseNote .details {
+                    margin: 2rem auto;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="releaseNote" class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="title"></div>
+                        <div class="summary"></div>
+                        <div class="details">
+                            <apex:outputText value="" escape="false" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

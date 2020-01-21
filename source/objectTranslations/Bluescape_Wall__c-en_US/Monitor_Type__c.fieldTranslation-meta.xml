@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Specify the primary manufacturer of the wall monitor(s) --></help>
+    <label><!-- Monitor Type --></label>
+    <name>Monitor_Type__c</name>
+    <picklistValues>
+        <masterLabel>3M</masterLabel>
+        <translation><!-- 3M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avocor</masterLabel>
+        <translation><!-- Avocor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dell</masterLabel>
+        <translation><!-- Dell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multitaction</masterLabel>
+        <translation><!-- Multitaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optika</masterLabel>
+        <translation><!-- Optika --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planar</masterLabel>
+        <translation><!-- Planar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Why Did they Choose Bluescape? --></label>
+    <name>Why_Did_they_Choose_Bluescape__c</name>
+</CustomFieldTranslation>

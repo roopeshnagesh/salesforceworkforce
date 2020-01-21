@@ -1,0 +1,68 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Adobe Creative Cloud Plugins
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                    <h2>Overview</h2>
+Bluescape and Adobe Creative Cloud work seamlessly together via plugins. Adobe Creative Cloud provides industry-leading tools for video, design, photography, and web. These highly visual tools work perfectly with Bluescape for developing creative projects while enhancing productivity. &nbsp;<br />
+<br />
+The plugin allows users to reduce the number of steps when moving content back and forth between Adobe files and Bluescape workspaces. Users can transfer images to and from a canvas and respond to comments, all without leaving Adobe applications.&nbsp;<br />
+<br />
+<b>Note</b>: The Bluescape plugin is supported for Adobe Photoshop, Illustrator, InDesign, and XD.<br />
+<br />
+For more information about the Bluescape Plugins for Adobe Creative Cloud, click <a href="https://www.bluescape.com/products/bluescape-for-adobe-creative-cloud/" target="_blank">here</a>.&nbsp;
+
+<h2>&nbsp;</h2>
+
+<h2>Requirements</h2>
+
+<ul>
+	<li>Internet connectivity</li>
+	<li>An Adobe Creative Cloud license, with Photoshop, Illustrator, InDesign, and/or XD installed</li>
+</ul>
+&nbsp;
+
+<h2>Known Limitations</h2>
+
+<ul>
+	<li>Images must be saved as .JPEG and contained in a canvas.</li>
+	<li>Markups created on an image in Bluescape will not appear in any Adobe application.</li>
+</ul>
+&nbsp;
+                                    <p>
+                                        
+                                    </p>
+                                    For the complete guide on how to use the Adobe Creative Cloud plugins for Bluescape, click <a href="https://drive.google.com/file/d/1vVYSbIzfWfF7U2Pkb2fB-ztzxNy3b6M6/view?usp=sharing" target="_blank">here</a>.
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

@@ -1,0 +1,70 @@
+<apex:page title="Bluescape Support: Article" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStylesheets="false">
+
+   <!-- <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #article .article-body {
+                    margin: 3rem 0;
+                }
+
+                #article img {
+                    max-width: 100%;
+                    border: 1px solid #53565A;
+                }
+
+                @media (max-width: 992px) {
+                    /* 768, 992, 1200 */
+                    #article .relatedArticles h2 {
+                        display: block;
+                        background-color: #F0F0EE;
+                        margin-top: 2rem;
+                    }
+                }
+
+                #article .relatedArticles ul {
+                    padding-left: 0;
+                    list-style: none;
+                    font-size: 1.5rem;
+                }
+
+                #article .relatedArticles li {
+                    margin-left: 0;
+                    margin-bottom: 1rem;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="article" class="container">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7 col-lg-offset-1">
+                        <div class="article">
+                            <h1>{!article.title}</h1>
+                            <div class="article-body">
+                                <apex:outputText value="{!article.details}" escape="false" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="relatedArticles">
+                            <h2>Related Articles:</h2>
+                            <ul>
+                                <apex:repeat value="{!relatedArticles}" var="article">
+                                    <li><a href="{!$Page.BluescapeSupport_Article}?a={!article.url}">{!article.title}</a></li>
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </apex:define>
+
+    </apex:composition>
+ -->
+</apex:page>

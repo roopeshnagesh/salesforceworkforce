@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Travel Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Travel Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>Travel Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Return date must come after the departure date --></errorMessage>
+        <name>Departure_and_Return_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hotel Check-out date has to come after the check-in date. --></errorMessage>
+        <name>Hotel_Check_in_and_Check_out_Dates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hotel dates need to be within the travel dates. --></errorMessage>
+        <name>Hotel_Dates_inside_Travel_Dates</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Account Layout for Standard Users</layout>
+        <sections>
+            <label><!-- Intacct Customer Details --></label>
+            <section>Intacct Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- Special Circumstancs/Important Details --></label>
+            <section>Special Circumstancs/Important Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo --></label>
+            <section>ZoomInfo</section>
+        </sections>
+        <sections>
+            <label><!-- Zoominfo --></label>
+            <section>Zoominfo</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout for Support</layout>
+        <sections>
+            <label><!-- Intacct Customer Details --></label>
+            <section>Intacct Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- Special Circumstancs/Important Details --></label>
+            <section>Special Circumstancs/Important Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo --></label>
+            <section>ZoomInfo</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>External Support Account Layout</layout>
+        <sections>
+            <label><!-- Special Circumstancs/Important Details --></label>
+            <section>Special Circumstancs/Important Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Account Layout</layout>
+        <sections>
+            <label><!-- Intacct Customer Details --></label>
+            <section>Intacct Customer Details</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Sales Navigator --></label>
+            <section>LinkedIn Sales Navigator</section>
+        </sections>
+        <sections>
+            <label><!-- Special Circumstancs/Important Details --></label>
+            <section>Special Circumstancs/Important Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo --></label>
+            <section>ZoomInfo</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Please enter a billing address below --></errorMessage>
+        <name>Address_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Maximum trial period is 90 days --></errorMessage>
+        <name>Max_Trial_Period</name>
+    </validationRules>
+</CustomObjectTranslation>

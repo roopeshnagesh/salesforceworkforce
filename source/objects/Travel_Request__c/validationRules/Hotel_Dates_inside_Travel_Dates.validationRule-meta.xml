@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hotel_Dates_inside_Travel_Dates</fullName>
+    <active>true</active>
+    <errorConditionFormula>( NOT(ISNULL(Hotel_Check_in_Date__c)) &amp;&amp; Hotel_Check_in_Date__c &lt; Departure_Date__c )||( NOT(ISNULL(Hotel_Check_out_Date__c)) &amp;&amp; Hotel_Check_out_Date__c &gt; Return_Date__c )</errorConditionFormula>
+    <errorMessage>Hotel dates need to be within the travel dates.</errorMessage>
+</ValidationRule>

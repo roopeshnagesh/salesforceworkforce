@@ -1,0 +1,200 @@
+<apex:page title="Bluescape Support: Templates" controller="BluescapeSupport_TemplatesController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #templates>.container {
+                    margin-top: 2rem;
+                }
+
+                #templates .input-form {
+                    background-color: #e7e7e7;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                    display: block;
+                    margin-top: -30px;
+                    width: 100%;
+                    padding-top: 15px;
+                    padding-left: 10px;
+                }
+
+                #templates .box {
+                    background-color: #e7e7e7;
+                    padding: 10px !important;
+                    margin-top: 2rem;
+                }
+
+                #templates .item {
+                    display: inline-block;
+                    max-width: 20rem;
+                    font-size: 1.2rem;
+                    margin: 5px;
+                }
+
+                #templates .catFilterBtns,
+                #templates .searchBox {
+                    padding-top: 10px;
+                }
+
+                #templates a.catFilterBtn {
+                    align-items: center;
+                    border: 1px solid #017FFB;
+                    border-radius: 7px;
+                    color: #017FFB;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-size: 12px;
+                    margin: 4px;
+                    padding: 4px;
+                    width: auto;
+                }
+
+                #templates a.catFilterBtn.active {
+                    background-color: #017FFB;
+                    color: #FFF;
+                }
+
+                #templates #browseTemplates,
+                #templates #filterTemplates,
+                #templates #searchTemplates,
+                #templates .catTemplateGroup {
+                    display: none;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="templates" class="container">
+
+                <div class="row">
+                    <!-- <div class="col-md-3">
+                        <div class="box">
+                            <h4>Filter templates by:</h4>
+                            <div class="catFilterBtns">
+                                <apex:repeat value="{!types}" var="type">
+                                    <a class="catFilterBtn" id="{!type.value}">{!type.label}</a>
+                                </apex:repeat>
+                            </div>
+                            <br/>
+                            <h4>Search templates:</h4>
+                            <div class="searchBox">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchInput" />
+                                    <div class="input-group-addon" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-md-9">
+                        <div id="templateContainer">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- <a type="button" class="cursor" id="clearSearch"> &laquo; All Templates</a> -->
+                                    <h1 class="subheader">Contact Support for Templates</h1>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="tmpl-container">
+                                        <apex:repeat value="{!templates}" var="template">
+                                            <div class="item" data-type="{!template.typeId}">
+                                                <a type="button" href="{!$Page.BluescapeSupport_Template}?templateId={!template.id}">
+                                                    <img class="img-responsive" src="{!template.thumbnailUrl}" />
+                                                    <span class="title">{!template.title}</span>
+                                                </a>
+                                            </div>
+                                        </apex:repeat>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+        <apex:define name="scripts">
+            <script type="text/javascript">
+                let selectedCat;
+
+                function clearSelectedCat() {
+                    $(".catFilterBtn").removeClass("active");
+                    selectedCat = null;
+                }
+
+                function clearSearch() {
+                    $('#searchInput').val('');
+                }
+
+                function filterTemplates() {
+                    let templateItems = $(".tmpl-container .item");
+                    let searchTerm = $('#searchInput').val().trim().toLowerCase();
+
+                    templateItems.each(function() {
+                        let item = $(this);
+
+                        if (selectedCat && item.attr("data-type") !== selectedCat) {
+                            item.hide();
+                        } else if (searchTerm && item.find(".title").text().toLowerCase().indexOf(searchTerm) < 0) {
+                            item.hide();
+                        } else {
+                            item.show();
+                        }
+                    });
+
+                    if (selectedCat) {
+                        $("#templateContainer .subheader").text($(".catFilterBtn#" + selectedCat).text());
+                        $('#clearSearch').hide();
+                    } else if (searchTerm) {
+                        $("#templateContainer .subheader").text("Search Results: " + searchTerm);
+                        $('#clearSearch').show();
+                    } else {
+                        $("#templateContainer .subheader").text("All Templates");
+                        $('#clearSearch').hide();
+                    }
+                }
+
+                $('#searchBtn').click(function() {
+                    clearSelectedCat();
+                    filterTemplates();
+                });
+
+                $('#searchInput').on('keypress', function(e) {
+                    var key = e.which;
+                    if (key == 13) {
+                        clearSelectedCat();
+                        filterTemplates();
+                        return false;
+                    }
+                });
+
+                $('#clearSearch').on('click', function(e) {
+                    clearSearch();
+                    clearSelectedCat();
+                    filterTemplates();
+                });
+
+                $("#templates").on("click", ".catFilterBtn", function(e) {
+                    let elem = $(this);
+                    let isSelected = elem.hasClass("active");
+
+                    clearSearch();
+                    clearSelectedCat();
+
+                    if (!isSelected) {
+                        elem.addClass("active");
+                        selectedCat = elem.attr("id");
+                    }
+
+                    filterTemplates();
+                });
+
+                filterTemplates();
+            </script>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

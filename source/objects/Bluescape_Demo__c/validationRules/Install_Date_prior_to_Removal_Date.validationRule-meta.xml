@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Install_Date_prior_to_Removal_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>Install_Date__c &gt;  Removal_Date__c</errorConditionFormula>
+    <errorDisplayField>Install_Date__c</errorDisplayField>
+    <errorMessage>Install date has to come before the removal date</errorMessage>
+</ValidationRule>

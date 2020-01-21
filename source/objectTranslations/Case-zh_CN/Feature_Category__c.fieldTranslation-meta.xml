@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Feature Category --></label>
+    <name>Feature_Category__c</name>
+    <picklistValues>
+        <masterLabel>Ability to hide the workspace title</masterLabel>
+        <translation><!-- Ability to hide the workspace title --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admin tools</masterLabel>
+        <translation><!-- Admin tools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basic photo editing (crop/rotate)</masterLabel>
+        <translation><!-- Basic photo editing (crop/rotate) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to expand (like YouTube)</masterLabel>
+        <translation><!-- Click to expand (like YouTube) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to next pic</masterLabel>
+        <translation><!-- Click to next pic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design tools (flowcharts/wireframe)</masterLabel>
+        <translation><!-- Design tools (flowcharts/wireframe) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Image information listed in a sidebar</masterLabel>
+        <translation><!-- Image information listed in a sidebar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-design PIN to be less obtrusive</masterLabel>
+        <translation><!-- Re-design PIN to be less obtrusive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Read-only mode</masterLabel>
+        <translation><!-- Read-only mode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support PSD</masterLabel>
+        <translation><!-- Support PSD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Text box (floating text / show text)</masterLabel>
+        <translation><!-- Text box (floating text / show text) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>“Hand off” presenter (as in GoToMeeting)</masterLabel>
+        <translation><!-- “Hand off” presenter (as in GoToMeeting) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

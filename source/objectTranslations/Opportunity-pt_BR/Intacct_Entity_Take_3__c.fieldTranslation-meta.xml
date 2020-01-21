@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Intaact Entity test --></label>
+    <name>Intacct_Entity_Take_3__c</name>
+</CustomFieldTranslation>

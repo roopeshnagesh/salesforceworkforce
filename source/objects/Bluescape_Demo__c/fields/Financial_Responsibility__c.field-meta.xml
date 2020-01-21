@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Responsibility__c</fullName>
+    <description>Party responsible for paying the shipping costs</description>
+    <externalId>false</externalId>
+    <label>Financial Responsibility</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bluescape</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Bluescape</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Haworth</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Haworth</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Split (add details in Notes)</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Split (add details in Notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- JIRA Resolution --></label>
+    <name>JIRA_Resolution__c</name>
+    <picklistValues>
+        <masterLabel>By Design</masterLabel>
+        <translation><!-- By Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cannot Reproduce</masterLabel>
+        <translation><!-- Cannot Reproduce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Complete</masterLabel>
+        <translation><!-- Code Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Declined</masterLabel>
+        <translation><!-- Declined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Done</masterLabel>
+        <translation><!-- Done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation><!-- Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KP &amp; S</masterLabel>
+        <translation><!-- KP &amp; S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Info Added</masterLabel>
+        <translation><!-- New Info Added --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unresolved</masterLabel>
+        <translation><!-- Unresolved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Won&#39;t Do</masterLabel>
+        <translation><!-- Won&apos;t Do --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

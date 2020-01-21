@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Videos</fullName>
+    <columns>Title__c</columns>
+    <columns>URL__c</columns>
+    <columns>Active__c</columns>
+    <columns>Category__c</columns>
+    <columns>Image__c</columns>
+    <columns>SiteCategory__c</columns>
+    <columns>Audience__c</columns>
+    <columns>Display_Sequence__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Videos</label>
+    <language>en_US</language>
+</ListView>

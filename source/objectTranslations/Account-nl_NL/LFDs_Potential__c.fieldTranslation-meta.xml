@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Roll Up Summary of (Estimated) Potential LFD Quantity --></help>
+    <label><!-- Opportunity LFDs (Potential) --></label>
+    <name>LFDs_Potential__c</name>
+</CustomFieldTranslation>

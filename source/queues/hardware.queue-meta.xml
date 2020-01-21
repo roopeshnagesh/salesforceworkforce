@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Hardware Action</name>
+    <queueMembers>
+        <roles>
+            <role>Installation_Specialist</role>
+            <role>Project_Manager_Deployment_Lead</role>
+        </roles>
+        <users>
+            <user>don.preble@bluescape.com</user>
+            <user>jay.cawog@bluescape.com</user>
+            <user>marcel.dubois@bluescape.com</user>
+            <user>ping.huang@bluescape.com</user>
+            <user>shaun.conners@bluescape.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

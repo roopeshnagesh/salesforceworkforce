@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>Email2Chatter_Setup</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Email2Chatter</label>
+    <tabs>Email2Chatter_Setup</tabs>
+    <tabs>Entitlement_Template__c</tabs>
+    <tabs>Travel_Request__c</tabs>
+    <tabs>Bluescape_Community_Text__c</tabs>
+    <tabs>Activities</tabs>
+    <tabs>Churn__c</tabs>
+    <tabs>Bluescape_API_Token__c</tabs>
+</CustomApplication>

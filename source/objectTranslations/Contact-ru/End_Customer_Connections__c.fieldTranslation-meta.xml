@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Simple text field  to enter any End Customers that this contact works with. May or may not include non-opportunity accounts. Please Enter using Company ABC; Company XYZ; format - semi-colon + space --></help>
+    <label><!-- End Customer Connections --></label>
+    <name>End_Customer_Connections__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,20 @@
+<aura:component controller="BluescapeIntegration" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="DemoFields" type="Bluescape_Demo__c"/>
+
+    <force:recordData 
+                      aura:id="DemoRecord"
+                      layoutType="FULL"
+                      targetFields="{!v.DemoFields}"
+                      fields=
+                            "Primary_Contact__r.Owner.Email,
+                            Primary_Contact__r.Email"
+                      recordId="{!v.recordId}"
+    />
+    
+    <lightning:card title=''>
+        <div class="slds-p-horizontal_medium">
+            <lightning:button label="Request Org" variant="brand" onclick="{!c.requestOrg}"></lightning:button>
+            <lightning:spinner alternativeText="Loading" size="small" aura:id="spinner" class="slds-hide"/>
+        </div>
+    </lightning:card>
+</aura:component>

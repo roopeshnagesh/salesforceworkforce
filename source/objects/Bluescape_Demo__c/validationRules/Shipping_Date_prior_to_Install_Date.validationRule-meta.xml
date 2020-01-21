@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Date_prior_to_Install_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>Shipping_Date__c  &gt;  Install_Date__c</errorConditionFormula>
+    <errorDisplayField>Shipping_Date__c</errorDisplayField>
+    <errorMessage>Shipping date has to come before the install date</errorMessage>
+</ValidationRule>

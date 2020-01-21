@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>ops@bluescape.com</email>
+    <name>Cloud Ops</name>
+    <queueMembers>
+        <users>
+            <user>brucej@spindance.com</user>
+            <user>nick.pilch@bluescape.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>KnowledgeArticleVersion</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task__c</sobjectType>
+    </queueSobject>
+</Queue>

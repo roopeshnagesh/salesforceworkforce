@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- There should be a compelling reason to buy created by the situation or client. Is there a timeline you need to get something done by? --></help>
+    <label><!-- Compelling Reason to Act --></label>
+    <name>Compelling_Reason_to_Act__c</name>
+</CustomFieldTranslation>

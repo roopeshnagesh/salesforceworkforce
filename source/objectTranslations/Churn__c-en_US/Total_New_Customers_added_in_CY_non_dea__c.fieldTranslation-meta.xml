@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Total New Customers added in CY (non-dea --></label>
+    <name>Total_New_Customers_added_in_CY_non_dea__c</name>
+</CustomFieldTranslation>

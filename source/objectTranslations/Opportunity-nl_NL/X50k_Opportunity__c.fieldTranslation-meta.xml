@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Box is checked if opportunity value exceeds 50,000 --></help>
+    <label><!-- 50k+ Opportunity --></label>
+    <name>X50k_Opportunity__c</name>
+</CustomFieldTranslation>

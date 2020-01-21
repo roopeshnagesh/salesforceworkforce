@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Case Jira Fields</layout>
+        <sections>
+            <label><!-- JIRA Details --></label>
+            <section>JIRA Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Related Jira Information --></label>
+            <section>Related Jira Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout Feed Style</layout>
+        <sections>
+            <label><!-- JIRA Details --></label>
+            <section>JIRA Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout Feed Style (Max Space)</layout>
+        <sections>
+            <label><!-- JIRA Details --></label>
+            <section>JIRA Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout Lightning</layout>
+        <sections>
+            <label><!-- JIRA Details --></label>
+            <section>JIRA Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout Lightning (1 col record detail component)</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout Lightning (PRIMARY for support)</layout>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Escalated --></label>
+            <section>Escalated</section>
+        </sections>
+        <sections>
+            <label><!-- JIRA Details --></label>
+            <section>JIRA Details</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Community - Customer Logged In Layout</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Community - Guest User Layout</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Engineering Layout</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>External Support Case Layout</layout>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Escalated --></label>
+            <section>Escalated</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Manager Case Layout Feed Style</layout>
+        <sections>
+            <label><!-- JIRA Details --></label>
+            <section>JIRA Details</section>
+        </sections>
+        <sections>
+            <label><!-- Previous Values --></label>
+            <section>Previous Values</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mobile</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Non-support team Layout</layout>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Close Case --></label>
+        <name>Close_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close Case --></label>
+        <name>Close_Case_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>Email_Button</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Mark Duplicate --></label>
+        <name>Mark_Duplicate</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- This is what non-support users see (community users, CSMs, sales) --></description>
+        <label><!-- Customer Facing --></label>
+        <name>Customer_Facing</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- If the Case is Closed, you must select a Type before you can save the Case as Closed. --></errorMessage>
+        <name>Case_Type_Field_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The case needs to go through &apos;Closing (Pending review)&apos; before being closed. --></errorMessage>
+        <name>Closing_Cases_Needs_Review</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reason &apos;Duplicate&apos; requires Parent Case to be set. --></errorMessage>
+        <name>Duplcate_cases_require_a_Parent_Case</name>
+    </validationRules>
+</CustomObjectTranslation>

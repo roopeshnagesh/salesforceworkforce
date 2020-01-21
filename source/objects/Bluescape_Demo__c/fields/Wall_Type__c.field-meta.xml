@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wall_Type__c</fullName>
+    <description>What type of Bluescape Wall should be installed</description>
+    <externalId>false</externalId>
+    <label>Wall Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Controller</fullName>
+                <default>false</default>
+                <label>Controller</label>
+            </value>
+            <value>
+                <fullName>MultiTaction</fullName>
+                <default>false</default>
+                <label>MultiTaction</label>
+            </value>
+            <value>
+                <fullName>Optika</fullName>
+                <default>false</default>
+                <label>Optika</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Planar</fullName>
+                <default>false</default>
+                <label>Planar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

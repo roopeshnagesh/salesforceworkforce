@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The lifecycle stage of the lead or contact. Marketing Qualified Leads have been qualified by marketing and passed over to sales for assignment. --></help>
+    <label><!-- Lifecycle Stage --></label>
+    <name>Lifecycle_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation><!-- Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead</masterLabel>
+        <translation><!-- Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Qualified Lead</masterLabel>
+        <translation><!-- Marketing Qualified Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunity</masterLabel>
+        <translation><!-- Opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Qualified Lead</masterLabel>
+        <translation><!-- Sales Qualified Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscriber</masterLabel>
+        <translation><!-- Subscriber --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Large_Format_Display__c</fullName>
+    <description>What type of Bluescape Wall should be installed</description>
+    <externalId>false</externalId>
+    <label>Large Format Display</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MultiTaction</fullName>
+                <default>false</default>
+                <label>MultiTaction</label>
+            </value>
+            <value>
+                <fullName>Planar</fullName>
+                <default>false</default>
+                <label>Planar</label>
+            </value>
+            <value>
+                <fullName>Optika</fullName>
+                <default>false</default>
+                <label>Optika</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Ricoh</fullName>
+                <default>false</default>
+                <label>Ricoh</label>
+            </value>
+            <value>
+                <fullName>Dell</fullName>
+                <default>false</default>
+                <label>Dell</label>
+            </value>
+            <value>
+                <fullName>Avocor</fullName>
+                <default>false</default>
+                <label>Avocor</label>
+            </value>
+            <value>
+                <fullName>Windows</fullName>
+                <default>false</default>
+                <label>Windows</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

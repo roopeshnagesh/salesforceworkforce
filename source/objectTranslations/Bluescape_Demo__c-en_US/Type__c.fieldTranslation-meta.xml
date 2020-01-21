@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Partner Demo</masterLabel>
+        <translation><!-- Partner Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospect Demo</masterLabel>
+        <translation><!-- Prospect Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic Demo</masterLabel>
+        <translation><!-- Strategic Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trade Show</masterLabel>
+        <translation><!-- Trade Show --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

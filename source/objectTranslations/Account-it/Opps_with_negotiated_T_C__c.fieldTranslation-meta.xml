@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Do any opportunities on this account contain negotiated terms and conditions? --></help>
+    <label><!-- Opps with Negotiated T&amp;C? --></label>
+    <name>Opps_with_negotiated_T_C__c</name>
+</CustomFieldTranslation>

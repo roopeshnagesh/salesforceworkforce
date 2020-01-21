@@ -1,0 +1,78 @@
+<apex:page title="Bluescape Support: Videos" controller="BluescapeSupport_VideosController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false"> >
+  <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Using Group Select
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                   You can select multiple assets with the Group Select feature. This is useful when you want to make changes to multiple assets at the same time, such as moving or duplicating them.<br />
+<br />
+To start, ensure you are in a workspace with multiple assets. From there, you have two options to Group Select assets. The first uses the sidebar menu:
+                                    <br />
+<ol>
+	<li>Click the arrow select icon in the sidebar menu.&nbsp;</li>
+	<li>A context menu opens. Select the <b>Marquee </b>or<b> Lasso</b> option.</li>
+</ol>
+<br />
+
+&nbsp; &nbsp;3. Your mouse cursor should become a crosshair. Click and drag your mouse across the desired assets. The <b>Marquee</b> tool lets you trace a rectangular frame around a group of assets, while the <b>Lasso</b> tool lets you trace a circle.<br />
+<br />
+For the second way to group select:
+                                    <br />
+<ol>
+	<li>Hold down the Shift key on your keyboard.&nbsp;</li>
+	<li>Click on multiple assets to group select them.&nbsp;</li>
+</ol>
+A blue boundary box encloses the assets you selected.&nbsp;<br />
+<br />
+Once you&rsquo;ve Group Selected assets, you can act on them all at once. For example, you can move the assets by dragging the highlighted box. They will move as a group.&nbsp;<br />
+<br />
+In addition, when you click the context menu during Group Select, you can perform the following tasks:
+<br />
+<ul>
+	<li>Pinning Assets- Pin the group of assets to the workspace.</li>
+	<li>Present- Create a presentation out of the group of assets.</li>
+	<li>Create Canvas- Create a canvas that encompasses the group of assets.</li>
+	<li>Ungroup- Cancel the group select for all assets in the group.</li>
+	<li>Download as ZIP with markup- Download the group of assets and their accompanying markup as a compressed ZIP file.</li>
+	<li>Download as ZIP- Download the group of assets as a compressed ZIP file.</li>
+	<li>Align elements- Align the assets left, vertically, right, top, horizontally, or bottom.</li>
+	<li>Arrange- Arrange the assets into a column, grid, or row.</li>
+	<li>Duplicate- Create copies of the selected assets.</li>
+	<li>Delete- Remove the selected assets from the workspace.</li>
+</ul>
+<br />
+To add to an existing group, simply click the additional assets you&rsquo;d like to add. The blue box will encompass them, making them part of the group.&nbsp;<br />
+<br />
+To remove an asset from group selection, click the asset.&nbsp;<br />
+<br />
+To deselect the entire group of assets, click on the workspace background outside of the selection box.
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>  
+</apex:page>

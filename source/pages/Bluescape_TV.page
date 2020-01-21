@@ -1,0 +1,372 @@
+<apex:page controller="BluescapeTV_controller" sidebar="false" showHeader="true" title="Bluescape TV">
+
+    <apex:includeScript value="{!URLFOR($Resource.Bluescapestaticresources, '/js/moment.min.js')}" />
+
+    <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bluescape.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bootstrap.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.Bluescapestaticresources, '/css/bluescaperesponsive.css')}" />
+
+    <style>
+        .input-form {
+            background-color: #e7e7e7;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: block;
+            margin-top: -30px;
+            width: 100%;
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+
+        .box {
+            background-color: #e7e7e7;
+            padding: 10px !important;
+        }
+
+        .item {
+            display: inline-block;
+            max-width: 20rem;
+        }
+
+        .catFilterBtns,
+        .searchBox {
+            padding-top: 10px;
+        }
+
+        a.catFilterBtn {
+            align-items: center;
+            border: 1px solid #017FFB;
+            border-radius: 7px;
+            color: #017FFB;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px;
+            padding: 4px;
+            width: auto;
+        }
+
+        a.catFilterBtn.active {
+            background-color: #017FFB;
+            color: #FFF;
+        }
+
+        #browseVideos,
+        #filterVideos,
+        #searchVideos,
+        .catVideoGroup {
+            display: none;
+        }
+    </style>
+
+    <div class="main-wraper">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box">
+                        <h4>Filter videos by:</h4>
+                        <div class="catFilterBtns">
+                            <apex:repeat value="{!categories}" var="cat">
+                                <a class="catFilterBtn" id="{!cat.id}">{!cat.title}</a>
+                            </apex:repeat>
+                        </div>
+
+                        <br/>
+                        <h4>Search videos:</h4>
+                        <div class="searchBox">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="searchInput" />
+                                <div class="input-group-addon" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div id="browseVideos">
+                        <apex:outputPanel >
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="subheader">All Videos</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="vid-container">
+                                        <apex:repeat value="{!recentVideos}" var="vid">
+                                            <div class="item">
+                                                <a type="button" class="" data-toggle="modal" data-target="#vid " onClick="watchVideo('{!vid.id}');">
+                                                    <img class="img-responsive" onClick="watchVideo('{!vid.id}');" src="{!vid.imageUrl}" />
+                                                    <span class="video_content">{!vid.title}</span>
+                                                </a>
+                                            </div>
+                                        </apex:repeat>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputpanel>
+                    </div>
+
+                    <div id="filterVideos">
+                        <apex:repeat value="{!categories}" var="cat">
+                            <apex:outputPanel >
+                                <div class="catVideoGroup" id="{!cat.id}">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4 class="subheader">{!cat.title}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="vid-container">
+                                                <div class="cusrow owl-carousel">
+                                                    <apex:repeat value="{!cat.videos}" var="vid">
+                                                        <div class="item">
+                                                            <a type="button" data-toggle="modal" data-target="#vid " onClick="watchVideo('{!vid.id}');">
+                                                                <img class="img-responsive" onClick="watchVideo('{!vid.id}');" src="{!vid.imageUrl}" />
+                                                                <span class="video_content">{!vid.title}</span>
+                                                            </a>
+                                                        </div>
+                                                    </apex:repeat>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:repeat>
+                    </div>
+
+                    <div id="searchVideos">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <a type="button" class="cursor" id="clearSearch"> &laquo; All Videos</a>
+                                <h4 id="searchHeader" class="subheader">Search Results</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="vid-container">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function updateWindowState(params = {}) {
+            let newLoc;
+            newLoc = updateUrlParameter(window.location.href, 'cat', params.cat);
+            newLoc = updateUrlParameter(newLoc, 'q', params.q);
+            window.history.replaceState(null, null, newLoc);
+        }
+
+        function watchVideo(videoId) {
+            window.location.href = `{!$Page.Bluescape_VideoPlayer}?videoId=${videoId}`;
+        }
+
+        function getUrlParameter(key) {
+            var re = new RegExp("([?&])" + key + "=(.*?)(&|$)", "i");
+            var match = window.location.href.match(re);
+
+            if (match) {
+                return match[2];
+            } else {
+                return undefined;
+            }
+        }
+
+        function updateUrlParameter(uri, key, value) {
+            // remove the hash part before operating on the uri
+            var i = uri.indexOf('#');
+            var hash = i === -1 ? '' : uri.substr(i);
+            uri = i === -1 ? uri : uri.substr(0, i);
+
+            var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+            var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+
+            if (!value) {
+                // remove key-value pair if value is empty
+                uri = uri.replace(new RegExp("([?&]?)" + key + "=[^&]*", "i"), '');
+                if (uri.slice(-1) === '?') {
+                    uri = uri.slice(0, -1);
+                }
+                // replace first occurrence of & by ? if no ? is present
+                if (uri.indexOf('?') === -1) uri = uri.replace(/&/, '?');
+            } else if (uri.match(re)) {
+                uri = uri.replace(re, '$1' + key + "=" + value + '$2');
+            } else {
+                uri = uri + separator + key + "=" + value;
+            }
+            return uri + hash;
+        }
+
+        function executeSearch(searchText, cb) {
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.BluescapeTV_controller.search}',
+                searchText,
+                function(videos, event) {
+                    if (event.status) {
+                        cb(videos);
+                    } else if (event.type === 'exception') {
+                        console.log(event.message + ' ' + event.where);
+                    } else {
+                        console.log(event.message);
+                    }
+                }, {
+                    escape: true
+                }
+            );
+        }
+
+        function updateSearchResults(searchVal, videos) {
+            let resultsContainer = $("#searchVideos .vid-container");
+
+            $("#searchHeader").text("Search Results: " + searchVal);
+            resultsContainer.empty();
+
+            if (videos.length != 0) {
+
+                for (i = 0; i < videos.length; i++) {
+                    let video = videos[i];
+                    let result =
+                        `<div class="item">
+                        <a type="button" onClick="watchVideo('${video.id}');">
+                            <img class="img-responsive" onClick="watchVideo('${video.id}');" src="${video.imageUrl}" />
+                            <span class="video_content">${video.title}</span>
+                        </a>
+                    </div>
+                    `;
+                    resultsContainer.append(result);
+                }
+            }
+        }
+
+        function performSearch(searchVal, updateState = true) {
+            if (!searchVal) {
+                searchVal = $('#searchInput').val().trim();
+            } else {
+                $('#searchInput').val(searchVal.trim());
+            }
+
+            if (searchVal == '') {
+                $("#searchVideos").hide();
+                $("#filterVideos").hide();
+                $(".catFilterBtn").removeClass("active");
+                $("#browseVideos").show();
+            } else {
+                $("#browseVideos").hide();
+                $("#filterVideos").hide();
+                $(".catFilterBtn").removeClass("active");
+                $("#searchVideos").show();
+
+                $('#content').html('');
+                $('#uploaded').html('');
+                $('#viewed').html('');
+
+                executeSearch(searchVal, (videos) => {
+                    updateSearchResults(searchVal, videos);
+
+                    if (updateState) {
+                        if (updateState) {
+                            updateWindowState({
+                                q: searchVal
+                            });
+                        }
+                    }
+                });
+            }
+
+            return false;
+        }
+
+        function clearSearch(updateState = true) {
+            $('#searchInput').val("");
+            $("#searchVideos").hide();
+            $("#filterVideos").hide();
+            $("#browseVideos").show();
+
+            if (updateState) {
+                updateWindowState();
+            }
+        }
+
+        function selectCategory(categoryId, updateState = true) {
+            let elem = $(".catFilterBtn#" + categoryId);
+
+            $(".catFilterBtn").removeClass("active");
+            $(".catVideoGroup").hide();
+            $("#browseVideos").hide();
+            $("#searchVideos").hide();
+
+            elem.addClass("active");
+            $(".catVideoGroup#" + categoryId).show();
+            $("#filterVideos").show();
+
+            if (updateState) {
+                updateWindowState({
+                    cat: categoryId
+                });
+            }
+        }
+
+        function clearCategory(updateState = true) {
+            let catButtons = $(".catFilterBtn");
+            catButtons.removeClass("active");
+
+            $("#searchVideos").hide();
+            $("#filterVideos").hide();
+            $(".catVideoGroup").hide();
+            $("#browseVideos").show();
+
+            if (updateState) {
+                updateWindowState();
+            }
+        }
+
+        $(document).ready(() => {
+
+            $('#searchBtn').click(function() {
+                performSearch();
+            });
+
+            $('#searchInput').on('keypress', function(e) {
+                var key = e.which;
+                if (key == 13) {
+                    performSearch();
+                    return false;
+                }
+            });
+
+            $('#clearSearch').on('click', function(e) {
+                clearSearch();
+            });
+
+            $(".catFilterBtn").on("click", function(e) {
+                let elem = $(this);
+                if (elem.hasClass("active")) {
+                    clearCategory();
+                } else {
+                    selectCategory(elem.attr("id"));
+                }
+            });
+
+            let searchTerm = getUrlParameter('q');
+            let categoryId = getUrlParameter('cat');
+
+            if (searchTerm) {
+                performSearch(searchTerm, false);
+            } else if (categoryId) {
+                selectCategory(categoryId, false);
+            } else {
+                clearCategory(false);
+            }
+        })
+    </script>
+
+</apex:page>

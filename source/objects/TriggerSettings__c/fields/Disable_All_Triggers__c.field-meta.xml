@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_All_Triggers__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked : Stops execution of all triggers that use Trigger Factory.
+Unchecked : All triggers that use Trigger Factory will be executed normally.</description>
+    <externalId>false</externalId>
+    <label>Disable All Triggers</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

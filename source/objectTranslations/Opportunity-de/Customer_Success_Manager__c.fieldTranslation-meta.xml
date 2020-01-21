@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the person at Bluescape who will support the sale and the drive the implementation on behalf of the success plan. --></help>
+    <label><!-- Customer Success Manager --></label>
+    <name>Customer_Success_Manager__c</name>
+    <relationshipLabel><!-- Opportunities (Customer Success Manager) --></relationshipLabel>
+</CustomFieldTranslation>

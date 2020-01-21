@@ -1,0 +1,48 @@
+<apex:page id="LeadThankYou" showHeader="false" title="Thank You">
+    
+  <style>
+  h1{
+      color: #0672a6;
+      font-size: 140%;
+      font-family:Helvetica;
+      margin-top:30px;
+      margin-left:10px;
+      margin-bottom:40px;
+     
+  }
+   table {
+       margin-left:280px;
+       border:#0672a6;
+}
+  
+    p {
+    color:#000000;
+    font-size:12pt;
+    margin-left:10px;
+    margin-right:60px;
+    font-family:Helvetica;
+    }
+
+ </style>
+  
+    <apex:composition template="PortalTemplate2"> 
+         <apex:define name="body"> 
+              <br></br>
+              <br></br>
+              <table style="static:left; border-style:solid; border-width:1.5px; "> 
+                   <tr>
+                     <td>  
+                        <br />
+                        <h1>Success</h1>
+                        <p> Thank you for registering the lead.
+                        <br/> If you have any questions, please contact: 
+                        <br/>
+                        <br/> Loni Miller 
+                        <br/> loni.miller@bluescape.com 
+                        <br/> 650-567-4564 </p>
+                      </td>
+                  </tr>
+             </table>
+      </apex:define>
+    </apex:composition>  
+</apex:page>

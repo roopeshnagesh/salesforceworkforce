@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Lead Layout for Sales/Marketing</layout>
+        <sections>
+            <label><!-- HubSpot Intelligence --></label>
+            <section>HubSpot Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo --></label>
+            <section>ZoomInfo</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo Details --></label>
+            <section>ZoomInfo Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead Layout for Standard Users</layout>
+        <sections>
+            <label><!-- Contact Us Message --></label>
+            <section>Contact Us Message</section>
+        </sections>
+        <sections>
+            <label><!-- HubSpot Intelligence --></label>
+            <section>HubSpot Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Member Profile --></label>
+            <section>LinkedIn Member Profile</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- ZoomInfo Details --></label>
+            <section>ZoomInfo Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead New Layout 12/2018</layout>
+        <sections>
+            <label><!-- HubSpot Intelligence --></label>
+            <section>HubSpot Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Member Profile --></label>
+            <section>LinkedIn Member Profile</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Information --></label>
+            <section>Marketing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- Zoominfo --></label>
+            <section>Zoominfo</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead New no Zoom Info</layout>
+        <sections>
+            <label><!-- HubSpot Intelligence --></label>
+            <section>HubSpot Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Member Profile --></label>
+            <section>LinkedIn Member Profile</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Information --></label>
+            <section>Marketing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Lead Page with Zoom Info --></description>
+        <label><!-- Lead Detail --></label>
+        <name>Lead_Detail</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- New Lead view without Zoom info felds --></description>
+        <label><!-- New Lead --></label>
+        <name>New_Lead_12_18</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Disqualification Reason required if Status is Disqualified --></errorMessage>
+        <name>Disqualification_Reason_required</name>
+    </validationRules>
+</CustomObjectTranslation>

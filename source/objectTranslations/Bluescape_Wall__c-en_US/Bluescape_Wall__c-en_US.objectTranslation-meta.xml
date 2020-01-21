@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bluescape Wall</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bluescape Walls</value>
+    </caseValues>
+    <layouts>
+        <layout>Bluescape Wall Layout</layout>
+        <sections>
+            <label><!-- Audio Video Information --></label>
+            <section>Audio Video Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Network Information --></label>
+            <section>Network Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

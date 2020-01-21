@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>businessdevelopment@bluescape.com</contactEmail>
+    <contactPhone>6505674550</contactPhone>
+    <label>iContact Pro</label>
+    <oauthConfig>
+        <callbackUrl>https://app.icontactpro.com/SalesforceAuthenticate.aspx</callbackUrl>
+        <consumerKey>3MVG9y6x0357HlecqCjiev3mzquMiDuBd._8y1tGU7sXnnTbHu3RpbdAZGdQEJAy7xbF_Ow8mUU5bfecB6Eww</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

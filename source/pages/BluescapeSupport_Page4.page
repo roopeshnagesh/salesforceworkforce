@@ -1,0 +1,96 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Overview of a Guest User
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                   <p>Depending on your Organization&rsquo;s privacy settings, you can invite guest users to collaborate on a workspace.&nbsp;Guests do not have to belong to any Organization in Bluescape prior to being invited. In addition, they can only see the workspaces they have been invited to &mdash; they cannot see any Public workspaces in the Organization.</p>
+<br />
+Guests will have the permissions of the corresponding workspace role set by the Admin. However, for security purposes, guests cannot perform the following tasks, regardless of their workspace role:
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Create new workspaces</li>
+	<li>Invite other guests and collaborators to view a workspace</li>
+	<li>View the list of users in the Organization</li>
+</ul>
+<br />
+<b>Note</b>: For Organizations with Custom Roles enabled, guests can be assigned specific custom roles (while still maintaining the three restrictions above).<br />
+<div class="p1" style="font-size: 18.1818180084229px;">
+<div class="p1" style="font-size: 18.1818180084229px;">&nbsp;</div>
+    <h2>
+        Adding a Guest to a Workspace
+    </h2>
+    Guest users can be invited to a workspace by Users or Admins. Guests do not have to belong to any Organization in Bluescape prior to being invited. However, the role does have certain limitations.<br />
+<br />
+To add a guest to a workspace:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Follow the steps to add a collaborator to a workspace. If the collaborator does not already belong to the Organization, the system designates them as a guest. You will see the drop-down <b>Create &ldquo;&lt;guest email address&gt;&rdquo;</b> beneath the guest&rsquo;s email address in the <b>Add collaborator</b> pop-up window.&nbsp;</li>
+    <li>An invitation is sent to the guest&#39;s email address.&nbsp;</li>
+    <li>Guests that are new to Bluescape&nbsp;will be sent to the Bluescape account creation&nbsp;page. They must enter a name and password, and select their industry. Clicking <b>Accept invitation</b>&nbsp;completes the login process.</li>
+    <li>The guest can now access the workspace they were invited to.</li>
+</ol>
+<br />
+<b>Note</b>: Guest users will have a badge indicating their guest role on the <b>Workspace Collaborators</b> page.<br />
+    <br />
+    <h2>
+        Setting Admin Approval for Guest Invites
+    </h2>
+    
+    <p>Organizations may be configured to require that guests are approved by an Administrator before receiving a workspace invitation. The following steps detail the approval process:</p>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>A user invites the guest to a workspace.</li>
+	<li>Admininstrator(s) receive&nbsp;a request for&nbsp;approval&nbsp;email.</li>
+	<li>Administrator approves the invitation.</li>
+	<li>Guest receives an invitation email.</li>
+	<li>The guest can now enter the workspace.</li>
+</ol>
+<br />
+To enable the guest approval process:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Login to Bluescape as an Administrator.&nbsp;</li>
+	<li>Click the Org tree icon to open the&nbsp;<b>Organization Settings</b>&nbsp;page in the portal.</li>
+	<li>Locate the <b>User invite settings</b> section. Toggle the <b>Guest invites require admin approva</b>l to the blue &quot;on&quot;&nbsp;position.</li>
+</ol>
+
+</div>
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

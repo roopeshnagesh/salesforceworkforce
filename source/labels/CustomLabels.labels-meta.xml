@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>BlueScape_Community_Profile_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BlueScape Community Profile Name</shortDescription>
+        <value>Customer Community User Custom</value>
+    </labels>
+    <labels>
+        <fullName>Bluescape_Custmer_Commnity_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Bluescape Custmer Community Name</shortDescription>
+        <value>Customer Community</value>
+    </labels>
+    <labels>
+        <fullName>Community_URL_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community URL Name</shortDescription>
+        <value>community</value>
+    </labels>
+    <labels>
+        <fullName>PKB2_Recent_Articles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PKB2: Recent Articles</shortDescription>
+        <value>Public Articles - To view all articles, please log in.</value>
+    </labels>
+</CustomLabels>

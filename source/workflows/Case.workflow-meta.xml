@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Escalated_so_mail_Manager</fullName>
+        <description>Case Escalated so mail Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Escalated_Case_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Could_Not_Reproduce_Need_more_info_notification</fullName>
+        <description>Could Not Reproduce/Need more info notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Director_Support_Services</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/JIRA_Issue_Needs_More_Info</template>
+    </alerts>
+    <alerts>
+        <fullName>Create_Org_Case_Closed</fullName>
+        <description>Send Notification to Finance when &quot;Create Org&quot; case is closed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Accountant</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Assistant_Controller</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff.smith@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Process_Builder/Create_Org_Case_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_First_Level_Support_about_PKB_case</fullName>
+        <description>Email First Level Support about PKB case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Tier_2_Customer_Support_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_for_First_Level_Support_Queue</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Manager</fullName>
+        <description>Email Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Case_Reassigneed_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Slack_Customer_Support</fullName>
+        <ccEmails>l5x4p1h9z2l1f9a1@bluescape.slack.com</ccEmails>
+        <description>Email Slack Customer Support</description>
+        <protected>false</protected>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_Slack_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Update_Notify_Account_Team</fullName>
+        <description>Email Update Notify Account Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Case_Email_Rec_Sent_Notify_Account_Team</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Case_Comment_Email_Alert_to_Customer</fullName>
+        <description>New Case Comment Email Alert to Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_Comment_to_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Case_Created_Alert_to_Customer</fullName>
+        <description>New Case Created Alert to Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Customer_Notification_of_new_case_012020</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Comment_Alert_to_Customer</fullName>
+        <description>New Comment Alert to Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_Comment_to_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_API_Support_Ariel</fullName>
+        <description>Notify API Support (Ariel)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>API_Support_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_for_First_Level_Support_Queue</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Account_Team</fullName>
+        <description>Notify Account Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Case_Update_Notification_for_Sales_Team</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CSM_and_Sales_Executive_of_new_case</fullName>
+        <description>Notify CSM and Sales Executive of new case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/CSM_AE_Notification_of_New_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CSMs_of_Case_Update</fullName>
+        <description>Notify CSMs of Case Update</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Solutions Consultant #2</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Case_Update_Notification_for_Sales_Team</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Hardware_Action_Queue_Members</fullName>
+        <description>Notify Hardware Action Queue Members</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Hardware_Action_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_for_First_Level_Support_Queue</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Ops_of_US_Gov_t_Case</fullName>
+        <ccEmails>ops@bluescape.com</ccEmails>
+        <description>Notify Ops of US Gov&#39;t Case</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>Customer Success Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional Sales Manager</recipient>
+            <type>accountTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nick.pilch@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>oswald.dsa@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/CSM_AE_Notification_of_New_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Manager</fullName>
+        <description>Send Email to Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Customer_Communication/Emailing_Internal_Employees</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_to_previous_owner</fullName>
+        <description>Send email to previous owner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Previous_Owner__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/Case_Reassigneed_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Slack_notification_of_a_new_case</fullName>
+        <ccEmails>l9n6b9f5p4t6c5z8@bluescape.slack.com</ccEmails>
+        <description>Slack notification of a new case</description>
+        <protected>false</protected>
+        <senderAddress>support@bluescape.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Case_Email_Templates/New_Case_for_First_Level_Support_Queue</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CPC_Case_Origin</fullName>
+        <field>Origin</field>
+        <literalValue>Customer Portal Community</literalValue>
+        <name>CPC Case Origin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Support_1</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Case Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_update_open_days_field</fullName>
+        <description>Updates &quot;Open Days&quot; field to calculate days that a case is open excluding on hold statuses</description>
+        <field>Open_Days__c</field>
+        <formula>IF( 
+OR ( 
+ISPICKVAL(Status,&quot;On Hold&quot;), 
+ISPICKVAL(Status,&quot;PKI Hold&quot;), 
+IsClosed 
+), 
+IF(ISNULL(Open_Days__c),0,Open_Days__c), 
+(NOW() - LastModifiedDate )+ IF(ISNULL(Open_Days__c),0,Open_Days__c) 
+)</formula>
+        <name>Case: update open days field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Owner_to_First_Level_Support</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Support_1</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Change Owner to First Level Support</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Chatter_Answers_Origin</fullName>
+        <field>Origin</field>
+        <literalValue>Chatter Answers</literalValue>
+        <name>Chatter Answers Origin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CommStatus_Case_Closed</fullName>
+        <field>Comm_Status__c</field>
+        <literalValue>Case Closed</literalValue>
+        <name>CommStatus-Case Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Convert_User_Story_Ticket_to_URL</fullName>
+        <field>User_Story_Ticket__c</field>
+        <formula>&quot;https://jira.common.bluescape.com/browse/&quot; +  User_Story_Ticket__c</formula>
+        <name>Convert User Story Ticket to URL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_HW_Issue_to_Previous_HW_Issue</fullName>
+        <field>Previous_Hardware_Issue__c</field>
+        <formula>IF(PRIORVALUE(Hardware_Issue__c),&quot;TRUE&quot;, &quot;FALSE&quot;
+)</formula>
+        <name>Copy HW Issue to Previous HW Issue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Jira_Priority_to_Previous_Jira_Prio</fullName>
+        <field>Previous_Jira_Priority__c</field>
+        <formula>TEXT(PRIORVALUE(JiraPriority__c))</formula>
+        <name>Copy Jira Priority to Previous Jira Prio</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Jira_Status_to_Previous_Jira_Status</fullName>
+        <description>Save previous value for email notifications</description>
+        <field>Previous_Jira_Status__c</field>
+        <formula>TEXT(PRIORVALUE( JIRA_Status__c ))</formula>
+        <name>Copy Jira Status to Previous Jira Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Owner_to_Previous_Owner_Text</fullName>
+        <description>Store previous owner for email notifications</description>
+        <field>Previous_Owner_Text__c</field>
+        <formula>Previous_Owner__r.FirstName</formula>
+        <name>Copy Owner to Previous Owner Text</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Priority_to_Previous_Priority</fullName>
+        <field>Previous_Priority__c</field>
+        <formula>TEXT(PRIORVALUE(Priority))</formula>
+        <name>Copy Priority to Previous Priority</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Status_to_Previous_Status</fullName>
+        <description>Storing the previous value of Status so we can use it when sending notification emails to CSMs, etc.</description>
+        <field>Previous_Status__c</field>
+        <formula>TEXT(PRIORVALUE(Status))</formula>
+        <name>Copy Status to Previous Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Subject_to_Previous_Subject</fullName>
+        <description>Previous value used for email notifications</description>
+        <field>Previous_Subject__c</field>
+        <formula>PRIORVALUE(Subject)</formula>
+        <name>Copy Subject to Previous Subject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_User_Story_to_Previous_User_Story</fullName>
+        <field>Previous_User_Story_Ticket__c</field>
+        <formula>PRIORVALUE(User_Story_Ticket__c)</formula>
+        <name>Copy User Story to Previous User Story</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PKB_Case_Origin</fullName>
+        <field>Origin</field>
+        <literalValue>PKB</literalValue>
+        <name>PKB Case Origin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Priority_High</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Priority High</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>QA_Resource_set_to_default</fullName>
+        <field>QA_Resource__c</field>
+        <literalValue>QA</literalValue>
+        <name>QA Resource set to default</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_CaseOwner_queue_First_Level_Support</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Support_1</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set CaseOwner queue First Level Support</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Owner_Marcel</fullName>
+        <field>OwnerId</field>
+        <lookupValue>marcel.dubois@bluescape.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Set Case Owner: Marcel</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Owner_it_support_bluescape_com</fullName>
+        <field>OwnerId</field>
+        <lookupValue>IT_Support</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set Case Owner: it-support@bluescape.com</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Reason_Enhancement_Request</fullName>
+        <field>Reason</field>
+        <literalValue>Enhancement Request</literalValue>
+        <name>Set Case Reason Enhancement Request</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Reason_Internal_IT_Issue</fullName>
+        <field>Reason</field>
+        <literalValue>Internal IT Issue</literalValue>
+        <name>Set Case Reason Internal IT Issue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Reason_Works_As_Intended</fullName>
+        <field>Reason</field>
+        <literalValue>Works as intended</literalValue>
+        <name>Set Case Reason Works As Intended</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Reason_to_Duplicate</fullName>
+        <field>Reason</field>
+        <literalValue>Duplicate</literalValue>
+        <name>Set Case Reason to Duplicate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Reason_to_Enhancement_Request</fullName>
+        <description>Set Case Reason to Enhancement Request based on Case Type equal to Feature Request</description>
+        <field>Reason</field>
+        <literalValue>Enhancement Request</literalValue>
+        <name>Set Case Reason to Enhancement Request</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Type_to_Feature_Request</fullName>
+        <description>Set Case Type to Feature Request when a Suggestion is submitted.</description>
+        <field>Type</field>
+        <literalValue>Feature Request</literalValue>
+        <name>Set Case Type to Feature Request</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_High_Priority_Timestamp</fullName>
+        <description>Set High Priority Timestamp to Now</description>
+        <field>High_Priority_Timestamp__c</field>
+        <formula>IF(ISBLANK(High_Priority_Timestamp__c),Now(), High_Priority_Timestamp__c )</formula>
+        <name>Set High Priority Timestamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Initial_CommStatus_Initial_Email_Sen</fullName>
+        <field>Comm_Status__c</field>
+        <literalValue>Initial Email Sent</literalValue>
+        <name>Set Initial CommStatus-Initial Email Sen</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Organization_Name_from_Account_Name</fullName>
+        <field>Organization_Name__c</field>
+        <formula>Account.Name</formula>
+        <name>Set Organization Name from Account Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Owner_Product_Portfolio</fullName>
+        <description>Send Feature Requests to the Product Team</description>
+        <field>OwnerId</field>
+        <lookupValue>Product_Portfolio</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set Owner Product Portfolio</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Platform_N_A</fullName>
+        <field>Platform__c</field>
+        <literalValue>N/A</literalValue>
+        <name>Set Platform N/A</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Priority_High</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Set Priority High</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Priority_Medium</fullName>
+        <field>Priority</field>
+        <literalValue>Medium</literalValue>
+        <name>Set Priority Medium</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Priority_to_Request_Want</fullName>
+        <field>Priority</field>
+        <literalValue>Medium</literalValue>
+        <name>Set Priority to Request - Want</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_QA_assistance_timestamp</fullName>
+        <field>QA_Assistance_Timestamp__c</field>
+        <formula>now()</formula>
+        <name>Set QA assistance timestamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Service_Product_Manager</fullName>
+        <field>Product_Manager__c</field>
+        <literalValue>Satish Santhakumar</literalValue>
+        <name>Set Service Product Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Set Status Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Pending_Prioritization</fullName>
+        <field>Status</field>
+        <literalValue>Pending Prioritization</literalValue>
+        <name>Set Status Pending Prioritization</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Type_Kudos</fullName>
+        <field>Type</field>
+        <literalValue>Kudos</literalValue>
+        <name>Set Type Kudos</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Type_Problem</fullName>
+        <field>Type</field>
+        <literalValue>Problem</literalValue>
+        <name>Set Type Problem</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_User_Story_Status_Unprioritized</fullName>
+        <field>JIRA_Status__c</field>
+        <literalValue>Unprioritized</literalValue>
+        <name>Set User Story Status Unprioritized</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_User_Story_Ticket</fullName>
+        <field>User_Story_Ticket__c</field>
+        <formula>IF(ISBLANK(User_Story_Ticket__c),&quot;This needs to be set&quot;,User_Story_Ticket__c)</formula>
+        <name>Set User Story Ticket</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Wall_Product_Manager</fullName>
+        <field>Product_Manager__c</field>
+        <literalValue>Brian Allen</literalValue>
+        <name>Set Wall Product Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_PKB_Set_New</fullName>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+        <name>Status (PKB) - Set New</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Set_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Status - Set Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Set_Escalated</fullName>
+        <field>Status</field>
+        <literalValue>Escalated</literalValue>
+        <name>Status - Set Escalated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Set_Pending_Prioritization</fullName>
+        <field>Status</field>
+        <literalValue>Pending Prioritization</literalValue>
+        <name>Status - Set Pending Prioritization</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Set_Working</fullName>
+        <field>Status</field>
+        <literalValue>Working</literalValue>
+        <name>Status - Set Working</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Case_Changed_Date</fullName>
+        <field>Case_Changed_Timestamp__c</field>
+        <formula>NOW()</formula>
+        <name>Update Last Case Changed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>User_Story_Status_set_to_Icebox</fullName>
+        <field>JIRA_Status__c</field>
+        <literalValue>Icebox</literalValue>
+        <name>User Story Status set to Icebox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>BACKUP CS person takes ownership</fullName>
+        <actions>
+            <name>Set_CaseOwner_queue_First_Level_Support</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>First Level Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Hardware Action</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <description>COPY - When someone pulls a case off of the First Level Support Queue, do these things.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPC Case Origin</fullName>
+        <actions>
+            <name>CPC_Case_Origin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Case_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( 
+OR(
+$Profile.Id = &quot;00eE0000000euhQ&quot;,
+$Profile.Id = &quot;00eE0000000erUT&quot;
+),
+NOT(ISPICKVAL (Origin, &quot;Chatter Answers&quot;)),
+NOT(ISPICKVAL (Origin, &quot;PKB&quot;)
+))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CS person takes ownership</fullName>
+        <actions>
+            <name>Status_Set_Working</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When someone pulls a case off of the First Level Support Queue, do these things.</description>
+        <formula>AND(
+ISCHANGED(OwnerId),
+LEFT(OwnerId,3) = &quot;005&quot;,
+LEFT(PRIORVALUE(OwnerId),3) = &quot;00G&quot; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Created%3A Store Initial Previous Values</fullName>
+        <actions>
+            <name>Copy_HW_Issue_to_Previous_HW_Issue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Jira_Priority_to_Previous_Jira_Prio</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Jira_Status_to_Previous_Jira_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Priority_to_Previous_Priority</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Status_to_Previous_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Subject_to_Previous_Subject</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_User_Story_to_Previous_User_Story</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Store copy of initial values for Status, Subject, Jira_Status, Jira_Priority, User_Story_Ticket, Hardware Issue, Priority into the &quot;Previous&quot; fields. These are used in email notifications to CSMs, etc.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Updated - Update Last Status Change</fullName>
+        <actions>
+            <name>Update_Last_Case_Changed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Set a local Last Modified Date field every time a case is updated</description>
+        <formula>OR(ISCHANGED(Status),
+ISCHANGED(OwnerId),
+ISCHANGED(Origin),
+ISCHANGED(Priority),
+ISCHANGED(Subject),
+ISCHANGED(Type),
+ISCHANGED(Hardware_Issue__c),
+ISCHANGED(Hardware_Type__c),
+ISCHANGED(Reason),
+ISCHANGED(Platform__c),
+ISCHANGED(Description),
+ISCHANGED(AccountId),
+ISCHANGED(ContactId)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case assigned to Hardware Action Queue</fullName>
+        <actions>
+            <name>Notify_Hardware_Action_Queue_Members</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_High</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+ISCHANGED(OwnerId),
+OwnerId = &quot;00GE0000001boqk&quot;,
+OR(ISPICKVAL(Status,&quot;Working&quot;),
+   ISPICKVAL(Status,&quot;Escalated&quot;),
+   ISPICKVAL(Status,&quot;New&quot;),
+   ISPICKVAL(Status,&quot;Observe&quot;),
+   ISPICKVAL(Status,&quot;On Hold&quot;)
+  )
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case reassigned</fullName>
+        <actions>
+            <name>Email_Manager</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Email the manager (Marcel) when a case owner changes</description>
+        <formula>ISCHANGED(OwnerId)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case reassigned %28user to user%29</fullName>
+        <actions>
+            <name>Send_email_to_previous_owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Send email to previous owner when case owner changes.</description>
+        <formula>AND(
+ISCHANGED(OwnerId),
+LEFT(OwnerId,3) = &quot;005&quot;,
+LEFT(PRIORVALUE(OwnerId),3) = &quot;005&quot; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case transferred to Queue</fullName>
+        <active>false</active>
+        <description>When a case is assigned to a queue</description>
+        <formula>AND(
+ISCHANGED(OwnerId),
+LEFT(OwnerId,3) = &quot;00G&quot;,
+LEFT(PRIORVALUE(OwnerId),3) = &quot;005&quot; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case%3A update open days field</fullName>
+        <actions>
+            <name>Case_update_open_days_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updates &quot;Open Days&quot; field with field update formula.</description>
+        <formula>TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Chatter Answers Origin</fullName>
+        <actions>
+            <name>Chatter_Answers_Origin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>(ISPICKVAL (Question.Origin, &quot;Chatter Answers&quot;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Closed Case for %22Create New Org%22</fullName>
+        <actions>
+            <name>Create_Org_Case_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>startsWith</operation>
+            <value>Create New Org for Account:</value>
+        </criteriaItems>
+        <description>Send notification to Finance &amp; Accounting when &quot;Create New Org for Account:&quot; case is closed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Comm Status Update%2C notify Account Team</fullName>
+        <actions>
+            <name>Email_Update_Notify_Account_Team</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Account Team wants to know when customer case communciation happens. When Comm Status is updated to &#39;Awaiting User Response&#39; or &#39;User Response Received&quot;, send notification to Account Team</description>
+        <formula>AND (ISCHANGED(Comm_Status__c),
+     OR ( 
+         ISPICKVAL(Comm_Status__c, &quot;Awaiting User Response&quot;),
+         ISPICKVAL(Comm_Status__c, &quot;User Response Received&quot;)
+        )
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Community Case created assigned to FLS</fullName>
+        <actions>
+            <name>Change_Owner_to_First_Level_Support</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.AccountName</field>
+            <operation>equals</operation>
+            <value>Bluescape Community Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>First Level Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <description>Make sure cases created via the community are assigned to First Level Support.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Community case created-assign to T1</fullName>
+        <actions>
+            <name>Change_Owner_to_First_Level_Support</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Make sure cases created by guest and logged in users in the community are assigned to T1</description>
+        <formula>AND( OR ( ISPICKVAL(Origin, &quot;Community Guest&quot;), ISPICKVAL(Origin, &quot;Community User&quot;)), (Owner:Queue.QueueName  &lt;&gt;  &quot;Tier 1&quot;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Hardware Issue Change to Previous Hardware Issue</fullName>
+        <actions>
+            <name>Copy_HW_Issue_to_Previous_HW_Issue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Storing a copy of the previous value. Used in email notifications to CSMs, etc.</description>
+        <formula>ISCHANGED( Hardware_Issue__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Jira Status Change to Previous Jira Status</fullName>
+        <actions>
+            <name>Copy_Jira_Status_to_Previous_Jira_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Storing a copy of the previous value. Used in email notifications to CSMs, etc.</description>
+        <formula>ISCHANGED( JIRA_Status__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Owner to Previous Owner</fullName>
+        <actions>
+            <name>Copy_Owner_to_Previous_Owner_Text</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Storing a copy of the previous value. Used in email notifications to CSMs, etc.</description>
+        <formula>ISCHANGED(  OwnerId  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Priority Change to Previous Priority</fullName>
+        <actions>
+            <name>Copy_Priority_to_Previous_Priority</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Storing a copy of the previous value. Used in email notifications to CSMs, etc.</description>
+        <formula>ISCHANGED( Priority )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Status Change to Previous Status</fullName>
+        <actions>
+            <name>Copy_Status_to_Previous_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Storing a copy of the previous value. Used in email notifications to CSMs, etc.</description>
+        <formula>ISCHANGED( Status )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Subject Change to Previous Subject</fullName>
+        <actions>
+            <name>Copy_Subject_to_Previous_Subject</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Storing a copy of the previous value. Used in email notifications to CSMs, etc.</description>
+        <formula>ISCHANGED( Subject )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Duplicate Case</fullName>
+        <actions>
+            <name>Set_Status_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Duplicate</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email Ops for US Fed Gov%27t Cases</fullName>
+        <actions>
+            <name>Notify_Ops_of_US_Gov_t_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>equals</operation>
+            <value>US Federal Government</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Account_ID__c</field>
+            <operation>equals</operation>
+            <value>001E000001Mtc01</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Escalated Cases</fullName>
+        <actions>
+            <name>Case_Escalated_so_mail_Manager</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_High</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </criteriaItems>
+        <description>Should have Priority High</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Feature request case reassigned to product portfolio</fullName>
+        <actions>
+            <name>Set_Case_Reason_Enhancement_Request</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Case_Type_to_Feature_Request</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_to_Request_Want</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Status_Pending_Prioritization</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>What to do when a case is reassigned to the product portfolio queue</description>
+        <formula>ISCHANGED(OwnerId) &amp;&amp; OwnerId = &quot;00GE0000001bouh&quot; &amp;&amp;  IsClosed = False</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Hardware Action Timestamp</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Hardware Action</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>High Priority Timestamp</fullName>
+        <actions>
+            <name>Set_High_Priority_Timestamp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>Problem - High,High</value>
+        </criteriaItems>
+        <description>Set Date/Time on High Priority Timestamp</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Jira Ticket URL</fullName>
+        <actions>
+            <name>Convert_User_Story_Ticket_to_URL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>make Jira Ticket (aka User Story Ticket) look like a URL</description>
+        <formula>NOT(CONTAINS(User_Story_Ticket__c,&quot;http&quot;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Kudos</fullName>
+        <actions>
+            <name>Status_Set_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Kudos</value>
+        </criteriaItems>
+        <description>Setting fields based on Type=Kudos</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New API Support Case</fullName>
+        <actions>
+            <name>Notify_API_Support_Ariel</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Platform__c</field>
+            <operation>equals</operation>
+            <value>API</value>
+        </criteriaItems>
+        <description>Forward to Ariel (API Support)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Case Comment Alert to Customer</fullName>
+        <actions>
+            <name>New_Comment_Alert_to_Customer</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Last_Public_Case_Comment__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Case Tasks</fullName>
+        <actions>
+            <name>New_Case_Created_Alert_to_Customer</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Slack_notification_of_a_new_case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>When a case is created, email customer, forward notification to Slack, and set CommStatus</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Feature Request Case from email</fullName>
+        <actions>
+            <name>Set_Case_Reason_Enhancement_Request</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Case_Type_to_Feature_Request</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_to_Request_Want</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Status_Pending_Prioritization</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_User_Story_Status_Unprioritized</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_User_Story_Ticket</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>What to do when email is sent to support@bluescape.com with subject starting with &#39;feature request&#39;</description>
+        <formula>LEFT(LOWER(Subject),15) = &quot;feature request&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Account Executive and CSM</fullName>
+        <actions>
+            <name>Notify_CSM_and_Sales_Executive_of_new_case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>When a case is assigned to an account, notify the appropriate AE and CSM</description>
+        <formula>OR(
+/* New Case, and the account is not Bluescape HQ */
+AND(ISNEW(), NOT ISBLANK(AccountId),NOT(AccountId = &quot;001E000000RrswS&quot;))
+,
+/* Account is changed, it&#39;s not blank and not Bluescape HQ, and case is open */
+AND(ISCHANGED(AccountId),NOT(AccountId = &quot;001E000000RrswS&quot;),NOT ISBLANK(AccountId),NOT(IsClosed))
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Account Executive and CSM 2</fullName>
+        <actions>
+            <name>Notify_CSM_and_Sales_Executive_of_new_case</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>When a case is created and assigned to a non-bluescape account, notify the Account Team</description>
+        <formula>AND(NOT ISBLANK(AccountId),NOT(AccountId = &quot;001E000000RrswS&quot;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Account Team if case status changes</fullName>
+        <actions>
+            <name>Notify_CSMs_of_Case_Update</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notify Account Team if certain case fields change (eg - Status, Subject, JIRA_Status, JIRA_Priority, Priority</description>
+        <formula>OR(
+ISCHANGED(Status),
+ISCHANGED(Subject),
+ISCHANGED(JIRA_Status__c),
+ISCHANGED(JiraPriority__c),
+ISCHANGED(User_Story_Ticket__c),
+ISCHANGED(Hardware_Issue__c),
+ISCHANGED(Priority)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Case Owner when more info requested</fullName>
+        <actions>
+            <name>Could_Not_Reproduce_Need_more_info_notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT(ISPICKVAL(PRIORVALUE(JIRA_Resolution__c),&quot;Cannot Reproduce&quot;)),
+    ISPICKVAL(JIRA_Resolution__c, &quot;Cannot Reproduce&quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PKB Case Origin</fullName>
+        <actions>
+            <name>Email_First_Level_Support_about_PKB_case</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Change_Owner_to_First_Level_Support</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>PKB_Case_Origin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>contains</operation>
+            <value>Public KB</value>
+        </criteriaItems>
+        <description>Normal Case Assignment Rules don&#39;t work for cases created via PKB2. This rule makes sure the Support team is notified and the case is assigned to their queue.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Priority High-%3EMed changes Status to working</fullName>
+        <actions>
+            <name>Status_Set_Working</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>Medium</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </criteriaItems>
+        <description>Changing high to medium changes status escalated to working</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Production Issue</fullName>
+        <actions>
+            <name>Priority_High</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Type_Problem</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Support_Type__c</field>
+            <operation>equals</operation>
+            <value>Production Issue</value>
+        </criteriaItems>
+        <description>Set Status to Escalated and Case Type to Problem when a Production Issue is reported</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>QA Assistance Notification</fullName>
+        <actions>
+            <name>QA_Resource_set_to_default</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_QA_assistance_timestamp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.QA_Assistance_Needed__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>When the QA Assistance request box is checked, send email to the QA team</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reassigned Create New Org requests</fullName>
+        <actions>
+            <name>Set_Case_Owner_Marcel</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_Medium</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Status_Set_Working</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>startsWith</operation>
+            <value>Create New Org for Account:</value>
+        </criteriaItems>
+        <description>Key on subject &quot;Create New Org for Account: &lt;company name&gt;&quot;</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Service Down cases set Priority High</fullName>
+        <actions>
+            <name>Priority_High</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>equals</operation>
+            <value>NOTIFICATION: Service DOWN</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set CommStatus when Case Closed</fullName>
+        <actions>
+            <name>CommStatus_Case_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Feature Request fields</fullName>
+        <actions>
+            <name>Set_Case_Reason_Enhancement_Request</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_to_Request_Want</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Status_Pending_Prioritization</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_User_Story_Status_Unprioritized</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_User_Story_Ticket</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>For Feature Requests, set several default values (eg - status, user story status, etc)</description>
+        <formula>NOT(ISPICKVAL(PRIORVALUE(Type), &quot;Feature Request&quot;)) &amp;&amp; ISPICKVAL(Type, &quot;Feature Request&quot;) &amp;&amp; IsClosed  = False</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Organization Name from Account Name</fullName>
+        <actions>
+            <name>Set_Organization_Name_from_Account_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Organization Name is passed on to Jira when a user creates a jira ticket from within salesforces</description>
+        <formula>Account.Name  &lt;&gt;  Organization_Name__c</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Product Manager for Service Dev</fullName>
+        <actions>
+            <name>Set_Service_Product_Manager</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Platform__c</field>
+            <operation>notContain</operation>
+            <value>Wall</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Platform__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Based on the platform, set the Product Manager field. This will be passed to Jira when the Create Jira Story button is used.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Product Manager for Wall Dev</fullName>
+        <actions>
+            <name>Set_Wall_Product_Manager</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Platform__c</field>
+            <operation>equals</operation>
+            <value>Wall</value>
+        </criteriaItems>
+        <description>Based on the platform, set the Product Manager field. This will be passed to Jira when the Create Jira Story button is used.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Previous Values</fullName>
+        <actions>
+            <name>Copy_HW_Issue_to_Previous_HW_Issue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Jira_Priority_to_Previous_Jira_Prio</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Jira_Status_to_Previous_Jira_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Priority_to_Previous_Priority</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Status_to_Previous_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Subject_to_Previous_Subject</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_User_Story_to_Previous_User_Story</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Store copy of the previous values for Status, Subject, Jira_Status, Jira_Priority, User_Story_Ticket, Hardware Issue, Priority. These are used in email notifications to CSMs, etc.</description>
+        <formula>OR( 
+ISCHANGED(Status), 
+ISCHANGED(Subject), 
+ISCHANGED(JIRA_Status__c), 
+ISCHANGED(JiraPriority__c), 
+ISCHANGED(Hardware_Issue__c), 
+ISCHANGED(User_Story_Ticket__c), 
+ISCHANGED(Priority) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>User Story Ticket Added</fullName>
+        <actions>
+            <name>User_Story_Status_set_to_Icebox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.User_Story_Ticket__c</field>
+            <operation>startsWith</operation>
+            <value>http</value>
+        </criteriaItems>
+        <description>When User Story Ticket is set, change User Story Status to Icebox</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>When User Story Status is Current Dev%2E</fullName>
+        <actions>
+            <name>Status_Set_Working</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.JIRA_Status__c</field>
+            <operation>equals</operation>
+            <value>Current Dev.</value>
+        </criteriaItems>
+        <description>When User Story Status (from Pivotal) is updated to Current Dev., Update case status</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>When User Story Status is Engr Done or Released</fullName>
+        <actions>
+            <name>Set_Status_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.JIRA_Status__c</field>
+            <operation>equals</operation>
+            <value>Engr. Done,Released</value>
+        </criteriaItems>
+        <description>When User Story Status (from Pivotal) is updated to Engr. Done or Released Update case status to Closed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>it-support emails</fullName>
+        <actions>
+            <name>Set_Case_Reason_Internal_IT_Issue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Platform_N_A</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Priority_Medium</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>IT Support</value>
+        </criteriaItems>
+        <description>Set Priority and Reason</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

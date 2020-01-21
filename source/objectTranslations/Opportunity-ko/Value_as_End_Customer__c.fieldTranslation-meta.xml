@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total won value as End Customer --></help>
+    <label><!-- Value as End Customer --></label>
+    <name>Value_as_End_Customer__c</name>
+</CustomFieldTranslation>

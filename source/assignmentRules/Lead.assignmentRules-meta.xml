@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>SDR Assignment Rules</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>denzel.nicholas@bluescape.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND (2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>InsideView</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>CA,OR,WA,NV,ID,MT,UT,WY,AZ,NM,CO,HI,AK</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>California,Oregon,Washington,Idaho,Nevada,Arizona,Utah,Montana,Wyoming,Colorado,New Mexico,Hawaii,Alaska</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>rashad.burroughs@bluescape.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND (2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>InsideView</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>ND,SD,NE,KS,OK,TX,LA,AR,MO,IA,MN,WI,IL,KY,TN,MS,AL,IN,MI,NC,GA,FL,SC,NC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>Florida,Georgia,South Carolina,North Carolina,Alabama,Mississippi,Tennessee,Kentucky,Indiana,Michigan,Illinois,Wisconsin,Louisiana,Texas,Oklahoma,Arkansas,Missouri,Kansas,Iowa,Nebraska,South Dakota,Minnesota,North Dakota</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>denzel.nicholas@bluescape.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND (2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>InsideView</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>VA,WV,OH,PA,MD,DC,NJ,NY,CT,RI,MA,NH,VT,ME</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>Virginia,West Virginia,Maryland,District of Columbia,New Jersey,Pennsylvania,Ohio,New York,Connecticut,Rhode Island,Massachusetts,New Hampshire,Vermont,Maine</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

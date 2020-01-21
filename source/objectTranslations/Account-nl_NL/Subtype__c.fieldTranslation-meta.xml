@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Subtype --></label>
+    <name>Subtype__c</name>
+    <picklistValues>
+        <masterLabel>Analyst</masterLabel>
+        <translation><!-- Analyst --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blue35</masterLabel>
+        <translation><!-- Blue35 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bluescape</masterLabel>
+        <translation><!-- Bluescape --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bluescape Demo</masterLabel>
+        <translation><!-- Bluescape Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bluescape Warehouse</masterLabel>
+        <translation><!-- Bluescape Warehouse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Channel</masterLabel>
+        <translation><!-- Channel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Channel Distributor</masterLabel>
+        <translation><!-- Channel Distributor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Channel Reseller</masterLabel>
+        <translation><!-- Channel Reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consulting</masterLabel>
+        <translation><!-- Consulting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Developer</masterLabel>
+        <translation><!-- Developer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct</masterLabel>
+        <translation><!-- Direct --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Reseller</masterLabel>
+        <translation><!-- Global Reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth</masterLabel>
+        <translation><!-- Haworth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth Dealer</masterLabel>
+        <translation><!-- Haworth Dealer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth Reseller</masterLabel>
+        <translation><!-- Haworth Reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legacy Reseller</masterLabel>
+        <translation><!-- Legacy Reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Press</masterLabel>
+        <translation><!-- Press --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self Service</masterLabel>
+        <translation><!-- Self Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supplier</masterLabel>
+        <translation><!-- Supplier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology</masterLabel>
+        <translation><!-- Technology --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

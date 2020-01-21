@@ -1,0 +1,54 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Whitelisting a Guest Email Domain
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+          Admins can whitelist a guest email domain, which automatically approves any guest with that email domain without requiring admin approval. This streamlines the approval process for guests from domains you trust, while maintaining control against those you don&#39;t. For more information, see <a href="https://support.bluescape.com/BluescapeSupport_Article?a=Setting-Admin-Approval-for-Guest-Invites" target="_blank">Setting Admin Approval for Guest Invites</a>.&nbsp;<br />
+<br />
+To whitelist a guest email domain:
+<ol>
+    <li>Log in to Bluescape as an admin.</li>
+    <li>Click the Org tree icon&nbsp;in the portal to open the&nbsp;<b>Organization Settings</b> page.</li>
+    <li>Find&nbsp;the <b>Whitelisting guest email domains</b> section.&nbsp;</li>
+    <li>Enter the domain you want to whitelist in the&nbsp;field with the following convention: &quot;abc.com&quot; (i.e., the email domain name followed by .com, with no @ sign)</li>
+    <li> Click <b>Add</b>.</li>
+</ol>
+<br />
+Guests from that email domain will be automatically approved, even if admin approval for guest invites is required.<br />
+<br />
+In addition, the email domain is now displayed under the <b>Whitelisted domains</b>&nbsp;section.<br />
+<br />
+To remove the email domain from the whitelist, click the X (exit) icon next to the domain name.<br />
+<br />
+<b>Note</b>: You can also blacklist a guest email domain, which prevents guests from that email domain from being invited to use Bluescape. Note that you cannot add an email domain to the whitelist if it is already blacklisted. However, if you add a domain to the blacklist that is already whitelisted, you can still invite guests from that domain. In this case, the whitelist takes precedence over the blacklist.
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

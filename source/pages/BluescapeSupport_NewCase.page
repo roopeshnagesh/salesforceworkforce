@@ -1,0 +1,156 @@
+<apex:page title="Bluescape Support: New Case" controller="BluescapeSupport_NewCaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #newCase #caseForm .form-group label {
+                    white-space: nowrap;
+                }
+
+                #newCase #caseForm .form-group input,
+                #newCase #caseForm .form-group textarea {
+                    width: 100%;
+                }
+
+                #newCase #caseForm .form-group .buttons {
+                    text-align: right;
+                }
+
+                #newCase #caseForm .form-group .buttons button,
+                #newCase #caseForm .form-group .buttons .actionBtn {
+                    padding: .5rem 2rem;
+                    display: inline-block;
+                    margin: 2rem 0;
+                    margin-left: 3rem;
+                    border: none;
+                    border-radius: 0;
+                    float: right;
+                }
+
+                #newCase #caseForm .actionBtn.cancel {
+                    background: #f9f9f9;
+                }
+
+                #newCase #caseForm .actionBtn.cancel a {
+                    color: #000;
+                }
+
+                #newCase #caseForm button.submit {
+                    color: #FFF;
+                    background: #0072FF;
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="newCase" class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <h1>New Case</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <form id="caseForm" class="form-horizontal" action="#">
+                            <input type="hidden" id="contactId" value="{!userContactId}" />
+                            <div class="form-group">
+                                <label for="type" class="col-xs-12 col-sm-2 control-label">Type</label>
+                                <div class="col-xs-12 col-sm-10">
+                                    <select id="type" size="1">
+                                  <apex:repeat value="{!types}" var="type">
+                                    <option value="{!type.value}">{!type.label}</option>
+                                  </apex:repeat>
+                              </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="type" class="col-xs-12 col-sm-2 control-label">Priority</label>
+                                <div class="col-xs-12 col-sm-10">
+                                    <select id="priority" size="1">
+                                <apex:repeat value="{!priorities}" var="priority">
+                                  <option value="{!priority.value}">{!priority.label}</option>
+                                </apex:repeat>
+                            </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="type" class="col-xs-12 col-sm-2 control-label">Subject *</label>
+                                <div class="col-xs-12 col-sm-10">
+                                    <input type="text" id="subject" maxlength="255" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="type" class="col-xs-12 col-sm-2 control-label">Description *</label>
+                                <div class="col-xs-12 col-sm-10">
+                                    <textarea id="description" rows="5" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12 buttons">
+                                    <button class="submit">Submit</button>
+                                    <div class="actionBtn cancel">
+                                        <a href="{!$Page.BluescapeSupport_MyCases}">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </apex:define>
+
+        <apex:define name="scripts">
+            <script>
+                $("#newCase #caseForm").on('submit', function(e) {
+                    e.preventDefault();
+
+                    let contactId = $("#newCase #caseForm #contactId").val();
+                    let type = $("#newCase #caseForm #type").val();
+                    let priority = $("#newCase #caseForm #priority").val();
+                    let subject = $("#newCase #caseForm #subject").val().trim();
+                    let description = $("#newCase #caseForm #description").val().trim();
+
+                    if (subject && description) {
+                        $("#newCase #caseForm button").prop("disabled", true);
+                        submitCase(contactId, type, priority, subject, description, function(result) {
+                            if (result.substr(0, 2) === 'OK') {
+                                let caseId = result.substr(2);
+                                window.location.href = `{!$Page.BluescapeSupport_CaseDetail}?caseId=${caseId}`;
+                            } else {
+                                $("#newCase #caseForm button").prop("disabled", false);
+                            }
+                        });
+                    }
+                });
+
+                function submitCase(contactId, type, priority, subject, description, cb) {
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.BluescapeSupport_NewCaseController.createCase}',
+                        contactId,
+                        type,
+                        priority,
+                        subject,
+                        description,
+                        function(response, event) {
+                            if (event.status) {
+                                cb(response);
+                            } else {
+                                cb(event.message);
+                            }
+                        }, {
+                            escape: true
+                        }
+                    );
+                }
+            </script>
+           
+
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

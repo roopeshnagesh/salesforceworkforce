@@ -1,0 +1,60 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Adding Assets to a Workspace
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                                   The workspace is meant to be used as a central repository where all project materials can be stored, reviewed, and updated. The types of assets that can be added natively to a workspace are the following:<br />
+&nbsp;
+<ul>
+	<li>Web-hosted Content</li>
+	<li>Images</li>
+	<li>PDFs</li>
+	<li>Microsoft PowerPoint Files</li>
+	<li>Microsoft Word Files</li>
+	<li>Microsoft Excel Files</li>
+	<li>Websites</li>
+	<li>Notecards</li>
+	<li>Writing/Drawings</li>
+	<li>YouTube Videos</li>
+	<li>Text</li>
+	<li>Canvases</li>
+</ul>
+<br />
+All of these types of assets can be uploaded to the workspace from the <b>Upload</b> tray. To open the tray, click the plus sign icon&nbsp;in the sidebar menu.<br />
+&nbsp;
+<div style="text-align: center;"></div>
+
+<div><br />
+Additionally, files that you are adding directly from your desktop can be clicked and dragged over the workspace for a quick upload. After dragging and dropping the file over the workspace, it will begin load as an asset in the workspace.</div>
+
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

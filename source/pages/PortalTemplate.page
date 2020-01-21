@@ -1,0 +1,11 @@
+<apex:page showHeader="false" id="PortalTemplate">
+       <apex:stylesheet value="{!$Resource.PartnerBanner}"/>   
+          <apex:insert name="header">
+            <c:PortalHeader />
+        </apex:insert>
+          <apex:insert name="body"/>
+          <apex:insert name="footer">
+
+        <c:PortalFooter />
+      </apex:insert>
+</apex:page>

@@ -1,0 +1,117 @@
+<apex:page title="Bluescape Support: Contact" controller="BluescapeSupport_ContactCtrl" sidebar="false" showHeader="false" showChat="false" standardStylesheets="false">
+
+  <apex:composition template="BluescapeSupport_SiteTemplate">
+
+    <apex:define name="styles">
+      <style type="text/css">
+        #contact {
+          padding: 1rem;
+        }
+
+        @media (min-width: 992px) {
+          #contact .contactMethodContainer {
+            height: 240px;
+          }
+        }
+
+        #contact .contactMethod {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          background-color: #EEE;
+          border-radius: 5px;
+          padding: 1rem;
+          height: 100%;
+        }
+
+        #contact .contactMethod h2 {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        #contact .contactMethod p {
+          font-size: 1.3rem;
+          font-weight: normal;
+        }
+
+        #contact .tel {
+          font-size: 2rem;
+        }
+
+        #contact #openChat {
+          pointer-events: none;
+        }
+
+        #contact .btn {
+          width: 120px;
+        }
+      </style>
+    </apex:define>
+
+    <apex:define name="body">
+      <div id="contact">
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h1>Contact Support</h1>
+              <h5 class="hours">
+                Hours: Mon - Fri, 5am to 5pm PT (Except holidays)
+              </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4 contactMethodContainer">
+              <div class="contactMethod">
+                <h2>Chat with Us</h2>
+                <p>If you need an easier way to get assistance, please chat with us.</p>
+                <br/>
+                <p>Click the chat button at the bottom of the page to begin the conversation.</p>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4 contactMethodContainer">
+              <div class="contactMethod">
+                <h2>Open a Case</h2>
+                <p>If you can't find an answer or need personalized assistance, simply open a case.</p>
+                <br/>
+                <p>
+                  <a href="{!$Page.BluescapeSupport_NewCase}" class="btn btn-standard">Open Case</a><br />
+                  <br />
+                  or email us at <a href="mailto:support@bluescape.com">support@bluescape.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4 contactMethodContainer">
+              <div class="contactMethod">
+                <h2>Give us a Call</h2>
+                <p>If you have a critical issue or need assistance opening a case, please call us.</p>
+                <br/>
+                <p><span class="tel">1-888-507-0085</span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </apex:define>
+
+    <apex:define name="scripts">
+      <script>
+        function enableChat() {
+          if ($(".liveagent_online").is(":visible")) {
+            $("#contact #openChat").removeClass("btn-disabled").addClass("btn-standard").css('pointer-events', 'all');
+          }
+        }
+
+        $(document).ready(function() {
+          setTimeout(enableChat, 1000);
+        })
+      </script>
+    </apex:define>
+
+  </apex:composition>
+
+</apex:page>

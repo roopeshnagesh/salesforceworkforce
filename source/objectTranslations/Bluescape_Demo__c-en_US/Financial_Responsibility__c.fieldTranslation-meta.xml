@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Financial Responsibility --></label>
+    <name>Financial_Responsibility__c</name>
+    <picklistValues>
+        <masterLabel>Bluescape</masterLabel>
+        <translation><!-- Bluescape --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation><!-- Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth</masterLabel>
+        <translation><!-- Haworth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Split (add details in Notes)</masterLabel>
+        <translation><!-- Split (add details in Notes) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

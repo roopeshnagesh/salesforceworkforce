@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Roll-up summary of all closed-won opportunities (TCV) --></help>
+    <label><!-- Direct Account Value (TCV) --></label>
+    <name>Account_Value__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,74 @@
+<apex:page controller="BluescapeVideo_controller" showHeader="true" showChat="false" sidebar="false">
+
+    <style>
+        #vidPlayer {
+            width: 854px;
+            margin: 2rem auto;
+        }
+
+        #vidPlayer .video {
+            margin-bottom: 1rem;
+        }
+
+        #vidPlayer .category {
+            font-size: .9rem;
+            color: indianred;
+        }
+
+        #vidPlayer .title {
+            font-size: 1.2rem;
+        }
+
+        #vidPlayer .date {
+            margin-top: 1rem;
+            font-size: .8rem;
+            font-weight: bold;
+        }
+
+        #vidPlayer .desc {
+            font-size: .8rem;
+        }
+    </style>
+
+    <div id="vidPlayer">
+        <div class="video"></div>
+        <div class="category"></div>
+        <div class="title"></div>
+        <div class="date"></div>
+        <div class="desc"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(() => {
+            let videoId = "{!$CurrentPage.parameters.VideoID}";
+
+            getVideoInfo(videoId, (vid) => {
+                $("#vidPlayer .category").html(vid.category);
+                $("#vidPlayer .title").html(vid.title);
+                $("#vidPlayer .date").html(`Published on Jun 3, 2017`);
+                $("#vidPlayer .desc").html(vid.description);
+
+                let player = $(`<iframe width="854" height="480" src="${vid.url}" frameborder="0" allowfullscreen="true"></iframe>`);
+                $("#vidPlayer .video").append(player);
+            });
+
+            function getVideoInfo(videoId, cb) {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.BluescapeVideo_controller.getVideoInfo}',
+                    videoId,
+                    function(video, event) {
+                        if (event.status) {
+                            cb(video);
+                        } else if (event.type === 'exception') {
+                            console.log(event.message + ' ' + event.where);
+                        } else {
+                            console.log(event.message);
+                        }
+                    }, {
+                        escape: true
+                    }
+                );
+            }
+        });
+    </script>
+</apex:page>

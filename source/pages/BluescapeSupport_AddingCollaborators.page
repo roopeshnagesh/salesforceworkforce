@@ -1,0 +1,72 @@
+<apex:page title="Bluescape Support: Videos" controller="BluescapeSupport_VideosController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false"> >
+    
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Adding Collaborators to a Workspace
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    
+                              Once you&rsquo;ve created a workspace, you can share it with others. Depending on your Organization&rsquo;s privacy settings, you can invite both existing Bluescape users within the Organization and guests to collaborate on a workspace.&nbsp;
+<p>To add additional collaborators or guests to your workspace:</p>
+<p>
+    
+                                    </p>
+<ol>
+	<li>&nbsp;Login to Bluescape.</li>
+	<li>The <b>Workspaces</b> page of the portal opens. Find the <b>Permissions</b> column and click the Add User icon next to the desired workspace.</li>
+	<li>&nbsp;The <b>Workspace Collaborators</b> page opens.</li>
+	<li>&nbsp;Click the pencil icon next to <b>Permission Type</b> to edit the privacy setting of your workspace. This controls whether your workspace is <b>Private</b> or <b>Public</b>.&nbsp;
+	<ul>
+		<li><b>Public</b>&nbsp;workspaces are accessible to all Bluescape users in your Organization by default. You can add a collaborator and change their default role to a new role. Otherwise, their default role applies. For more information, see Setting Default Workspace Roles<b>.</b></li>
+		<li><b>Private</b> workspaces are only accessible to you until you explicitly add collaborators. You set the workspace role for any collaborators you add.&nbsp;</li>
+	</ul>
+	</li>
+	<li>&nbsp;To add&nbsp;colleagues to a workspace, click the <b>+ Collaborator</b> button. Alternatively, you can add collaborators directly from the workspace by clicking the User icon in the left sidebar menu, then clicking the <b>+ Workspace Collaborators</b> button.</li>
+    <li>The <b>Add collaborator</b> pop-up window opens. Enter one or more colleague&rsquo;s email address in the <b>Email address</b> field. If they are current users in your Bluescape Organization, suggestions to auto-fill their email address display.</li>
+    <li>Assign the collaborator(s) or guest(s) a workspace role with the <b>Permissions</b> drop-down menu. The permissions are different depending on whether the invitee is an existing user or a guest.</li>
+    <li>Click<b> Add</b>.</li>
+</ol>
+<br />
+
+<p>Your colleagues&rsquo; names and roles&nbsp;display in the <b>Workspace Collaborators</b> page. They will receive an email notification with a link to enter the workspace.&nbsp;</p>
+<b>Note</b>: If your Organization does not allow guests, only existing users within your Organization can be added as collaborators. If your Organization does allow guests, you can invite anyone with a valid email address.<br />
+&nbsp;
+<p>To remove a collaborator&#39;s access to a workspace, click&nbsp;the &ldquo;X&rdquo; to the right of their name on the <b>Workspace Collaborators </b>page.<br />
+<br />
+<b>Related Materials</b><br />
+<br />
+Bluescape University- <a href="https://university.bluescape.com/editing-collaborators/277576" target="_blank">Editing Collaborators</a></p>
+                                    
+                          
+                       
+</div>                                   
+                       
+                       
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

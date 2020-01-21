@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Standard Contact Page Layout</layout>
+        <sections>
+            <label><!-- CSM Contact Roles --></label>
+            <section>CSM Contact Roles</section>
+        </sections>
+        <sections>
+            <label><!-- HubSpot Intelligence --></label>
+            <section>HubSpot Intelligence</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn Member Profile --></label>
+            <section>LinkedIn Member Profile</section>
+        </sections>
+        <sections>
+            <label><!-- Useful Links --></label>
+            <section>Useful Links</section>
+        </sections>
+        <sections>
+            <label><!-- Zoom Info --></label>
+            <section>Zoom Info</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- With Zoom --></description>
+        <label><!-- Contact Detail Page --></label>
+        <name>Contact_Detail_Page</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- New Contact without Zoom --></description>
+        <label><!-- New Contact Record Type --></label>
+        <name>New_Contact_Record_Type</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Email cannot be changed for Bluescape Portal Users except by the Portal --></errorMessage>
+        <name>Lock_Email_for_Portal_Users</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First Name cannot be change for Bluescape Portal Users except by the Portal --></errorMessage>
+        <name>Lock_First_Name_for_Portal_Users</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Last Name cannot be change for Bluescape Portal Users except by the Portal --></errorMessage>
+        <name>Lock_Last_Name_for_Portal_Users</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Phone cannot be change for Bluescape Portal Users except by the Portal --></errorMessage>
+        <name>Lock_Phone_for_Portal_Users</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Portal Id cannot be changed for Bluescape Portal Users except by the Portal --></errorMessage>
+        <name>Lock_Portal_Id_for_Portal_Users</name>
+    </validationRules>
+</CustomObjectTranslation>

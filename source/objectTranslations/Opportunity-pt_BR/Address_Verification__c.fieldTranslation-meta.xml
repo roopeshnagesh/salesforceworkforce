@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Verify that the bill-to, ship-to contacts, and addresses on the quote for this particular opportunity are true &amp; accurate. --></help>
+    <label><!-- Address Verification --></label>
+    <name>Address_Verification__c</name>
+</CustomFieldTranslation>

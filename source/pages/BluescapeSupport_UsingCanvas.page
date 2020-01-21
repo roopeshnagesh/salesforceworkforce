@@ -1,0 +1,157 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Using the Canvas
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    <p>
+                                        
+                                    </p>
+Canvases allow Bluescape users to segment assets into groups to better present, locate, and share content. Canvases are similar to file folders on a computer. They contain multiple assets you can interact with on an individual and collective level. For example, you can create a presentation of images and PowerPoint files by dragging them into a canvas. This allows for a much more dynamic interaction with the content of the presentation. You can also easily locate any canvas you create from the <b>Canvas</b> icon within the workspace.<br />
+<br />
+
+                                    <p>
+                                        
+                                    </p>
+                                    <b>Creating a Canvas</b>
+                                    <p>
+                                        
+                                    </p>
+                                    <p>You can create a new canvas in two ways. The first method is to create a canvas which encompasses your current view of the workspace.</p>
+To create a canvas of your current view of the workspace:
+
+<ol>
+	<li>Open a workspace.</li>
+	<li>Click the <b>Canvas</b> icon in the workspace menu. &nbsp;A list of all canvases available in your workspace displays.</li>
+	<li>Click the <b>Add Canvas</b> button at the top of the list.</li>
+    <li>The <b>Edit Canvas</b> pop-up opens. Choose the color of the canvas icon and outline from a color palette.</li>
+    <li>Enter the name of the canvas in the text entry field.</li>
+    <li>Click <b>Add</b>.</li>
+</ol>
+<p>
+    
+                                    </p>
+
+The canvas is added to the workspace, with the frame of your viewable window as its boundaries. It now displays in the Canvas list in the workspace menu.<br />
+<br />
+You can also create a canvas that encompasses a group of assets in the workspace.&nbsp;<br />
+<br />
+To create a canvas around a group of assets:&nbsp;
+<ol>
+	<li>Open a workspace.</li>
+	<li>Group select assets in the workspace.</li>
+	<li>Click the group&#39;s context menu and select <b>Create Canvas</b>.</li>
+	<li>A menu opens that lets you view the details of the new canvas. Choose the color of the canvas icon and outline from a color palette.</li>
+	<li>Enter the name of the canvas in the text entry field.</li>
+	<li>Click <b>Add</b>.</li>
+</ol>
+The canvas is added to the workspace, with the edges of your group selection as its boundaries. It now displays in the Canvas list in the workspace menu.
+                                    <p>
+                                        
+                                    </p>
+                                    <b>Locating a Workspace</b>
+                                    <p>
+                                        
+                                    </p>
+                                    Canvases can function as location markers in the vastness of the workspace. Each workspace can contain multiple canvases, and each canvas is easily findable.&nbsp;<br />
+<br />
+To navigate to a canvas:
+<ol>
+	<li>Open a workspace.</li>
+	<li>Click the <b>Canvas</b> icon.</li>
+	<li>Find and click the canvas name from the list.</li>
+</ol>
+<p>
+    
+                                    </p>
+The workspace will automatically adjust the viewing window to center around the location of that canvas. Each canvas has a preset center point and zoom level, and the workspace view will adjust accordingly.
+                                    <p>
+                                        
+                                    </p>
+                                    <b>Organizing Assets with Canvas</b>
+                                    <p>
+                                        
+                                    </p>
+                                    You can interact with content in a canvas in various ways. Click the <b>Canvas</b> icon in the upper left-hand corner of the canvas frame to open its context menu and perform any of the following tasks:
+<ul>
+	<li><b>Comment</b>- View a list of all comments made on that particular canvas and/or add a new comment.</li>
+	<li><b>Edit</b>- Update the settings of the canvas, including the color and title.</li>
+	<li><b>Duplicate</b>- Create a copy of the canvas and all of its content. The word &ldquo;copy&rdquo; is appended at the end of the title of the duplicate.</li>
+	<li><b>Present</b>- Open present mode, with each of the assets in the canvas as the presentation materials. To exit this mode, swipe up or down on any of the presentation slides.</li>
+	<li><b>Delete</b>- Remove the canvas from the workspace. Note that this will not delete the content in the canvas, only the canvas icon and outline.</li>
+</ul>
+                                    <p>
+                                        
+                                    </p>
+                                    <b>Resizing a Canvas</b>
+                                <p>You can expand the size of a canvas to make it larger. This is useful when you want to fit more assets into a canvas or increase the size of one or more assets in the canvas.&nbsp;<br />
+<br />
+<b>Note</b>: You cannot shrink the size of a canvas.<br />
+                                    <p>
+                                        
+                                </p>
+
+To expand a canvas:
+</p>
+                                <p>
+                                    
+                                </p>
+
+<ol>
+	<li>&nbsp;Navigate to a canvas in a workspace.</li>
+	<li>&nbsp;Ensure there is an asset inside the canvas.</li>
+	<li>&nbsp;Drag the asset to the edge of the canvas until a thick border appears around the canvas. It may take a second for the border to appear.</li>
+	<li>&nbsp;Drag the asset outward until the canvas is the desired size. As you move the asset, the border of the canvas becomes a dotted line.</li>
+	<li>&nbsp;Release the asset to set the new canvas size.</li>
+</ol>
+                                <p>
+                                    
+                                </p>
+
+<p>To view a training video of resizing a canvas, see <a href="https://university.bluescape.com/bluescape-power-user/228306" target="_blank">Using Canvases to Organize a Workspace</a>.<br />
+<br />
+If you created a canvas that is too large, you can delete it without losing any of its&nbsp;assets, create a new, smaller canvas, and&nbsp;place the assets into it.&nbsp;<br />
+<br />
+</p>
+                                <b>Moving a Canvas</b>
+                                <p>
+                                    
+                                </p>
+                                You can move a canvas to a new location in the workspace.&nbsp;<br />
+<br />
+To move a canvas:&nbsp;
+<ol>
+	<li>Click the Canvas icon in the upper left-hand corner of the canvas.</li>
+	<li>The border of the canvas should be highlighted.</li>
+	<li>Click the Canvas icon again and drag it to the desired location. Any assets within the canvas boundary lines will move with it. Once you have reached the desired location, release the canvas.</li>
+</ol>
+                        </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

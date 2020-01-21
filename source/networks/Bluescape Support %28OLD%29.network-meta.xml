@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>true</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>Communities_Email_Templates/SupportChangePasswordEmail</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <emailSenderAddress>ariel.jakobovits@bluescape.com</emailSenderAddress>
+    <emailSenderName>Bluescape Support</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>false</enableGuestFileAccess>
+    <enableGuestMemberVisibility>true</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>true</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>Communities_Email_Templates/SupportForgotPasswordEmail</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <profile>Bluescape Sys Admin</profile>
+        <profile>RS Executive Profile</profile>
+        <profile>Demand Generation Lead</profile>
+        <profile>SA Clone</profile>
+        <profile>Sales Engineer</profile>
+        <profile>Solutions Consultant</profile>
+        <profile>Sales Insights Integration User</profile>
+        <profile>SalesforceIQ Integration User</profile>
+        <profile>Account Executive</profile>
+        <profile>Inside Sales Representative</profile>
+        <profile>Analytics Cloud Security User</profile>
+        <profile>Analytics Cloud Integration User</profile>
+        <profile>Business Development</profile>
+        <profile>RS Bluescape Sys Admin</profile>
+        <profile>RS Installation%2FLogistics Manager</profile>
+        <profile>Customer Support Knowledge</profile>
+        <profile>RS Finance%2FController</profile>
+        <profile>RS Standard User - Baseline Access</profile>
+        <profile>RS Standard User - Full Access</profile>
+        <profile>RS Standard Platform User - Baseline Access</profile>
+        <profile>RS Standard Platform User - Full Access</profile>
+        <profile>RS Office Manager</profile>
+        <profile>CSM Manager</profile>
+        <profile>Customer Support Knowledge%2Cw%2F Case Feed</profile>
+        <profile>Knowledge Administrator</profile>
+        <profile>Support %28External Agents%29</profile>
+        <profile>Sales Executive - No export</profile>
+        <profile>RS Installation%2FLogistics Specialist</profile>
+        <profile>RS Accounting</profile>
+        <profile>Customer Success Team</profile>
+        <profile>Engineering</profile>
+        <profile>Sales Executive</profile>
+        <profile>Marketing Team</profile>
+        <profile>QA</profile>
+        <profile>Communities Manager</profile>
+        <profile>Executive Profile</profile>
+        <profile>StandardAul</profile>
+        <profile>Program Manager</profile>
+        <profile>Admin</profile>
+        <profile>Chatter Free User</profile>
+        <profile>Chatter Moderator User</profile>
+        <profile>Standard</profile>
+        <profile>ReadOnly</profile>
+        <profile>SolutionManager</profile>
+        <profile>MarketingProfile</profile>
+        <profile>ContractManager</profile>
+        <profile>Sales Development</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Customer Community SU Custom</profile>
+        <profile>Customer Community User Custom</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Standard</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>VisualForce</homePageOverrideSetting>
+        <loginPageOverrideSetting>Standard</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Standard</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Bluescape_Support_OLD_C</picassoSite>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>Bluescape_Support_OLD</site>
+    <status>DownForMaintenance</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>supportold</urlPathPrefix>
+    <welcomeTemplate>Communities_Email_Templates/SupportWelcomeEmail</welcomeTemplate>
+</Network>

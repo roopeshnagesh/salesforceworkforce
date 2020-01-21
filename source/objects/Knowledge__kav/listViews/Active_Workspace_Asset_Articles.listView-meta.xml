@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Workspace_Asset_Articles</fullName>
+    <columns>ARTICLE_NUMBER</columns>
+    <columns>TITLE</columns>
+    <columns>PUBLISH_STATUS</columns>
+    <columns>IS_CHANNEL_PKB</columns>
+    <columns>IS_CHANNEL_CSP</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>LAST_PUBLISHED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PUBLISH_STATUS</field>
+        <operation>equals</operation>
+        <value>2</value>
+    </filters>
+    <filters>
+        <field>IS_CHANNEL_CSP</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>IS_CHANNEL_PKB</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>TITLE</field>
+        <operation>startsWith</operation>
+        <value>workspace asset</value>
+    </filters>
+    <label>Active Workspace Asset Articles</label>
+    <sharedTo>
+        <role>Community_Manager</role>
+        <role>Salesforce_Admin</role>
+        <role>T2_Support_Engineer</role>
+        <role>Technical_Writer</role>
+    </sharedTo>
+</ListView>

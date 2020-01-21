@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>true</allowMembersToFlag>
+    <changePasswordTemplate>Communities_Email_Templates/SupportChangePasswordEmail</changePasswordTemplate>
+    <communityRoles/>
+    <description>Bluescape Customer Community</description>
+    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <emailFooterLogo>SharedDocuments/bluescape_logo_new_branding_black_blue_150x25.png</emailFooterLogo>
+    <emailFooterText>999 Skyway Road Suite 145, San Carlos, California 94070</emailFooterText>
+    <emailSenderAddress>community@bluescape.com</emailSenderAddress>
+    <emailSenderName>Bluescape Community</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableGuestChatter>true</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>true</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>true</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>true</enablePrivateMessages>
+    <enableReputation>true</enableReputation>
+    <enableShowAllNetworkSettings>true</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>true</enableTopicSuggestions>
+    <enableUpDownVote>true</enableUpDownVote>
+    <forgotPasswordTemplate>Communities_Email_Templates/SupportForgotPasswordEmail</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
+    <lockoutTemplate>All_Templates/CommunityLockoutEmailTemplate</lockoutTemplate>
+    <logoutUrl>https://community.bluescape.com</logoutUrl>
+    <networkMemberGroups>
+        <permissionSet>Moderate_Community_Feeds_and_Files</permissionSet>
+        <profile>Support %28External Agents%29</profile>
+        <profile>RS Executive Profile</profile>
+        <profile>RS Installation%2FLogistics Specialist</profile>
+        <profile>RS Accounting</profile>
+        <profile>Sales Development</profile>
+        <profile>Sales Executive - No export</profile>
+        <profile>Demand Generation Lead</profile>
+        <profile>SA Clone</profile>
+        <profile>Sales Engineer</profile>
+        <profile>Solutions Consultant</profile>
+        <profile>Sales Insights Integration User</profile>
+        <profile>SalesforceIQ Integration User</profile>
+        <profile>Account Executive</profile>
+        <profile>Inside Sales Representative</profile>
+        <profile>Analytics Cloud Security User</profile>
+        <profile>Analytics Cloud Integration User</profile>
+        <profile>Business Development</profile>
+        <profile>RS Bluescape Sys Admin</profile>
+        <profile>RS Installation%2FLogistics Manager</profile>
+        <profile>Customer Support Knowledge</profile>
+        <profile>RS Finance%2FController</profile>
+        <profile>RS Standard User - Baseline Access</profile>
+        <profile>RS Standard User - Full Access</profile>
+        <profile>RS Standard Platform User - Baseline Access</profile>
+        <profile>RS Standard Platform User - Full Access</profile>
+        <profile>RS Office Manager</profile>
+        <profile>CSM Manager</profile>
+        <profile>Customer Support Knowledge%2Cw%2F Case Feed</profile>
+        <profile>Knowledge Administrator</profile>
+        <profile>Customer Success Team</profile>
+        <profile>Engineering</profile>
+        <profile>Sales Executive</profile>
+        <profile>Marketing Team</profile>
+        <profile>QA</profile>
+        <profile>Communities Manager</profile>
+        <profile>Bluescape Sys Admin</profile>
+        <profile>Executive Profile</profile>
+        <profile>StandardAul</profile>
+        <profile>Program Manager</profile>
+        <profile>Admin</profile>
+        <profile>Chatter Free User</profile>
+        <profile>Chatter Moderator User</profile>
+        <profile>Standard</profile>
+        <profile>ReadOnly</profile>
+        <profile>SolutionManager</profile>
+        <profile>MarketingProfile</profile>
+        <profile>ContractManager</profile>
+        <profile>Customer Community SU Custom</profile>
+        <profile>Customer Community User Custom Temp</profile>
+        <profile>Customer Community User Custom</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Customer Community User Ford</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Configurable</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Bluescape_Community_C</picassoSite>
+    <recommendationAudience>
+        <recommendationAudienceDetails>
+            <audienceCriteriaType>CustomList</audienceCriteriaType>
+            <setupName>Partner users</setupName>
+        </recommendationAudienceDetails>
+    </recommendationAudience>
+    <recommendationDefinition>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://university.bluescape.com</actionUrl>
+            <description>Learn how to make the most of Bluescape.</description>
+            <linkText>Let&#39;s Go</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>DefaultChannel</channel>
+                    <enabled>true</enabled>
+                    <rank>2</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Bluescape University</setupName>
+            <title>Check out Blue U!</title>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://developer.bluescape.com</actionUrl>
+            <description>Integrate Bluescape with the tools that drive your organization’s creativity and productivity.</description>
+            <linkText>Check it out</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>DefaultChannel</channel>
+                    <enabled>true</enabled>
+                    <rank>1</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Developer Site</setupName>
+            <title>Become a Bluescape Developer</title>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://university.bluescape.com/improvements-to-managing-your-workspace-content/408836/scorm/3syb288w1474m</actionUrl>
+            <description>Find out what&#39;s new in November</description>
+            <linkText>Check it Out</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>CustomChannel1</channel>
+                    <enabled>true</enabled>
+                    <rank>1</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Ford November Release</setupName>
+            <title>November Release Notes</title>
+        </recommendationDefinitionDetails>
+    </recommendationDefinition>
+    <reputationLevels>
+        <level>
+            <lowerThreshold>0.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>51.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>151.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>401.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>801.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>1501.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>2501.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>4001.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>6001.0</lowerThreshold>
+        </level>
+        <level>
+            <lowerThreshold>10001.0</lowerThreshold>
+        </level>
+    </reputationLevels>
+    <reputationPointsRules>
+        <pointsRule>
+            <eventType>FeedItemYourAnswerMarkedBest</eventType>
+            <points>0</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAnAnswer</eventType>
+            <points>0</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemPostQuestion</eventType>
+            <points>0</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemAnswerAQuestion</eventType>
+            <points>0</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemMarkAnswerAsBest</eventType>
+            <points>0</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorsedForKnowledgeOnATopic</eventType>
+            <points>2</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>EndorseSomeoneForKnowledgeOnATopic</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAComment</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemMentionSomeone</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemLikeSomething</eventType>
+            <points>1</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAComment</eventType>
+            <points>3</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemShareAPost</eventType>
+            <points>2</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveALike</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemWriteAPost</eventType>
+            <points>3</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemReceiveAMention</eventType>
+            <points>5</points>
+        </pointsRule>
+        <pointsRule>
+            <eventType>FeedItemSomeoneSharesYourPost</eventType>
+            <points>5</points>
+        </pointsRule>
+    </reputationPointsRules>
+    <selfRegProfile>customer community user custom</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>Bluescape_Community</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>Case</defaultTab>
+        <standardTab>Case</standardTab>
+    </tabs>
+    <urlPathPrefix>community</urlPathPrefix>
+    <verificationTemplate>All_Templates/CommunityVerificationEmailTemplate</verificationTemplate>
+    <welcomeTemplate>Communities_Email_Templates/Community_Welcome_Email</welcomeTemplate>
+</Network>

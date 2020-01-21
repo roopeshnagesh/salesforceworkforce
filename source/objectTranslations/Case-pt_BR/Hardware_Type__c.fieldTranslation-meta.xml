@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Hardware Type --></label>
+    <name>Hardware_Type__c</name>
+    <picklistValues>
+        <masterLabel>3M C5567PW Monitor</masterLabel>
+        <translation><!-- 3M C5567PW Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AdvancedHPC Controller</masterLabel>
+        <translation><!-- AdvancedHPC Controller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apple TV</masterLabel>
+        <translation><!-- Apple TV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avocor</masterLabel>
+        <translation><!-- Avocor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DVI Cable</masterLabel>
+        <translation><!-- DVI Cable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DisplayPort Cable</masterLabel>
+        <translation><!-- DisplayPort Cable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DisplayPort-to-DVI Adapter</masterLabel>
+        <translation><!-- DisplayPort-to-DVI Adapter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HDMI Cable</masterLabel>
+        <translation><!-- HDMI Cable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HDMI-to-DVI Adapter</masterLabel>
+        <translation><!-- HDMI-to-DVI Adapter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inogeni</masterLabel>
+        <translation><!-- Inogeni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Media Hub</masterLabel>
+        <translation><!-- Media Hub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTaction MT420S Monitor</masterLabel>
+        <translation><!-- MultiTaction MT420S Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTaction MT553  Monitor</masterLabel>
+        <translation><!-- MultiTaction MT553  Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTaction MT555 Monitor</masterLabel>
+        <translation><!-- MultiTaction MT555 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optika 55 Monitor</masterLabel>
+        <translation><!-- Optika 55 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optika 65 Monitor</masterLabel>
+        <translation><!-- Optika 65 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optika 85 Monitor</masterLabel>
+        <translation><!-- Optika 85 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planar UR8450 Monitor</masterLabel>
+        <translation><!-- Planar UR8450 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planar UR8451 Monitor</masterLabel>
+        <translation><!-- Planar UR8451 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planar UR9850 Monitor</masterLabel>
+        <translation><!-- Planar UR9850 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planar UR9851 Monitor</masterLabel>
+        <translation><!-- Planar UR9851 Monitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stylus</masterLabel>
+        <translation><!-- Stylus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiki Controller</masterLabel>
+        <translation><!-- Tiki Controller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>USB Cable</masterLabel>
+        <translation><!-- USB Cable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

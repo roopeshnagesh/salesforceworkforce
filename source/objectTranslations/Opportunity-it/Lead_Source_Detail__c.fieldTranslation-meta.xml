@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Lead Source Detail --></label>
+    <name>Lead_Source_Detail__c</name>
+    <picklistValues>
+        <masterLabel>AVI-SPL</masterLabel>
+        <translation><!-- AVI-SPL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autodesk University 2015</masterLabel>
+        <translation><!-- Autodesk University 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blue35</masterLabel>
+        <translation><!-- Blue35 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BlueJeans</masterLabel>
+        <translation><!-- BlueJeans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bluescape Employee</masterLabel>
+        <translation><!-- Bluescape Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Box</masterLabel>
+        <translation><!-- Box --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BoxWorks 2015</masterLabel>
+        <translation><!-- BoxWorks 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Development</masterLabel>
+        <translation><!-- Business Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consultant</masterLabel>
+        <translation><!-- Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Form</masterLabel>
+        <translation><!-- Contact Form --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation><!-- Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct Mailer</masterLabel>
+        <translation><!-- Direct Mailer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dropbox</masterLabel>
+        <translation><!-- Dropbox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Campaign</masterLabel>
+        <translation><!-- Email Campaign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Esri 9.27</masterLabel>
+        <translation><!-- Esri 9.27 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field Originated</masterLabel>
+        <translation><!-- Field Originated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finovate Booth Visit Form</masterLabel>
+        <translation><!-- Finovate Booth Visit Form --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Form Fill</masterLabel>
+        <translation><!-- Form Fill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Ad</masterLabel>
+        <translation><!-- Google Ad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Adwords</masterLabel>
+        <translation><!-- Google Adwords --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth</masterLabel>
+        <translation><!-- Haworth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haworth Dealer</masterLabel>
+        <translation><!-- Haworth Dealer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation><!-- Inbound Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JB&amp;A</masterLabel>
+        <translation><!-- JB&amp;A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LinkedIn</masterLabel>
+        <translation><!-- LinkedIn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MultiTaction</masterLabel>
+        <translation><!-- MultiTaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NeoCon 2015</masterLabel>
+        <translation><!-- NeoCon 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Obscura</masterLabel>
+        <translation><!-- Obscura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone Lead</masterLabel>
+        <translation><!-- Phone Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SDR Originated</masterLabel>
+        <translation><!-- SDR Originated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SMPTE 2016</masterLabel>
+        <translation><!-- SMPTE 2016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webinar</masterLabel>
+        <translation><!-- Webinar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

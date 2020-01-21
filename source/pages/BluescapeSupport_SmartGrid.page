@@ -1,0 +1,151 @@
+<apex:page title="Bluescape Support: Smart Grid" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+        
+        <apex:define name="body">
+            <div id="SmartGrid" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        
+                        <h1>
+                            Smart Grid
+                        </h1>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <br />
+                        <ul>  
+                            <h4>
+                                Creating a Smart Grid
+                            </h4>
+                            <p>Smart Grid allows you to format images in a persistent grid object. You can specify the 
+                                number of rows, columns, and cell height and width. Each cell can contain one image. In
+                                addition, images auto-fit to cells and respect aspect ratio. This is useful for 
+                                presenting and story-boarding. 
+                            </p>
+                            <p>
+                                <b>Note:</b> Smart Grid is different from the Arrange and Align in a Grid layout tool. It is 
+                                fully functional on the Wall, and is viewable (but not editable) on the Web client as 
+                                of March 2019. It is not enabled by default. Talk to your Bluescape Account Representative 
+                                for more information.
+                                
+                            </p>
+                            <p>
+                                There are two ways to create a Smart Grid. One is after group selecting images to be 
+                                contained in the grid. The other is to create an empty grid. 
+                                
+                            </p>
+                            <p>
+                                To create a Smart Grid using a group of images:
+                                <br/>
+                                <ol>
+                                    
+                                    <li>Enter a workspace on the Wall.</li>
+                                    <li>Group Select a collection of images. See Common Touch Gestures on a Wall for more 
+                                        information on how to Group Select on a Wall. Long touch the selection box to open the group's context menu.</li>
+                                    <li>Tap Create Grid.</li>
+                                    <li>The Create a smart grid pop-over opens. An outline of the Smart Grid with the 
+                                        default dimensions displays beneath it. The columns and rows will default to fit 
+                                        the number of images selected.</li>
+                                    
+                                    <li>Tap Create when you are finished, or tap Reset to return to the default dimensions.</li>
+                                    <li>The grid displays with the dimensions you set, and with the selected images inside it.</li>
+                            </ol>
+                        </p>
+                        <p>
+                            <br/>
+                            You can also create an empty Smart Grid and move images into it afterwards. <br/>
+                            <br/>
+                            To create an empty Smart Grid:<br/>
+                            <ol>
+                                
+                                <li>Enter a workspace on the Wall.</li>
+                                <li>Tap the Grid icon in the toolbar.</li>                            
+                                <li>The Create a smart grid pop-over opens. An outline of the smart grid with the default
+                                    dimensions displays beneath it. The default dimensions for an empty grid are 5 by 5 
+                                    cells, with cell width and height set to 1000.  Adjust the Columns, Rows, Cell width, 
+                                    and Cell height using the + and – buttons.
+                                </li>                            
+                                <li>Tap Create when you are finished, or tap Reset to return to the default dimensions. </li>
+                        </ol>
+                        <br/>
+                        The grid displays with the dimensions you specified.
+                    </p>                       
+                    <br/>                    
+                </ul>
+                <ul>
+                    <h4>
+                        Using Smart Grid
+                    </h4> 
+                    <p>
+                        Once you have created a Smart Grid, you can move images into it. A single Smart Grid supports up to 400 images.
+                    </p>
+                    
+                    <p>
+                        
+                        To move images into the Smart Grid:
+                        
+                        <ol>                            
+                            <li>Drag the asset with your finger or stylus and hover it over an empty cell. The cell will be highlighted in blue.</li>
+                            <li>Release to drop the asset in the highlighted cell. The image will scale to fit, but the aspect ratio is respected. </li>
+                    </ol>
+                </p>
+                
+                
+                You can move the image to any other cell in the grid via drag and drop.
+                <br/>
+                To remove an image from the grid, simply drag it out of the grid. It will return to its default size.
+                <br/>
+                <br/>
+                
+                
+                <b>Note:</b> Only images are compatible with Smart Grid. A red overlay displays on the grid to indicate that the asset is not supported and cannot be placed inside it.
+                <br/>
+                <br/>
+                
+                
+                To move the grid itself, touch anywhere on the grid except on an image. The grid will be framed in white. Drag the grid and release it when you’ve reached the desired location.
+                <br/>
+                <br/>
+                <b>Note:</b> You cannot manually resize the Smart Grid with your fingers. Instead, you must edit its dimensions from the context menu.
+                <br/>
+                <br/>
+                You can interact with the grid similarly to any other asset in a workspace. To open the grid’s context menu, long touch anywhere on the grid. From here, you can perform the following actions:
+                <br/>
+                <p>
+                    
+                </p>
+                
+                <ul>
+                    
+                    <li><b>Delete-</b> Deletes the grid outline. However, the contents remain and maintain their position and current size in the workspace.</li><br/>
+                    <li><b>Comment-</b> View existing comments and/or create new ones.</li><br/>
+                    <li><b>Edit-</b> Adjust the following:</li><br/>
+                    <ul>                        
+                        <li>Number of rows</li><br/>
+                        <li>Number of columns</li><br/>
+                        <li>Cell width</li><br/>
+                        <li>Cell height</li><br/>
+                    </ul>
+                    
+                    <li><b>Pin-</b> Pins the Smart Grid to the background of the workspace. See Pinning Assets for more information. Note: The images in the grid’s cells are not pinned, only the grid itself.</li><br/>
+                    <li><b>Present-</b> Launches a presentation with the grid images as its slides. The first slide is the image in the top left cell, moving from left to right and top to bottom. You can present the grid images on both Wall and Web. <b>Note:</b> To present the entire Smart Grid as a presentation slide, create a canvas with the Smart Grid inside it, then select Present from the canvas context menu.</li><br/>
+                </ul>
+                
+                <br/>
+                <b>Note:</b> You can draw on the images in the grid, but not on the grid itself.
+            </ul>  
+            
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+</apex:define>
+
+</apex:composition>
+
+</apex:page>

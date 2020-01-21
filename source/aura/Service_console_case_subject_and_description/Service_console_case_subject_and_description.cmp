@@ -1,0 +1,42 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="case" type="Object"/>
+    <aura:attribute name="simpleCase" type="Object"/>
+    <aura:attribute name="caseError" type="String"/>
+    
+    <force:recordData aura:id="caseRecordLoader"
+        recordId="{!v.recordId}"
+        fields="Id,Subject,Description"
+        targetRecord="{!v.case}"
+        targetFields="{!v.simpleCase}"
+        targetError="{!v.caseError}"
+    />
+   
+    <div class="slds-section slds-is-open whitebackground"
+        aura:id="collapsibleSectionContainer" >
+        <h3 class="slds-section__title slds-theme_shade bold">
+            <!-- button state defaults to false so state 
+                 represents "is collapsed"
+            -->
+            <lightning:buttonStateful labelWhenOff="Description"
+                                      labelWhenOn="Description"
+                                      iconNameWhenOff="utility:chevrondown"
+                                      iconNameWhenOn="utility:chevronright"
+                                      onclick="{! c.handleSectionHeaderClick }"
+                                      class="slds-section__title-action " />
+        </h3>
+        <div class="slds-section__content" style="white-space: pre-wrap;">
+            {!v.simpleCase.Description}
+        </div>
+    </div>
+    
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.caseError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.caseError}
+            </ui:message>
+        </div>
+    </aura:if>
+
+
+</aura:component>

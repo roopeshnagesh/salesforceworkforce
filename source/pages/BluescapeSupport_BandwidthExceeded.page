@@ -1,0 +1,34 @@
+<apex:page title="Bluescape Support: Bandwidth Exceeded" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #bandwidth {}
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="bandwidth" class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <br/>
+                        <br/>
+                        <apex:outputText styleClass="title" value="{!$Label.site.limit_exceeded}" />
+                        <br/>
+                        <br/>
+                        <apex:outputText value="{!$Label.site.sorry_for_inconvenience}" />
+                        <apex:outputText escape="false" value=" {!$Label.site.get_in_touch}">
+                            <apex:param value="mailto:{!$Site.AdminEmailAddress}" />
+                            <apex:param value="{!$Label.site.email_us}" />
+                        </apex:outputText>
+                    </div>
+                </div>
+
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

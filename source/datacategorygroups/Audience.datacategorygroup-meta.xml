@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Tier 1</label>
+                <name>Tier_1</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Tier 2</label>
+                <name>Tier_2</name>
+            </dataCategory>
+            <label>Support Team</label>
+            <name>Support_Team</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Partner</label>
+                <name>Partner</name>
+            </dataCategory>
+            <label>Community</label>
+            <name>Community</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Who can see these articles: partners, tier 1, community users, guest users, employees</description>
+    <label>Audience</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

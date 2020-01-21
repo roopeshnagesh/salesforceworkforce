@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>QLI_List_Price</fullName>
+        <field>List_Price_Copy__c</field>
+        <formula>PricebookEntry.UnitPrice</formula>
+        <name>QLI List Price</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sales_Price</fullName>
+        <description>Update Sales Price with (Unit Price + Sales Price Adjustment) * Term</description>
+        <field>UnitPrice</field>
+        <formula>if(isnull(Term_Years__c), 
+
+UnitPrice, 
+
+Term_Years__c *  UnitPrice )</formula>
+        <name>Update Sales Price</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Copy Product List Price to QLI</fullName>
+        <actions>
+            <name>QLI_List_Price</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QuoteLineItem.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Copy the product&#39;s list price to the Quote Line Item. This will be used for a roll-up in the quote.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Sales Price on Term %26 Sales Price Adjustment %28Quote%29</fullName>
+        <actions>
+            <name>Update_Sales_Price</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>QuoteLineItem.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Calculate new Sales Price based on Term and Sales Price Adjustment</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

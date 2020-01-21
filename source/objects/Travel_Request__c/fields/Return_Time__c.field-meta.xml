@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Time__c</fullName>
+    <description>What time of day to travel?</description>
+    <externalId>false</externalId>
+    <label>Return Time</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Early Morning (6-8am)</fullName>
+                <default>false</default>
+                <label>Early Morning (6-8am)</label>
+            </value>
+            <value>
+                <fullName>Mid Morning (8-10am)</fullName>
+                <default>false</default>
+                <label>Mid Morning (8-10am)</label>
+            </value>
+            <value>
+                <fullName>Late Morning (10-12pm)</fullName>
+                <default>false</default>
+                <label>Late Morning (10-12pm)</label>
+            </value>
+            <value>
+                <fullName>Early Afternoon (12-2pm)</fullName>
+                <default>false</default>
+                <label>Early Afternoon (12-2pm)</label>
+            </value>
+            <value>
+                <fullName>Mid Afternoon (2-4pm)</fullName>
+                <default>false</default>
+                <label>Mid Afternoon (2-4pm)</label>
+            </value>
+            <value>
+                <fullName>Late Afternoon (4-6pm)</fullName>
+                <default>false</default>
+                <label>Late Afternoon (4-6pm)</label>
+            </value>
+            <value>
+                <fullName>Evening (6-11pm)</fullName>
+                <default>false</default>
+                <label>Evening (6-11pm)</label>
+            </value>
+            <value>
+                <fullName>Night (11pm-6am)</fullName>
+                <default>false</default>
+                <label>Night (11pm-6am)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

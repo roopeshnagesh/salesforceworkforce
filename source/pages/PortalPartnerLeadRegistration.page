@@ -1,0 +1,174 @@
+<apex:page id="LeadRegistrationPage" showHeader="false" title="Lead Registration" controller="PartnerPortalController">
+
+<style>
+
+   head{
+    margin-bottom:50px;   
+   }
+
+ table {
+       margin-left:20px;
+       border:#0672a6;
+}
+
+  h1{
+      color: #0672a6;
+      font-size: 130%;
+      font-family:Helvetica;
+      margin-top:40px;
+      margin-left:30px;
+ 
+  }
+  
+   h2{
+      color: #0672a6;
+      font-size: 130%;
+      font-family:Helvetica;
+      margin-top:10px;
+      margin-left:50px;
+ 
+  }
+  
+     h3{
+      color: #0672a6;
+      font-size: 130%;
+      font-family:Helvetica;
+      margin-top:10px;
+      margin-left:0px;
+ 
+  }
+  
+  .colStyle1 { 
+      width:50%;
+      text-align:left;
+       padding-right:50px; 
+       border-right:1px solid #000;
+   }
+   
+  .colStyle2 { 
+      width:50%; 
+      text-align:left; 
+      padding-left:10px; 
+      }
+      
+  .colStyle3 { 
+      width:50%;
+      text-align:right; 
+      padding-left:10px; 
+      }
+      
+  .rowstyle { 
+      padding:10px; 
+      }
+      
+      .verticalLine {
+    border-right: thick solid #ff0000;
+}
+  
+ </style>
+
+  <script>  
+        function createNewLead() {
+            createNewLead();
+        }
+        
+    </script>
+
+    <apex:composition template="PortalTemplate2"> 
+   
+         <apex:define name="body"> 
+
+        <table width="750" cellPadding="1" cellspacing="1" style="float:center; margin-top:20px;margin-left:180px;"> 
+                   <tr>
+                     <td>
+
+        <h3>Partner Portal</h3>  
+
+        <p>If you are interested to do business with us as a distributor, dealer or reseller, please contact us via email at partner@bluescape.com 
+        or to become Bluescapes valued reseller or distributor then fill out the form below to get the marketing materials and 
+        Bluescapes Partner Certificate in detail for your valued clients in your local area.</p>
+
+</td>
+</tr>
+</table>
+               <table cellPadding="1" cellspacing="1" style="float:center; border-style:solid; border-width:1.5px;  margin-top:20px;margin-left:180px;"> 
+                   <tr>
+                     <td>
+                       <br></br>
+                      <h1> Lead Registration </h1>  
+              <apex:panelGrid width="350" cellpadding="2" cellspacing="3" bgcolor="white" columns="3" style="margin:1em;"> 
+                 
+                   <apex:form id="theForm" forceSSL="true">
+                    <apex:actionFunction name="createNewLead" action="{!createNewLead}"/>
+                    <apex:pageMessages id="error" escape="false" showDetail="false"/>
+                    <apex:panelGrid columns="2" cellPadding="5" cellspacing="3">
+                      <apex:outputLabel value="FIRST NAME *"/>
+                      <apex:outputLabel value="LAST NAME *"/>
+                      <apex:inputField value="{!lead.FirstName}" ></apex:inputField>
+                      <apex:inputField value="{!lead.LastName}" ></apex:inputField>
+                        <apex:outputLabel value="TITLE *"/>
+                         <apex:outputLabel value="COMPANY *"/>
+                      <apex:inputField value="{!lead.Title}" ></apex:inputField>
+                      <apex:inputText value="{!lead.Company}" ></apex:inputText>
+                         <apex:outputLabel value="PHONE *"/>
+                      <apex:outputLabel value="EMAIL *"/>
+                      <apex:inputField value="{!lead.Phone}" ></apex:inputField>
+                      <apex:inputField value="{!lead.Email}" ></apex:inputField>
+                      <apex:outputLabel value="ADDRESS *"/>
+                     <apex:outputLabel value="CITY *"/>
+                      <apex:inputText value="{!addressLine}" ></apex:inputText>
+                      <apex:inputField value="{!lead.City}" ></apex:inputField>
+                     <apex:outputLabel value="STATE *"/>
+                      <apex:outputLabel value="ZIP *"/>
+                      <apex:inputField style="width:150px;" value="{!lead.StateCode}" ></apex:inputField>
+                      <apex:inputField value="{!lead.PostalCode}" ></apex:inputField>
+                     <apex:outputLabel value="COUNTRY *"/>
+                     <apex:outputLabel value=" DEPARTMENT *"/>
+                      <apex:inputField style="width:150px;" value="{!lead.CountryCode}" ></apex:inputField>
+                      <apex:inputField value="{!lead.Department__c}" ></apex:inputField>
+                    <apex:inputCheckbox value="{!lead.Is_Global_Account__c}"> Global Account  </apex:inputCheckbox>
+                    <apex:inputCheckbox value="{!lead.Is_Fortune_100__c}"> Fortune 1000 </apex:inputCheckbox>
+                   </apex:panelgrid>
+                          <br></br>
+                          <apex:outputLabel style="margin-left:30px;" value="DETAILS (Tell us about the lead and their interest in Bluescape.) *"/>
+                          <br></br>
+                          <apex:inputField style="margin-left:30px; margin-bottom:20px; width:420px; height:40px;" value="{!lead.Details__c}" ></apex:inputField>
+                           <br> </br>
+                   </apex:form> 
+                    </apex:panelgrid> 
+                   
+               
+  <!------------------------------------------------------------------>    
+            <!--    <table cellPadding="1" cellspacing="1" style="float:left"> -->
+              
+                  <td>
+                    <h2> Haworth Rep </h2>
+                  <apex:panelGrid width="200" cellpadding="2" cellspacing="3" bgcolor="white" columns="1" style="margin:1em;">              
+          <!--     <div class="verticalLine">  -->
+                  <apex:form id="theForm1" forceSSL="true">
+                    <apex:panelGrid columns="1" cellPadding="2" cellspacing="10">
+                       <apex:outputLabel value="FIRST NAME *"/>
+                      <apex:inputField value="{!currentUserContact.FirstName}" ></apex:inputField>
+                      <apex:outputLabel value="LAST NAME *"/>
+                      <apex:inputField value="{!currentUserContact.LastName}" ></apex:inputField>
+                         <apex:outputLabel value="COMPANY*"/>
+                      <apex:inputText value="{!currentUserContact.Account.Name}" ></apex:inputText>
+                      <apex:outputLabel value="EMAIL*"/>
+                      <apex:inputField value="{!currentUserContact.Email}" ></apex:inputField>
+                      <apex:outputLabel value="PHONE *"/>
+                          <apex:inputField value="{!currentUserContact.Phone}" ></apex:inputField>
+                   </apex:panelgrid>
+                   </apex:form>
+             <!--  </div>  --> 
+                  </apex:panelgrid>
+                                 </td>
+                                  
+                               <!--  </table> -->  
+                    </td>
+                </tr>
+           </table> 
+      
+       <input type="button" style="background:#3eb9e6;color:white;width:100px;height:30px; margin-top:30px; margin-bottom:20px; margin-left:500px;" value="Register Now" onclick="createNewLead();return false"/>
+      </apex:define>
+    </apex:composition>  
+</apex:page>

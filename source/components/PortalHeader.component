@@ -1,0 +1,4 @@
+<apex:component id="Portalheader">
+  
+  <apex:image id="theImage" value="{!$Resource.PartnerBanner}" style="width:100%; height:100px; margin-left:10px; margin-right:10px;"/>
+</apex:component>

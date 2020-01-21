@@ -1,0 +1,109 @@
+<apex:page title="Bluescape Support: Meet Basics" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="MeetBasics" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        
+                        <h1>
+                           Using Meet to Teleconference
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <p> The Bluescape workspace includes Meet, a teleconferencing tool that utilizes your webcam and computer microphone to virtually communicate with collaborators. With Meet, you can join or start a discussion via video-and-audio or audio-only.
+                                </p>
+                                <p> To use Meet: </p>
+                    
+<ol>
+<li>Click the Meet icon in the workspace menu. The Meet tray opens.</li>
+<li>To join or start a meeting with video feed, click the camera icon. To join with an audio-only feed, click the microphone icon.</li>
+    <li>Your camera and/or microphone will be activated and you will see your feed and the feed for all other participants.</li>
+</ol>
+                                <p>
+                                </p>
+
+<p> To share your screen during the meeting, click the double screen icon. All meeting participants will see your screen. To stop screensharing, click the icon again. For more information, see Using Screencast to Share Your Screen. </p>
+
+<p> Once you've joined the meeting, you can activate or deactivate your camera feed by clicking the camera icon. </p>
+
+<p> Similarly, to mute or unmute yourself, click the microphone icon.</p>
+
+<p> An input is in use when its respective icon is highlighted blue. It is not in use when the icon has a slash through it. For example, if you wanted to remain on webcam but stay muted, the camera icon should be highlighted in blue and the microphone icon should have a slash through it. </p>
+
+<p><b>Note</b>: You are still active in Meet even if both the camera and microphone inputs are disabled in the tray.</p>
+
+<p> To disconnect from Meet, click the red phone icon. This is the equivalent of hanging up on a call; you are removed from the meeting, and you will no longer broadcast your video and/or audio, or see and hear meeting participants. </p>
+<p>
+    
+                                </p>
+                                <h2>Following a Leader and Leading a Team in Meet</h2>
+                                <p>
+                                    
+                                </p>
+                                <b>Following</b>
+<br />
+                                <p>
+                                    
+                                </p>
+You can follow another user in a workspace, which allows you to see their exact view of the workspace and any actions they take. This is useful during meetings and presentations.&nbsp;<br />
+<br />
+To follow another user within the workspace:
+                                <p>
+                                    
+                                </p>
+<ol>
+	<li>Click on the icon in the workspace menu. A list of all users who are currently viewing the workspace opens.</li>
+    <li>Click on the user&rsquo;s name you want to follow. Your viewing window will display what that user is viewing. As that user moves around the workspace, your viewing window will automatically follow.</li>
+    <li>To stop following the user, click their name in the user&rsquo;s list again or hit &ldquo;ESC&rdquo; on your keyboard. Your display will become independent of the other user&rsquo;s.</li>
+</ol>
+<p>
+    
+                                </p>
+
+<b>Leading</b>
+<br />
+                                <p>
+                                    
+                                </p>
+Alternatively, if you want everyone to follow your view of the workspace, you can lead the group.&nbsp;<br />
+<br />
+To lead all users in the workspace, click on your name in the user&rsquo;s list. You will receive a notification that you are leading the group, and the icon next to your name will turn red.<br />
+
+<p>
+    
+                                </p>When one user chooses to lead the group, all other users in the workspace are prompted with a pop-up asking if they want to follow the leader. They can choose <b>Yes</b> to immediately begin following the leader, or <b>No</b> to remain independent of the leader. If a user accidentally selects <b>No</b> or later decides to follow, they can click the leader&rsquo;s name in the user list.<br />
+<br />
+
+<b>The Lead-Follow Dynamic in a Team Setting</b>
+<br />
+                                <p>
+                                    
+                                </p>
+If a discussion will have multiple users leading the group at various points, there is an &ldquo;Auto Follow Leader&rdquo; checkbox at the top of the users list. When this box is checked, you will no longer be prompted with a pop-up window if you&rsquo;d like to follow the new leader. You will automatically follow whoever is the leader of the group at the moment, and immediately begin following the new leader if there&rsquo;s a transition.<br />
+<br />
+Please note that this option is unchecked by default.<br />
+&nbsp;
+<br />
+The lead-follow dynamic provides an easy-to-use tool for developing an engaging, collaborative conversation within the workspace. No more waiting for the first user to figure out how to give the screen share rights to another user. Now every user can be both a leader and an engaged participant in the conversation.
+
+
+                        <br />
+                        <br />
+                        <br />
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                        </apex:define>
+        
+    </apex:composition>
+    
+</apex:page>

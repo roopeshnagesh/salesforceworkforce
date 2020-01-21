@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Does this opportunity contain the potential that the end customer will be buying hardware from the partner? --></help>
+    <label><!-- LFD Opportunity? End Customer -&gt; Partner --></label>
+    <name>LFD_Opportunity_End_Customer_Partner__c</name>
+</CustomFieldTranslation>

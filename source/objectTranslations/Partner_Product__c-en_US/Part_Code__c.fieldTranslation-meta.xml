@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Manufacture&apos;s Product Part Code --></help>
+    <label><!-- Part Code --></label>
+    <name>Part_Code__c</name>
+</CustomFieldTranslation>

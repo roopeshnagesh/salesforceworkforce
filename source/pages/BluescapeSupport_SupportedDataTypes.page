@@ -1,0 +1,136 @@
+<apex:page title="Bluescape Support: Supported Data Types" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="SupportedDataTypes" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <h1>
+                             Supported Data Types
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+<h3><br />
+<span style="color: #000000;"><span style="font-size: 8px;"><b style="font-size: 16px;">Overview</b></span></span></h3>
+
+<p><br />
+<span style="color: #000000;">The workspace is a central repository where all project materials can be stored, reviewed, and updated. The largest file or image you can upload to a workspace is defined by a byte limit, a page limit, and a megapixel limit. Setting limits improves overall performance. The limits are as follows:&nbsp;</span><br />
+&nbsp;</p>
+
+<ul>
+	<li><span style="color: #000000;">50 megabytes (MB); except for video files, which have a 150 MB limit</span></li>
+	<li>50 pages for documents (with some exceptions; see below)</li>
+	<li>125 megapixels (MP)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><span style="color: #000000;">Exceeding any of the three limits may prevent&nbsp;the&nbsp;file from uploading. If the file cannot upload, an alert displays.</span><br />
+<br />
+    
+The following table details file types and their limits:<br />
+&nbsp;</p>
+
+<table border="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="1"><b>File Type</b></td>
+			<td colspan="1" rowspan="1"><b>File Extension(s)</b></td>
+			<td colspan="1" rowspan="1"><b>Limits</b></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Images</td>
+			<td colspan="1" rowspan="1">.jpg, .png, .tif, and .gif, but excluding animated GIFs<br />
+			<br />
+			<b>Note</b>: Only the first page of TIF files with multiple pages displays in a workspace. You cannot page through the pages.</td>
+			<td colspan="1" rowspan="1">&bull;&nbsp;&nbsp; &nbsp;50 MB &nbsp;(megabytes)<br />
+			&bull;&nbsp;&nbsp; &nbsp;125 MP (megapixels)<br />
+			<br />
+			By adjusting your JPEG or other compression, you can fit large images within this limit.</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Microsoft Powerpoint</td>
+			<td colspan="1" rowspan="1">.ppt</td>
+			<td colspan="1" rowspan="1">&bull;&nbsp;&nbsp; &nbsp;50 MB<br />
+			&bull;&nbsp;&nbsp; &nbsp;50 pages</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Microsoft Word</td>
+			<td colspan="1" rowspan="1">.doc, .docx</td>
+			<td colspan="1" rowspan="1">&bull;&nbsp;&nbsp; &nbsp;50 MB<br />
+			&bull;&nbsp;&nbsp; &nbsp;50 pages</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Microsoft Excel</td>
+			<td colspan="1" rowspan="1">.xls, xlsx</td>
+			<td colspan="1" rowspan="1">50 MB</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">PDF</td>
+			<td colspan="1" rowspan="1">.pdf</td>
+			<td colspan="1" rowspan="1">&bull;&nbsp;&nbsp; &nbsp;50 MB<br />
+			&bull;&nbsp;&nbsp; &nbsp;50 pages *soft limit; see below<br />
+			<br />
+			<b>Note</b>: PDFs with 3D content are not supported.</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">Videos</td>
+			<td colspan="1" rowspan="1">.mov, .mp4<br />
+			<br />
+			<b>Note</b>: These files must be H.264 encoded.</td>
+			<td colspan="1" rowspan="1">150 MB<br />
+			<br />
+			<b>Note</b>: If an error message displays when you try to upload a video file, contact Bluescape Support.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><br />
+<b>PDF Soft Page Limit</b></h3>
+<br />
+PDF files have a soft limit; they can exceed 50 pages, but markup options will no longer be available. As a workaround, you can format opposing PDF pages to act as a single page, nearly doubling your effective page count.<br />
+<br />
+<b>Note</b>: PDFs cannot exceed 50 pages when using BENT/W.<br />
+&nbsp;
+<h3><b>Image Rendering on a Wall</b></h3>
+<br />
+Any image over 12 megapixels in a workspace on a Wall may be downscaled in order to maximize workspace memory. Similarly, if the sum of all images exceeds 3.2 gigapixels, the quality may be downscaled in order to maximize workspace memory. 3.2 gigapixels is equivalent to about 250 photos taken on an iPhone.<br />
+<br />
+<b>Note</b>: When you download an image from the workspace, the original quality remains in tact even if image quality is downscaled when displayed on the Wall.
+
+<h3><br />
+<b>Website Limitations</b></h3>
+
+<h4><br />
+Wall Client</h4>
+<br />
+On the Wall client, browsers have the following limitations:<br />
+<br />
+&bull;&nbsp;&nbsp; &nbsp;Cookies are only stored while the session is active. When the workspace is closed, all cookies are deleted.<br />
+&bull;&nbsp;&nbsp; &nbsp;No browser history is maintained.<br />
+&bull;&nbsp;&nbsp; &nbsp;Pop-ups are not supported.<br />
+&nbsp;
+<h4>Web Client</h4>
+<br />
+Due to limitations on running a browser within a browser, many external sites are not navigable within the Web client (though they are on a Wall client). Navigable sites must support both HTTPS and iFrame.&nbsp;<br />
+<br />
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

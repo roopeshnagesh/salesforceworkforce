@@ -1,0 +1,79 @@
+<apex:page title="Bluescape Support: {!video.title}" controller="BluescapeSupport_VideoPlayerController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #vidPlayer .video {
+                    margin: 1rem 0;
+                }
+
+                #vidPlayer .category {
+                    font-size: 1.2rem;
+                    color: indianred;
+                }
+
+                #vidPlayer .title {
+                    font-size: 2rem;
+                }
+
+                #vidPlayer .date {
+                    margin-top: 1rem;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+
+                #vidPlayer .desc {
+                    font-size: 1.2rem;
+                }
+
+                @media (min-width: 992px) {
+                    #vidPlayer iframe {
+                        width: 854px;
+                        height: 480px;
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 992px) {
+                    #vidPlayer iframe {
+                        width: 720px;
+                        height: 480px;
+                    }
+                }
+
+                @media (max-width: 768px) and (min-width: 426px) {
+                    #vidPlayer iframe {
+                        width: 426px;
+                        height: 240px;
+                    }
+                }
+
+                @media (max-width: 426px) {
+                    #vidPlayer iframe {
+                        width: 355px;
+                        height: 200px;
+                    }
+                }
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+
+            <div id="vidPlayer" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+                        <div class="video">
+                            <iframe src="{!video.url}" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="category">{!video.category}</div>
+                        <div class="title">{!video.title}</div>
+                        <div class="date">{!video.publishDate}</div>
+                        <div class="desc">{!video.description}</div>
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

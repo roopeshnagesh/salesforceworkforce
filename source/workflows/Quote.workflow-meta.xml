@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notify_Kevin_of_new_Quote_for_Approval</fullName>
+        <description>Notify Kevin And MT of new Quote for Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mt@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Liz_of_new_Quote_for_Approval_COO</fullName>
+        <description>Notify Liz &amp; Demian of new Quote for Approval (COO and VP-Level Approval)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>demian.entrekin@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Submitted_for_Approval_COO</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Approved_Email</fullName>
+        <description>Quote Approved Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>john.greenstein@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mt@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Approved_by_VP_Customer_Sucess</fullName>
+        <description>Quote Approved by VP Customer Success</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Approved_by_VP_Customer_Sucess</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Approved_by_VP_Sales</fullName>
+        <description>Quote Approved by VP Sales</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>john.greenstein@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mt@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Approved_by_VP_Sales</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Created_Send_Management_Notification</fullName>
+        <description>Quote Created-Send Management Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_Customer_Success</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Started_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Recalled_Email</fullName>
+        <description>Quote Recalled Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>john.greenstein@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.beals@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mt@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_Email</fullName>
+        <description>Quote Rejected Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_by_VP_Sales</fullName>
+        <description>Quote Rejected by VP Sales</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>john.greenstein@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mt@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_Rejected_by_VP_Sales</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_needs_approval_Email</fullName>
+        <description>Quote needs approval Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>marcel.dubois@bluescape.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Quote_Approval_Process/Quote_needs_Approval</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Copy_Owner_Manager_Email_to_email_field</fullName>
+        <field>Ownerss_Manager_Email__c</field>
+        <formula>Opportunity.Owner_s__c</formula>
+        <name>Copy Owner Manager Email to email field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quote_Status_Set_to_Approved</fullName>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>Quote Status Set to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quote_Status_Set_to_Draft</fullName>
+        <field>Status</field>
+        <literalValue>Draft</literalValue>
+        <name>Quote Status Set to Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quote_Status_Set_to_In_Review</fullName>
+        <field>Status</field>
+        <literalValue>In Review</literalValue>
+        <name>Quote Status Set to In Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quote_Status_Set_to_Rejected</fullName>
+        <field>Status</field>
+        <literalValue>Rejected</literalValue>
+        <name>Quote Status Set to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Quote_Record_Type_to_Approved</fullName>
+        <description>Control making visible the Create PDF and DocuSign buttons</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Approved_Quote_Record</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Quote Record Type to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Quote_Record_Type_to_Draft</fullName>
+        <description>Hide the Create PDF and DocuSign buttons when in draft mode</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Draft_Quote_Record</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Quote Record Type to Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Change Record Type from Approved to Draft</fullName>
+        <actions>
+            <name>Quote_Status_Set_to_Draft</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Quote Approvals: When approved quote is edited, change quote Record Type to draft quote. This hides the Create PDF and DocuSign buttons available. Quote needs to be approved again.</description>
+        <formula>AND(
+ISPICKVAL(PRIORVALUE(Status),&quot;Approved&quot;),
+
+OR(ISCHANGED(Hardware_Total__c), 
+ISCHANGED(Licenses_Total__c),
+ISCHANGED(Other_Costs_Total__c),
+ISCHANGED(Services_Total__c),
+ISCHANGED(Discounts_Total__c),
+ISCHANGED(List_Price_Total__c),
+ISCHANGED(Sale_Price_Total__c),
+ISCHANGED(Concurrent_License_Count__c),
+ISCHANGED(Named_License_Count__c),
+ISCHANGED(Total_Services_Licenses__c),
+ISCHANGED(Total_Up_Front_Investment__c),
+ISCHANGED(Ongoing_Licensing__c),
+ISCHANGED(Three_Year_Commitment__c),
+ISCHANGED(Ongoing_Annual_Licensing__c),
+ISCHANGED(LineItemCount),
+ISCHANGED(Notes__c),
+ISCHANGED(Total_Price2__c)
+),
+NOT($UserRole.Id = &quot;00EE0000000ZbKD&quot;) /* VP Finance */ 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New quote status is always Draft</fullName>
+        <actions>
+            <name>Quote_Status_Set_to_Draft</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Owner%27s Manager Email to 2nd Email Field</fullName>
+        <actions>
+            <name>Copy_Owner_Manager_Email_to_email_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Copy Owner&#39;s Manager Email text field to Ownerss Manager Email email field</description>
+        <formula>not(isnull( Owner_s_Manager_Email__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Quote Started Notification</fullName>
+        <actions>
+            <name>Quote_Created_Send_Management_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT (ISBLANK( QuoteNumber ) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Record Type for Approved Quote</fullName>
+        <actions>
+            <name>Set_Quote_Record_Type_to_Approved</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Status</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <description>Quote Approvals: change quote Record Type to approved quote. This makes the Create PDF and DocuSign buttons available.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Record Type for Draft Quote</fullName>
+        <actions>
+            <name>Set_Quote_Record_Type_to_Draft</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Status</field>
+            <operation>notEqual</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <description>Quote Approvals: change quote Record Type to draft quote. This hides the Create PDF and DocuSign buttons available.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

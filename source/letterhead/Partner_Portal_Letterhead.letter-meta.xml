@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <backgroundColor>#0099cc</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#0099cc</color>
+        <height>2</height>
+    </bottomLine>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Bluescape_Community_Assets/Bluescape_Partner_Logo.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Bluescape_Community_Assets/Bluescape_Partner_Logo.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#0099cc</color>
+        <height>2</height>
+    </middleLine>
+    <name>Partner Portal Letterhead</name>
+    <topLine>
+        <color>#0099cc</color>
+        <height>2</height>
+    </topLine>
+</Letterhead>

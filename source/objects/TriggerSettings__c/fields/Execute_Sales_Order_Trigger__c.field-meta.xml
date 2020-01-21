@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Execute_Sales_Order_Trigger__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Checked : Executes trigger on Sales Order object
+Unchecked : Does not execute trigger on Sales Order object</description>
+    <externalId>false</externalId>
+    <label>Execute Sales Order Trigger</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

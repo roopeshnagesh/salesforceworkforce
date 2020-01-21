@@ -1,0 +1,136 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             HDMI Screen Sharing on a Wall 
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                            <ul>
+                                <div style="text-align: left;">
+                                    <h2>
+                                        Windows
+                                    </h2>
+                                    
+                                    <h3>Overview</h3>
+<br />
+You can display additional video sources on the Wall if you have the proper hardware attached to a controller. This is similar to sharing your screen in Meet, but it has a variety of potential applications, including:
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Displaying third-party applications that may not work directly in a workspace, such as computer-aided design software.</li>
+	<li>Connecting a Cisco Webex Room Kit to make use of intelligent video conferencing.</li>
+</ul>
+<b>Note</b>: Screens&nbsp;shared via external hardware are only visible from the room they&rsquo;re shared in. This means they are not visible to remote participants in the workspace.
+
+<h3>Requirements</h3>
+&nbsp;
+
+<ul>
+	<li>Laptop or other device that supports video output to HDMI.&nbsp;</li>
+	<li>A video capture device connected to the Wall&rsquo;s controller, such as an HDMI to USB3 converter.</li>
+</ul>
+
+<h3>Instructions</h3>
+<br />
+To display an additional video source on a Wall:
+<p>&nbsp;</p>
+
+<ol>
+	<li>Enter a workspace on the Wall, either by opening a temporary workspace or sending a workspace to the Wall.</li>
+	<li>Connect your video capture device. <b>Note</b>: The Wall client can support up to three devices. However, only one feed can display at a time.</li>
+	<li>Tap the <b>Apps</b> icon on the side-panel menu.</li>
+    <li>The <b>Apps</b> tray opens. Tap the <b>External A/V</b> icon.</li>
+    <li>If you have multiple devices connected, each one&rsquo;s individual video feed displays in the <b>Apps</b> menu. Tap the desired feed. <b>Note</b>:&nbsp;Up to three devices can be supported.</li>
+    <li>A window automatically appears over the workspace and displays your video feed on the Wall.</li>
+</ol>
+<br />
+If your video source does not display on the Wall, try the following:
+<br />
+
+<ul>
+	<li>Unplug the video source from the video capture device, restart the controller, and try again.&nbsp;</li>
+	<li>Contact Bluescape Support</li>
+</ul>
+You can move and resize the window of the external video feed on the Wall. In addition, you can take a snapshot of it. Once captured in a workspace, you can easily mark up the image and receive feedback from collaborators. For more information, see <a href="https://support.bluescape.com/BluescapeSupport_Article?a=Taking-a-Snapshot-of-Interactive-Assets" target="_blank">Taking a Snapshot of Interactive Assets</a>.<br />
+<br />
+<b>Note</b>:&nbsp;Aside from the actions discussed above, you cannot interact with your video feed on the Wall; the Wall simply displays it.
+                                    <br />
+                                    <br />
+                                    
+                                    <h2>Linux</h2>
+                                    <p>
+                                        
+                                    </p>
+                                    
+                                    <h3>
+                                        Overview
+                                    </h3>
+                                    You can share your screen onto a Wall using your laptop&rsquo;s HDMI port. This is similar to sharing your screen in Meet, but the quality of the screen share is better because it&rsquo;s in High Definition. Anything displayed on your laptop displays on the Wall; the Wall becomes an extension of your laptop&rsquo;s screen. This is useful for displaying third-party applications that may not work directly in the workspace, such as computer-aided design software.<br />
+<br />
+                                    <h3>
+                                        Requirements
+                                    </h3>
+                                    <p>
+                                        Ensure&nbsp;your laptop has an HDMI port. It is often labelled and located on the side of your laptop near the USB port(s).
+                                    </p>
+                                    <h3>
+                                        Instructions
+                                    </h3>
+To share your screen using HDMI:
+                                    <p>
+                                        
+                                    </p>
+<ol>
+	<li>&nbsp;Enter a workspace on the Wall, either by opening a temporary workspace or by sending a workspace to the Wall.</li>
+	<li>&nbsp;Find the HDMI cable that is connected to the Wall. It is located below, behind, or on the side of the Wall unit.&nbsp;</li>
+	<li>&nbsp;Take the free end of the HDMI cable and plug it into the HDMI port on your laptop.&nbsp;</li>
+	<li>&nbsp;A window automatically appears over the workspace and displays your computer screen on the Wall.&nbsp;</li>
+</ol>
+                                    <br />
+
+<p>If your screen does not display on the Wall, try the following options:&nbsp;</p>
+                                    <br />
+
+<ul>
+	<li>Unplug the HDMI cable from your computer, restart the controller, and try again.</li>
+	<li>Verify the HDMI cable is connected through an Inogeni to a USB port on the controller. The Inogeni is an HDMI to USB converter.&nbsp;</li>
+	<li>Contact your IT department and ensure your computer supports dual monitors.&nbsp;</li>
+	<li>Contact Bluescape support.</li>
+</ul>
+                                    <br />
+<b>Note</b>: Screens shared via HDMI are only visible from the room they&rsquo;re shared in. This means they are not visible to remote participants in the workspace.<br />
+<br />
+You can also take a snapshot of your screen when you screen share with HDMI. This is useful when you want to capture High Definition images of your screen. Once captured in a workspace, you can easily mark up the image and receive feedback in Bluescape.
+
+<p><br />
+<b>Note</b>: Aside from taking a screenshot, you cannot interact with your laptop&rsquo;s screen on the Wall; the Wall simply displays it.</p>
+
+                                    
+                                </div>
+
+                            </ul>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

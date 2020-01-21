@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the Bluescape executive who will establish the close relationship with the Client Executive Sponsor. This person, working in conjunction with the AE and the CSM, supports the deal and helps the client team drive success at the client. --></help>
+    <label><!-- Internal Executive Sponsor Copy --></label>
+    <name>Internal_Executive_Sponsor_Copy__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,51 @@
+<apex:page title="Bluescape Support: File Not Found" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="styles">
+            <style>
+                #fileNotFound {}
+            </style>
+        </apex:define>
+
+        <apex:define name="body">
+            <div id="fileNotFound" class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <center>
+                            <apex:panelGrid bgcolor="white" columns="1">
+                                <br/>
+                                <br/>
+                                <apex:panelGrid width="758" cellpadding="0" cellspacing="0" bgcolor="white" columns="1" styleClass="topPanelContainer">
+                                    <br/>
+                                    <apex:outputPanel layout="block" styleClass="topPanel">
+                                        <apex:panelGrid width="758" cellpadding="0" cellspacing="0" bgcolor="white" columns="3">
+                                            <apex:image url="{!URLFOR($Resource.SiteSamples, 'img/clock.png')}" />
+                                            <apex:image url="{!URLFOR($Resource.SiteSamples, 'img/warning.gif')}" />
+                                            <apex:panelGroup >
+                                                <apex:outputText styleClass="title" value="{!$Label.site.page_not_found_detail}">
+                                                    <apex:param value="{!$Site.OriginalUrl}" />
+                                                </apex:outputText>
+                                                <br/>
+                                                <br/>
+                                                <apex:outputText value="{!$Label.site.stay_tuned}" />
+                                                <apex:outputText escape="false" value=" {!$Label.site.get_in_touch}">
+                                                    <apex:param value="mailto:{!$Site.AdminEmailAddress}" />
+                                                    <apex:param value="{!$Label.site.email_us}" />
+                                                </apex:outputText>
+                                            </apex:panelGroup>
+                                        </apex:panelGrid>
+                                    </apex:outputPanel>
+                                </apex:panelGrid>
+                            </apex:panelGrid>
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+        </apex:define>
+
+    </apex:composition>
+
+</apex:page>

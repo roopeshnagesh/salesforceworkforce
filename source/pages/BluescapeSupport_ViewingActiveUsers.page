@@ -1,0 +1,38 @@
+<apex:page title="Bluescape Support: Using the Canvas" controller="BluescapeSupport_BaseController" sidebar="false" showHeader="false" showChat="false" standardStyleSheets="false">
+    <apex:composition template="BluescapeSupport_SiteTemplate">
+
+        <apex:define name="body">
+            <div id="siteCategory" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <!-- <h1>{!siteCategory.name}</h1> -->
+                        <h1>
+                             Viewing Active Users in a Workspace (Mobile)
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <br />
+                  
+                          You can view all current active participants in a workspace in Bluescape Mobile, regardless of what platform they are using.<br />
+<br />
+To view active users:
+<ol>
+    <li>Tap a workspace on&nbsp;the <b>Workspaces</b> screen.&nbsp;</li>
+    <li>The workspace opens. Tap the Users icon. The blue number in the icon indicates the total number of active users in the workspace.</li>
+    <li>The <b>Active in workspace</b> pop-over window opens. All users currently active in the workspace display. An icon next to their name indicates which platform they are using (Web, Mobile, and Wall displayed below, respectively).</li>
+</ol>
+
+
+<b>Note: </b>Workspace participants on Web or Wall can follow Bluescape Mobile users, but Mobile users cannot follow other users.     
+          
+                    </div> 
+                </div>
+            </div>
+        </apex:define>
+
+    </apex:composition>
+</apex:page>

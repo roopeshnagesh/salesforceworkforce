@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A temporary role that can be assigned to a new client that has signed, but their Bluescape organization has not yet been setup or implemented.  It will be used in the case that we want future users to receive Bluescape communications right away --></help>
+    <label><!-- Pilot --></label>
+    <name>Pilot__c</name>
+</CustomFieldTranslation>

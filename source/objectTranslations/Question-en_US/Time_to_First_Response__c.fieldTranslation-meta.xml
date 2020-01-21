@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time elapsed since the question was first asked to the first response. --></help>
+    <label><!-- Time to First Response --></label>
+    <name>Time_to_First_Response__c</name>
+</CustomFieldTranslation>
