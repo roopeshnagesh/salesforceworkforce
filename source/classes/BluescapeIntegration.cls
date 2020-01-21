@@ -1,3 +1,5 @@
+/*  Class that contains information related to Bluescape Integration */
+
 public class BluescapeIntegration {
     public static Bluescape_API_Token__c newApiToken;
 
